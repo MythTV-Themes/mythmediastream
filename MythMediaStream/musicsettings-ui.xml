@@ -94,7 +94,7 @@
 	        <checkbox name="ignoreid3tags" from="checkbox_menu">
 	            <position>420,420</position>
 	        </checkbox>
-	
+	<!--
 	        <textarea name="tagencoding_label" from="musiclocationlbl">
 	            <position>250,455</position>
 	            <value>Tag Encoding:</value>
@@ -103,14 +103,14 @@
 	        <buttonlist name="tagencoding" from="selector_base">
 	            <position>420,455</position>
 	        </buttonlist>
-	
+	-->
 	        <textarea name="allowtagwriting_label" from="musiclocationlbl">
-	            <position>250,525</position>
+	            <position>250,490</position>
 	            <value>Allow metadata to be written to tags:</value>
 	        </textarea>
 	
 	        <checkbox name="allowtagwriting" from="checkbox_base">
-	            <position>735,525</position>
+	            <position>735,490</position>
 	        </checkbox>
 	
 	        <textarea name="helptext" from="textarea_base">
