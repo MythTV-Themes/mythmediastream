@@ -938,7 +938,7 @@
 <!--   <imagetype name="Menu_background_Sub1">
            <filename>images/shared/HomeBladeLeftMenuOverlay.png</filename>
            <area>0,0,450,720</area>
-       </imagetype> -->
+       </imagetype>-->
 
        <imagetype name="Menu_background_Sub2">
            <filename>images/shared/HomeBladeLeft.png</filename>
