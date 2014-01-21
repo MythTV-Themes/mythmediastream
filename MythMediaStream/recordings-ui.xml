@@ -142,7 +142,7 @@
            </imagetype>
            <imagetype name="progressimage">
                <area>0,0,520,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_amber.png</filename>
+               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
                <preserveaspect>false</preserveaspect>
            </imagetype>
         </progressbar>
@@ -162,23 +162,39 @@
 <!--
         <group name="coverart_details" depends="coverart">
 -->
+
+	        <imagetype name="coverartbgd" depends="preview">
+	            <area>17,254,264,391</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_movieicon_frame.png</filename>
+	        </imagetype>
+
 	        <imagetype name="coverart" depends="preview">
 	            <area>24,260,252,380</area>
 	            <preserveaspect>no</preserveaspect>
                <filename>images/shared/amt-blank-poster.png</filename>
-	            <reflection shear="0" scale="65" length="10"/>
+               <mask>images/shared/list_movieicon_mask.png</mask>
+	            <reflection shear="0" scale="50" length="15"/>
 	        </imagetype>
 
 	        <imagetype name="preview" depends="!coverart">
-	            <area>26,261,248,141</area>
+	            <area>24,260,252,142</area>
+<!--	            <area>25,261,248,141</area> -->
 <!--	            <grayscale>true</grayscale> -->
-	            <mask>images/shared/RecordingsPreviewMask.png</mask>
+               <mask>images/shared/list_movieicon_mask.png</mask>
+<!--	            <mask>images/shared/RecordingsPreviewMask.png</mask> -->
 	            <preserveaspect>no</preserveaspect>
 	            <alpha>224</alpha>
 	            <reflection shear="0" scale="100" length="100" spacing="0"/>
 	        </imagetype>
 
-	        <textarea name="titlesubtitle" from="textarea_base">
+	        <imagetype name="coverartglass" depends="preview">
+	            <area>24,260,252,380</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_movieicon_glass.png</filename>
+	        </imagetype>
+
+	        <textarea name="titlesubtitle" from="textarea_base" depends="preview">
 	            <area>300,260,425,30</area>
 	            <font>title</font>
 	            <multiline>yes</multiline>
@@ -204,7 +220,7 @@
 	            <case>upper</case>
 	        </textarea>
 	
-	        <textarea name="subtitle" from="textarea_base">
+	        <textarea name="subtitle" from="textarea_base" depends="preview">
 	            <area>300,370,425,200</area>
 	            <font>small</font>
 	            <case>normal</case>
@@ -349,6 +365,13 @@
         <imagetype name="banner">
             <area>558,670,162,30</area>
             <preserveaspect>no</preserveaspect>
+            <mask>images/shared/BannerMask.png</mask>
+        </imagetype>
+
+        <imagetype name="bannerglass" depends="banner">
+            <area>558,670,162,30</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/list_movieicon_glass.png</filename>
         </imagetype>
 
     </window>

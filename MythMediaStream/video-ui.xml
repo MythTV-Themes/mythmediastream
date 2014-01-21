@@ -175,12 +175,26 @@
         <!-- ===================================================== -->
         <!--     PROGRAM DETAILS                                   -->
         <!-- ===================================================== -->
-        <imagetype name="coverart">
-            <area>25,260,250,375</area>
-            <filename>images/shared/amt-blank-poster.png</filename>
-            <preserveaspect>yes</preserveaspect>
-            <reflection shear="0" scale="65" length="10"/>
-        </imagetype>
+	        <imagetype name="coverartbgd">
+	            <area>17,254,264,391</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_movieicon_frame.png</filename>
+	        </imagetype>
+
+	        <imagetype name="coverart">
+	            <area>24,260,252,380</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/amt-blank-poster.png</filename>
+               <mask>images/shared/list_movieicon_mask.png</mask>
+	            <reflection shear="0" scale="50" length="15"/>
+	        </imagetype>
+
+	        <imagetype name="coverartglass">
+	            <area>24,260,252,380</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_movieicon_glass.png</filename>
+	        </imagetype>
+
 
         <group name="videodetails" from="defaultvideodetails">
             <position>300,260</position>
