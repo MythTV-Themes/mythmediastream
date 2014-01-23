@@ -243,10 +243,16 @@
             <align>right,bottom</align>
         </textarea>
 
-         <imagetype name="banner">
+        <imagetype name="banner">
             <area>558,670,162,30</area>
-<!--            <mask>images/shared/BannerMask.png</mask>-->
             <preserveaspect>no</preserveaspect>
+            <mask>images/shared/BannerMask.png</mask>
+        </imagetype>
+
+        <imagetype name="bannerglass" depends="banner">
+            <area>558,670,162,30</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/list_movieicon_glass.png</filename>
         </imagetype>
 
        <textarea name="novideos"  from="textarea_base">
@@ -293,8 +299,22 @@
         <!-- ===================================================== -->
         <!--     PROGRAM DETAILS                                   -->
         <!-- ===================================================== -->
+        <imagetype name="bannerframe">
+            <area>12,247,701,151</area>
+            <preserveaspect>no</preserveaspect>
+            <mask>images/shared/list_movieicon_frame.png</mask>
+        </imagetype>
+
         <imagetype name="banner">
             <area>25,260,675,125</area>
+            <preserveaspect>no</preserveaspect>
+            <mask>images/shared/BannerMaskList.png</mask>
+        </imagetype>
+
+        <imagetype name="bannerglass" depends="banner">
+            <area>25,260,675,125</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/list_movieicon_glass.png</filename>
         </imagetype>
 
 <!--
