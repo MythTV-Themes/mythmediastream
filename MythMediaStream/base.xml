@@ -455,7 +455,7 @@
    </textarea>
 
    <textarea name="screentitle">
-       <area>150,5,280,40</area>
+       <area>150,8,280,40</area>
        <font>normal</font>
        <multiline>no</multiline>
        <align>right,vcenter</align>
@@ -465,12 +465,12 @@
    </textarea>
 
    <textarea name="screentitle2" from="screentitle">
-       <area>410,5,280,45</area>
+       <area>410,8,280,45</area>
        <value>Screen Title 2</value>
    </textarea>
 
    <textarea name="screentitle3" from="screentitle">
-       <area>730,5,220,50</area>
+       <area>730,8,220,50</area>
        <value>Screen Title 3</value>
    </textarea>
 
@@ -1124,37 +1124,38 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_menu">
-       <area>0,0,540,420</area>
+       <area>0,0,610,420</area>
        <searchposition>758,55</searchposition>
        <align>top,hcenter</align>
        <layout>vertical</layout>
        <wrapstyle>selection</wrapstyle>
        <arrange>stack</arrange>
-       <buttonarea>0,0,540,400</buttonarea>
+       <buttonarea>0,0,610,400</buttonarea>
+       <showarrow>no</showarrow>
        <statetype name="buttonitem">
            <!--ACTIVE-->
            <state name="active">
                <imagetype name="MenuItemNF">
-                   <area>0,0,540,40</area>
+                   <area>0,0,610,40</area>
                    <filename>images/shared/MenuItemNF.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,520,40</area>
+                   <area>10,0,590,40</area>
                    <alpha>128</alpha>
                </textarea>
            </state>
            <!--SELECTED ACTIVE-->
            <state name="selectedactive">
                <imagetype name="MenuItemNF">
-                   <area>0,0,540,40</area>
+                   <area>0,0,610,40</area>
                    <filename>images/shared/MenuItemNF.png</filename>
                </imagetype>
                <imagetype name="MenuItemFO">
-                   <area>0,0,540,40</area>
+                   <area>0,0,610,40</area>
                    <filename>images/shared/MenuItemFO.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,520,40</area>
+                   <area>10,0,590,40</area>
                    <scroll direction="left" />
                    <alpha>255</alpha>
                </textarea>
@@ -1169,6 +1170,7 @@
            </state>
        </statetype>
        <!--ARROWS-->
+<!-- 
        <statetype name="upscrollarrow">
            <position>10,404</position>	
            <state type="off">
@@ -1195,32 +1197,33 @@
                </imagetype>
            </state>
        </statetype>
+-->
    </buttonlist>
 
    <buttonlist name="buttonlist_menu_check" from="buttonlist_menu">
        <statetype name="buttonitem">
            <state name="active">
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,500,40</area>
+                   <area>10,0,580,40</area>
                    <alpha>128</alpha>
                </textarea>
                <statetype name="buttoncheck">
                    <state type="off">
                        <imagetype name="LedOff">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOff.png</filename>
                        </imagetype>
                    </state>
                    <state type="half">
                        <imagetype name="LEDOn">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOn.png</filename>
                            <alpha>128</alpha>
                        </imagetype>
                    </state>
                    <state type="full">
                        <imagetype name="LEDOn">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOn.png</filename>
                        </imagetype>
                    </state>
@@ -1228,27 +1231,27 @@
            </state>
            <state name="selectedactive">
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,500,40</area>
+                   <area>10,0,580,40</area>
                    <scroll direction="left" />
                    <alpha>255</alpha>
                </textarea>
                <statetype name="buttoncheck">
                    <state type="off">
                        <imagetype name="LedOff">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOff.png</filename>
                        </imagetype>
                    </state>
                    <state type="half">
                        <imagetype name="LEDOn">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOn.png</filename>
                            <alpha>128</alpha>
                        </imagetype>
                    </state>
                    <state type="full">
                        <imagetype name="LEDOn">
-                           <area>510,5,30,30</area>
+                           <area>580,5,30,30</area>
                            <filename>images/shared/LEDOn.png</filename>
                        </imagetype>
                    </state>
@@ -1261,11 +1264,11 @@
        <statetype name="buttonitem">
            <state name="selectedactive">
                <imagetype name="MediaItemDetailBG">
-                   <area>370,5,170,30</area>
+                   <area>440,5,170,30</area>
                    <filename>images/shared/MediaItemDetailBG.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,350,40</area>
+                   <area>10,0,420,40</area>
                    <scroll direction="left" />
                    <alpha>255</alpha>
                </textarea>
@@ -2894,14 +2897,11 @@
     <group name="defaultscreenlayoutTVlist_1">
         <area>0,0,1280,720</area>
         <imagetype name="BackgroundOverlay" from="image_wallpaper_base">
-            <filename>images/shared/TVFanartOverlay.png</filename>
+            <filename>images/shared/TVFanartOverlayFull.png</filename>
+            <alpha>240</alpha>
         </imagetype>
         <textarea name="clock" from="textarea_clock_base"/>
 	     <imagetype name="TitleBackgroundRecordings" from="titlebackground"/>
-        <imagetype name="MediaCountBackground">
-            <area>1110,5,160,40</area>
-            <filename>images/shared/MediaCountBackgroundLong.png</filename>
-        </imagetype>    
     </group>
 
     <group name="defaultscreenlayoutBrowse_1" from="defaultscreenlayoutTVlist_1">
@@ -2978,7 +2978,7 @@
     </group>
 
     <group name="defaultinfoicons" >
-        <area>0,0,495,50</area>
+        <area>0,0,580,50</area>
         <!-- ===================================================== -->
         <!--   INFO ICONS                                          -->
         <!-- ===================================================== -->
@@ -2988,14 +2988,15 @@
                 <imagetype name="autoexpire_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDRepeatFO.png</filename>
+                    <filename>images/icons/trash.png</filename>
                 </imagetype>
             </state>
             <state name="no">
                 <imagetype name="autoexpire_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDRepeatNF.png</filename>
+                    <filename>images/icons/trash.png</filename>
+                    <alpha>64</alpha>
                 </imagetype>
             </state>
         </statetype>
@@ -3005,14 +3006,15 @@
                 <imagetype name="commflagged_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDPresetSettingsFO.png</filename>
+                    <filename>images/icons/go-jump.png</filename>
                 </imagetype>
             </state>
             <state name="no">
                 <imagetype name="commflagged_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDPresetSettingsNF.png</filename>
+                    <filename>images/icons/go-jump.png</filename>
+                    <alpha>64</alpha>
                 </imagetype>
             </state>
         </statetype>
@@ -3022,14 +3024,15 @@
                 <imagetype name="bookmark_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDBookmarksFO.png</filename>
+                    <filename>images/icons/bookmarked.png</filename>
                 </imagetype>
             </state>
             <state name="no">
                 <imagetype name="bookmark_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDBookmarksNF.png</filename>
+                    <filename>images/icons/bookmarked.png</filename>
+                    <alpha>64</alpha>
                 </imagetype>
             </state>
         </statetype>
@@ -3039,19 +3042,20 @@
                 <imagetype name="cutlist_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDVideoFO.png</filename>
+                    <filename>images/icons/edit-cut.png</filename>
                 </imagetype>
             </state>
             <state name="no">
                 <imagetype name="cutlist_icon">
                     <area>0,0,30,30</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/shared/OSDVideoNF.png</filename>
+                    <filename>images/icons/edit-cut.png</filename>
+                    <alpha>64</alpha>
                 </imagetype>
             </state>
         </statetype>
         <statetype name="jobstate">
-            <area>250,10,30,30</area>
+            <area>205,10,30,30</area>
             <state name="recording">
                 <imagetype name="animation1">
                     <area>0,0,30,30</area>
@@ -3085,121 +3089,119 @@
         <!--   VIDEO, AUDIO AND SUBTITLE ICONS                     -->
         <!-- ===================================================== -->
         <statetype name="subtitletypes">
-            <area>285,0,74,50</area>
+            <area>250,9,100,32</area>
             <state name="cc">
                 <imagetype name="cc">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/cc.png</filename>
+                    <filename>images/icons/Misc/SUBTITLES.png</filename>
                 </imagetype>
             </state>
             <state name="subtitles">
                 <imagetype name="subtitles">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/sub.png</filename>
+                    <filename>images/icons/Misc/SUBTITLES.png</filename>
                 </imagetype>
             </state>
             <state name="onscreensub">
                 <imagetype name="onscreensub">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/onscreensub.png</filename>
+                    <filename>images/icons/Misc/SUBTITLES.png</filename>
                 </imagetype>
             </state>
             <state name="default">
                 <imagetype name="default">
-                    <area>0,0,74,50</area>
                     <alpha>64</alpha>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/onscreensub.png</filename>
+                    <filename>images/icons/Misc/SUBTITLES.png</filename>
                 </imagetype>
             </state>
        </statetype>
         <statetype name="videoprops">
-            <area>355,0,74,50</area>
+            <area>365,9,100,32</area>
             <showempty>yes</showempty>
             <state name="hd1080">
                 <imagetype name="hd1080">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/1080i.png</filename>
+                    <filename>images/icons/Video/1080P.png</filename>
                 </imagetype>
             </state>
             <state name="hd720">
                 <imagetype name="hd720">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/720i.png</filename>
+                    <filename>images/icons/Video/720P.png</filename>
                 </imagetype>
             </state>
             <state name="hdtv">
                 <imagetype name="hdtv">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/hdtv.png</filename>
+                    <filename>images/icons/Video/HD_Widescreen.png</filename>
                 </imagetype>
             </state>
             <state name="avchd">
                 <imagetype name="avchd">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/h264.png</filename>
+                    <filename>images/icons/Video/H264.png</filename>
                 </imagetype>
             </state>
             <state name="widescreen">
                 <imagetype name="widescreen">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/2.20.png</filename>
+                    <filename>images/icons/Video/SD_Widescreen.png</filename>
                 </imagetype>
             </state>
             <state name="default">
                 <imagetype name="default">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <alpha>64</alpha>
-                    <filename>images/flags/576i.png</filename>
+                    <filename>images/icons/Video/SD_169.png</filename>
                 </imagetype>
             </state>
         </statetype>
         <statetype name="audioprops">
-            <area>430,0,74,50</area>
+            <area>480,9,100,32</area>
             <showempty>yes</showempty>
             <state name="stereo">
                 <imagetype name="stereo">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/dd20.png</filename>
+                    <filename>images/icons/Audio/ac-3_dolby_digital_Stereo.png</filename>
                 </imagetype>
             </state>
             <state name="surround">
                 <imagetype name="surround">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/dd51.png</filename>
+                    <filename>images/icons/Audio/ac-3_dolby_digital_5.1.png</filename>
                 </imagetype>
             </state>
             <state name="dolby">
                 <imagetype name="dolby">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/dolby.png</filename>
+                    <filename>images/icons/Audio/AC3.png</filename>
                 </imagetype>
             </state>
             <state name="mono">
                 <imagetype name="mono">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <filename>images/flags/dd10.png</filename>
+                    <filename>images/icons/Audio/PCM.png</filename>
                 </imagetype>
             </state>
             <state name="default">
                 <imagetype name="default">
-                    <area>0,0,74,50</area>
+                    <area>0,0,100,32</area>
                     <preserveaspect>no</preserveaspect>
-                    <alpha>64</alpha>
-                    <filename>images/flags/dd20.png</filename>
+                    <filename>images/icons/Audio/MP2A.png</filename>
                 </imagetype>
             </state>
         </statetype>
@@ -3578,6 +3580,62 @@
             <position>0,340</position>
         </imagetype>
     </group>
+
+<!-- ===================================================== -->
+<!-- SCROLLBAR                                             -->
+<!-- ===================================================== -->
+    <shape name="base_button_shape_active">
+        <area>0,0,100%,100%</area>
+        <type>roundbox</type>
+        <fill color="#535353" alpha="120" />
+        <line color="#535353" alpha="100" width="1" />
+        <cornerradius>8</cornerradius>
+    </shape>
+
+    <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
+        <fill color="#ffffff" alpha="200" />
+        <line color="#ffffff" alpha="180" width="1" />
+    </shape>
+    
+    <shape name="base_button_shape_blue" from="base_button_shape_active">
+        <fill color="#105B8F" alpha="200" />
+        <line color="#105B8F" alpha="180" width="1" />
+    </shape>
+    
+    <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
+        <fill color="#1d1d1d" alpha="100" />
+        <line color="#1d1d1d" alpha="80" width="1" />
+    </shape>
+
+    <scrollbar name="base_vertical_scrollbar">
+        <area>0,0,10,640</area>
+        <layout>vertical</layout>
+        <hidedelay>0</hidedelay>
+        <shape name="background" from="base_button_shape_active">
+            <area>0,0,10,640</area>
+            <cornerradius>5</cornerradius> 
+        </shape>
+<!--
+        <shape name="slider" from="base_button_shape_blue">
+            <area>0,0,15,30</area>
+            <cornerradius>5</cornerradius> 
+        </shape>
+-->
+       <imagetype name="slider">
+            <area>0,0,42,41</area>
+            <filename>images/shared/progressbar/scrollbarnub-focus.png</filename>
+            <preserveaspect>no</preserveaspect>
+       </imagetype>
+    </scrollbar>
+
+    <!-- Aeon definition of a horizontal scrollbar -->
+    <scrollbar name="base_horizontal_scrollbar" from="base_vertical_scrollbar">
+        <area>15,1050,1890,15</area>
+        <layout>horizontal</layout>
+        <shape name="slider" from="base_button_shape_blue">
+            <area>0,0,30,15</area>
+        </shape>
+    </scrollbar>
 
 <!-- ===================================================== -->
 <!-- WINDOWS & DIALOGS                                     -->
