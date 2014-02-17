@@ -10,7 +10,7 @@
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamVideoBGD.png</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
         <textarea name="ScreenTitleRecordings" from="screentitle">
@@ -69,21 +69,9 @@
 	        <arrange>fixed</arrange>
 	        <buttonarea>0,0,610,640</buttonarea>
            <showarrow>no</showarrow>
-           <scrollbar name="vertscrollbar">
-	           <area>-57,0,101,640</area>
-		        <layout>vertical</layout>
-		        <hidedelay>0</hidedelay>
-		        <imagetype name="background">
-		            <area>0,0,101,640</area>
-		            <filename>images/shared/progressbar/scrollbarbacklist.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		        </imagetype>
-		        <imagetype name="slider">
-		            <area>33,0,35,35</area>
-		            <filename>images/shared/progressbar/scrollbarnub-focus.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		            <alpha>192</alpha>
-		        </imagetype>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
 	        </scrollbar>
            <statetype name="buttonitem">
                 <state name="active">
@@ -184,24 +172,10 @@
 	        <arrange>fixed</arrange>
 	        <buttonarea>0,0,610,600</buttonarea>
            <showarrow>no</showarrow>
-<!--           
-	        <scrollbar name="vertscrollbar">
-	           <area>-57,0,101,600</area>
-		        <layout>vertical</layout>
-		        <hidedelay>0</hidedelay>
-		        <imagetype name="background">
-		            <area>0,0,101,600</area>
-		            <filename>images/shared/progressbar/scrollbarbacklist.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		        </imagetype>
-		        <imagetype name="slider">
-		            <area>33,0,35,35</area>
-		            <filename>images/shared/progressbar/scrollbarnub-focus.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		            <alpha>192</alpha>
-		        </imagetype>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
 	        </scrollbar>
--->
         </buttonlist>
 
         <!-- ===================================================== -->
@@ -313,21 +287,7 @@
 		        
 	     </group>
 
-        <group name="menu_bgd">      
-           <area>0,0,1280,720</area>
-         
-	        <animation trigger="AboutToShow">
-	            <section duration="4000" centre="middle">
-	                <position start="0,0" end="-378,0" easingcurve="OutQuint" />
-	            </section>
-	        </animation>
-	
-	        <imagetype name="Menu_background_Sub2">
-	            <filename>images/shared/HomeBladeLeft.png</filename>
-	            <area>-436,0,846,720</area>
-	        </imagetype>
-	   
-	     </group>
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 
@@ -682,9 +642,7 @@
     </window>
 
     <window name="editmetadata">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamVideoBGD.png</filename>
-        </imagetype>
+        <area>0,0,988,720</area>
         <imagetype name="backgroundoverlay" from="background_overlay_base" />
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>

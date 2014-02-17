@@ -466,26 +466,40 @@
             <font state="warning">normal_warning</font>
         </textarea>
 
-        <buttonlist name="groups" from="buttonlist_wide">
-            <position>620,260</position>
+        <buttonlist name="groups" from="buttonlist_menu">
+		     <area>670,260,610,460</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,460</buttonarea>
+           <showarrow>no</showarrow>
         </buttonlist>
 
-        <buttonlist name="schedules" from="buttonlist_wide">
-            <position>620,260</position>
+        <buttonlist name="schedules" from="buttonlist_menu_details">
+		     <area>670,260,610,440</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
+	        <buttonarea>0,0,610,440</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="shortstarttimedate" from="textarea_base">
-                        <area>10,0,570,40</area>
+                        <area>10,0,550,40</area>
                         <alpha>255</alpha>
                         <font>normal</font>
                         <alpha>128</alpha>
                         <font state="error">normal_red</font>
                         <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
-                        <template>%title%  -  %timedate%</template>
+                        <template>%shortstarttimedate% | %titlesubtitle%</template>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
-                        <area>600,0,35,40</area>
+                        <area>570,0,35,40</area>
                         <alpha>128</alpha>
                         <font>normal</font>
                         <font state="error">normal_red</font>
@@ -495,15 +509,15 @@
                     </textarea>
                 </state>
                 <state name="selectedactive">
-                    <textarea name="title" from="textarea_base">
-                        <area>10,0,270,40</area>
+                    <textarea name="titlesubtitle" from="textarea_base">
+                        <area>10,0,420,40</area>
                         <alpha>255</alpha>
                         <font state="error">normal_red</font>
                         <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
                     </textarea>
                     <statetype name="status">
-                        <area>290,9,22,22</area>
+                        <area>445,9,22,22</area>
                         <state name="disabled">
                             <imagetype name="statusimage">
                                 <area>0,0,22,22</area>
@@ -547,106 +561,103 @@
                             </imagetype>
                         </state>
                     </statetype>
-                    <textarea name="shortstarttimedate" from="textarea_base">
-                        <area>320,7,320,33</area>
+                    <textarea name="lenmins" from="textarea_base">
+                        <area>475,5,120,35</area>
                         <alpha>255</alpha>
                         <case>normal</case>
                         <font>verysmall</font>
                         <font state="error">verysmall_red</font>
                         <font state="running">verysmall_amber</font>
                         <align>left,vcenter</align>
-                        <template>Input %card%:  %shorttimedate% on %longchannel%</template>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
 
-        <textarea name="title" from="textarea_base">
-            <area>20,260,560,40</area>
-            <font>title</font>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <case>upper</case>
-            <align>left,vcenter</align>
-        </textarea>
+        <group name="recordingdetails">
+           <area>30,260,630,393</area>
+           
+	        <textarea name="title" from="textarea_base">
+	            <area>15,0,600,30</area>
+	            <font>title</font>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	        </textarea>
+	
+	        <textarea name="category" from="textarea_base">
+	            <area>15,30,600,25</area>
+	            <font>title_small</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <alpha>192</alpha>
+	        </textarea>
+           
+           <group name="recordinginfo">
+              <area>0,30,630,122</area>
+	           <imagetype name="MenuItemLine1">
+	               <area>0,0,630,40</area>
+	               <filename>images/shared/MenuItemMusicNF.png</filename>
+	           </imagetype>
+	
+		        <textarea name="airedlbl" from="textarea_base">
+		            <area>60,50,100,25</area>
+		            <font>title_verysmall_blue</font>
+		            <align>left,vcenter</align>
+		            <value>Aired</value>
+		        </textarea>
+		
+		        <textarea name="timedate" from="textarea_base">
+		            <area>160,50,455,25</area>
+		            <font>small</font>
+		            <align>left,vcenter</align>
+		        </textarea>
+		
+		        <textarea name="channellbl" from="airedlbl">
+		            <position>60,77</position>
+		            <value>Channel</value>
+		        </textarea>
+		
+		        <textarea name="longchannel" from="timedate">
+		            <position>160,77</position>
+		            <template>%longchannel% on card %card%</template>
+		        </textarea>
+		
+		        <textarea name="rectypestatuslbl" from="airedlbl">
+		            <position>60,104</position>
+		            <value>Status</value>
+		        </textarea>
+		
+		        <textarea name="rectypestatus" from="timedate">
+		            <position>160,104</position>
+		        </textarea>
+	
+	           <imagetype name="MenuItemLine2" from="MenuItemLine1">
+	               <position>0,97</position>
+	           </imagetype>
+           </group>
 
-        <textarea name="longchannel" from="textarea_base">
-            <area>20,300,560,25</area>
-            <font>title_small</font>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <case>upper</case>
-            <align>left,vcenter</align>
-            <alpha>192</alpha>
-            <template>%longchannel% - %timedate%</template>
-        </textarea>
+	        <textarea name="description" from="textarea_base">
+	            <area>15,180,590,290</area>
+	            <font>small</font>
+	            <case>normal</case>
+	            <align>justify</align>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
+	        </textarea>
+	
+	        <textarea name="norecordings_info" from="description">
+	            <value>You Haven't Scheduled Any Programs To Be Recorded.\n
+	                To schedule a recording, exit this screen and
+	                select 'Program Guide' or 'Program Finder'.</value>
+	        </textarea>
+        </group>
 
-        <textarea name="description" from="textarea_base">
-            <area>20,340,560,235</area>
-            <font>small</font>
-            <case>normal</case>
-            <align>justify</align>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
-        </textarea>
-
-        <textarea name="rectypestatuslbl" from="textarea_base">
-            <area>20,605,250,25</area>
-            <font>title_verysmall_blue</font>
-            <align>left,vcenter</align>
-            <value>Recording Status</value>
-        </textarea>
-
-        <textarea name="rectypestatus" from="textarea_base">
-            <area>190,605,420,25</area>
-            <font>small</font>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <textarea name="recgrouplbl" from="rectypestatuslbl">
-            <position>20,630</position>
-            <value>Recording Group</value>
-        </textarea>
-
-        <textarea name="recgroup" from="rectypestatus">
-            <position>190,630</position>
-        </textarea>
-
-        <textarea name="lenminslbl" from="rectypestatuslbl">
-            <position>20,655</position>
-            <value>Lenght</value>
-        </textarea>
-
-        <textarea name="lenmins" from="rectypestatus">
-            <position>190,655</position>
-        </textarea>
-
-        <textarea name="filterlbl" from="rectypestatuslbl">
-            <position>20,680</position>
-            <value>Filter (1/2)</value>
-        </textarea>
-
-        <textarea name="filter" from="rectypestatus">
-            <position>190,680</position>
-        </textarea>
-
-        <textarea name="norecordings_info" from="description">
-            <value>You Haven't Scheduled Any Programs To Be Recorded.\n
-                To schedule a recording, exit this screen and
-                select 'Program Guide' or 'Program Finder'.</value>
-        </textarea>
-
-<!--        <imagetype name="icon">
-            <area>510,610,100,100</area>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
-
-        <imagetype name="glasoverlay">
-             <area>510,610,100,100</area>
-             <preserveaspect>no</preserveaspect>
-             <filename>images/shared/ButtonMenuGlass.png</filename>
-        </imagetype>-->
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 

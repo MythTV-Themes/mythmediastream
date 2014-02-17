@@ -431,6 +431,21 @@
        <align>left,vcenter</align>
    </textarea>
 
+   <textarea name="textarea_menu">
+       <area>0,0,330,35</area>
+       <imagetype name="backgroundactive">
+          <area>-170,0,510,35</area>
+          <filename>images/shared/MenuItemNF.png</filename>
+       </imagetype>
+       <font>normal</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <scroll direction="horizontal"/>
+       <case>normal</case>
+       <alpha>192</alpha>
+       <align>left,vcenter</align>
+   </textarea>
+
    <!-- The clock -->
    <textarea name="textarea_clock_base">
        <area>10,5,160,40</area> 
@@ -1014,6 +1029,70 @@
 
 
 <!-- ===================================================== -->
+<!-- SCROLLBAR                                             -->
+<!-- ===================================================== -->
+     <scrollbar name="basescrollbarvert">
+         <area>0,20,3%,100%-20</area>
+         <hidedelay>2000</hidedelay>
+         <layout>vertical</layout>
+         <shape name="bar">
+             <type>roundbox</type>
+             <area>0,2,15,-2</area>
+	          <line color="#535353" alpha="100" width="1" />
+	          <cornerradius>8</cornerradius>
+				 <fill style="gradient">
+					 <gradient direction="horizontal">
+						 <stop position="0" color="#535353" alpha="225" />
+						 <stop position="100" color="#000000" alpha="120" />
+					 </gradient>
+				 </fill>
+         </shape>
+         <shape name="slider">
+             <area>0,0,15,1</area>
+             <type>roundbox</type>
+		       <line color="#535353" alpha="100" width="1" />
+             <cornerradius>8</cornerradius>
+				 <fill style="gradient">
+					 <gradient direction="horizontal">
+						 <stop position="0" color="#A1A1A1" alpha="225" />
+						 <stop position="60" color="#105B8F" alpha="120" />
+					 </gradient>
+				 </fill>
+         </shape>
+     </scrollbar>
+
+     <scrollbar name="basescrollbarhorz">
+         <area>0,0,100%-40,8%</area>
+         <hidedelay>2000</hidedelay>
+         <layout>horizontal</layout>
+         <shape name="bar">
+             <area>0,0,-8,15</area>
+	          <line color="#535353" alpha="100" width="1" />
+             <type>roundbox</type>
+	          <cornerradius>8</cornerradius>
+				 <fill style="gradient">
+					 <gradient direction="vertical">
+						 <stop position="0" color="#535353" alpha="225" />
+						 <stop position="100" color="#000000" alpha="120" />
+					 </gradient>
+				 </fill>
+         </shape>
+         <shape name="slider">
+             <area>5,0,20,15</area>
+             <type>roundbox</type>
+		       <line color="#535353" alpha="100" width="1" />
+             <cornerradius>8</cornerradius>
+				 <fill style="gradient">
+					 <gradient direction="vertical">
+						 <stop position="0" color="#A1A1A1" alpha="225" />
+						 <stop position="60" color="#105B8F" alpha="120" />
+					 </gradient>
+				 </fill>
+         </shape>
+     </scrollbar>
+
+
+<!-- ===================================================== -->
 <!--     BUTTONLIST MENU                                   -->
 <!-- ===================================================== -->
    <buttonlist name="buttonlist_popup">
@@ -1163,10 +1242,12 @@
            <!--INACTIVE-->
            <state name="inactive" from="active">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
            <!--SELECTED INACTIVE-->
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
        </statetype>
        <!--ARROWS-->
@@ -1330,10 +1411,12 @@
            <!--INACTIVE-->
            <state name="inactive" from="active">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
            <!--SELECTED INACTIVE-->
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
        </statetype>
        <!--ARROWS-->
@@ -1410,6 +1493,44 @@
            <state name="selectedinactive" from="selectedactive"/>
        </statetype>
    </buttonlist>
+
+   <buttonlist name="buttonlist_videos" from="buttonlist_menu_details">
+      <area>670,60,610,640</area>
+      <scrollstyle>free</scrollstyle>
+      <wrapstyle>items</wrapstyle>
+      <arrange>free</arrange>
+      <buttonarea>0,0,610,640</buttonarea>
+      <showarrow>no</showarrow>
+      <showscrollbar>yes</showscrollbar>
+      <scrollbar name="scrollbar" from="basescrollbarvert">
+          <area>-20,0,3%,100%</area>
+      </scrollbar>
+      <statetype name="buttonitem">
+          <state name="selectedactive">
+              <textarea name="length" from="textarea_base">
+                  <area>475,5,120,35</area>
+                  <font>verysmall</font>
+                  <case>Normal</case>
+                  <align>left,vcenter</align>
+              </textarea>
+              <statetype name="watchedstate">
+                  <state name="yes">
+                      <imagetype name="yes">
+                          <area>445,9,22,22</area>
+                          <filename>images/shared/OverlayWatched.png</filename>
+                      </imagetype>
+                  </state>
+                  <state name="no">
+                      <imagetype name="no">
+                          <area>445,9,22,22</area>
+                          <filename>images/shared/OverlayUnwatched.png</filename>
+                      </imagetype>
+                  </state>
+              </statetype>
+          </state>
+      </statetype>
+   </buttonlist>
+
 
    <buttonlist name="buttonlist_browse">
        <spacing>3</spacing>
@@ -1532,6 +1653,133 @@
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_browse_large">
+       <spacing>0</spacing>
+       <area>0,0,1280,215</area>
+       <searchposition>758,55</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1275,215</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <group name="coverartgroup">
+                  <area>0,0,185,269</area>
+			         <imagetype name="coverartbgd">
+			             <area>0,0,185,269</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_frame.png</filename>
+			         </imagetype>
+		
+			         <imagetype name="buttonimage">
+			             <area>5,5,175,264</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster.png</filename>
+		                <mask>images/shared/list_movieicon_mask_active.png</mask>
+			         </imagetype>
+		
+			         <imagetype name="coverartglass">
+			             <area>5,5,175,264</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+               <statetype name="nodetype">
+                   <area>0,0,110,159</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>80,129,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,110,159</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
+                   <area>5,137,100,20</area>
+                   <alpha>128</alpha>
+                   <case>normal</case>
+                   <align>hcenter,vcenter</align>
+                   <font state="default">tiny</font>
+                   <font state="error">tiny_red</font>
+                   <font state="running">tiny_amber</font>
+               </textarea>	              
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <group name="coverartgroup">
+	               <area>0,-61,185,269</area>
+<!--	               <area>-40,-61,185,269</area> -->
+			         <imagetype name="coverartbgd">
+			             <area>0,0,264,391</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_frame.png</filename>
+			         </imagetype>
+		
+			         <imagetype name="buttonimage">
+			             <area>7,6,252,380</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster.png</filename>
+		                <mask>images/shared/list_movieicon_mask.png</mask>
+			         </imagetype>
+		
+			         <imagetype name="coverartglass">
+			             <area>7,6,252,380</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_glass.png</filename>
+			         </imagetype>
+               </group>
+               <statetype name="nodetype">
+                   <area>-8,0,138,199</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>103,164,30,30</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,138,199</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
+                   <area>-3,179,128,20</area>
+                   <alpha>255</alpha>
+                   <case>normal</case>
+                   <scroll direction="left" />
+                   <align>hcenter,vcenter</align>
+                   <font state="default">tiny</font>
+                   <font state="error">tiny_red</font>
+                   <font state="running">tiny_amber</font>
+               </textarea>	              
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
        </statetype>
    </buttonlist>
@@ -1607,6 +1855,7 @@
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
        </statetype>
    </buttonlist>
@@ -1711,6 +1960,7 @@
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+               <area>0,0,0,0</area>
            </state>
        </statetype>
    </buttonlist>
@@ -2671,11 +2921,11 @@
 <!-- ===================================================== -->
 <!--     BUTTONTREE                                        -->
 <!-- ===================================================== -->
-   <buttontree name="buttontree_menu">
-       <area>0,0,540,440</area>
+   <buttontree name="buttontree_video">
+       <area>670,60,610,640</area>
        <numlists>1</numlists>
        <spacing>0</spacing>
-       <buttonlist name="listtemplate" from="buttonlist_menu"/>
+       <buttonlist name="listtemplate" from="buttonlist_videos"/>
     </buttontree>
 
 <!-- ===================================================== -->
@@ -2895,6 +3145,16 @@
 <!-- ===================================================== -->
 
     <group name="defaultscreenlayoutTVlist_1">
+        <area>0,0,1280,720</area>
+        <imagetype name="BackgroundOverlay" from="image_wallpaper_base">
+            <filename>images/shared/TVFanartOverlay.png</filename>
+            <alpha>240</alpha>
+        </imagetype>
+        <textarea name="clock" from="textarea_clock_base"/>
+	     <imagetype name="TitleBackgroundRecordings" from="titlebackground"/>
+    </group>
+
+    <group name="defaultscreenlayoutTVlist_2">
         <area>0,0,1280,720</area>
         <imagetype name="BackgroundOverlay" from="image_wallpaper_base">
             <filename>images/shared/TVFanartOverlayFull.png</filename>
@@ -3207,6 +3467,62 @@
         </statetype>
     </group>
 
+        <!-- ===================================================== -->
+        <!--   Parental ICONS                                          -->
+        <!-- ===================================================== -->
+    <group name="parentalcontrolgroup">
+        <area>0,0,165,30</area>
+        <imagetype name="allbgd">
+            <area>0,0,30,30</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/icons/ParentalControl/kijkwijzer-AL.png</filename>
+            <alpha>64</alpha>
+        </imagetype>
+        <imagetype name="sixbgd" from="allbgd">
+            <area>45,0,30,30</area>
+            <filename>images/icons/ParentalControl/kijkwijzer-6.png</filename>
+        </imagetype>
+        <imagetype name="tweelvebgd" from="allbgd">
+            <area>90,0,30,30</area>
+            <filename>images/icons/ParentalControl/kijkwijzer-12.png</filename>
+        </imagetype>
+        <imagetype name="sixteenbgd" from="allbgd">
+            <area>135,0,30,30</area>
+            <filename>images/icons/ParentalControl/kijkwijzer-16.png</filename>
+        </imagetype>
+        <statetype name="videolevel">
+            <state name="lowest">
+                <imagetype name="all">
+                    <area>0,0,30,30</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/icons/ParentalControl/kijkwijzer-AL.png</filename>
+                </imagetype>
+            </state>
+            <state name="low">
+                <imagetype name="six">
+                    <area>45,0,30,30</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/icons/ParentalControl/kijkwijzer-6.png</filename>
+                </imagetype>
+            </state>
+            <state name="medium">
+                <imagetype name="tweelve">
+                    <area>90,0,30,30</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/icons/ParentalControl/kijkwijzer-12.png</filename>
+                </imagetype>
+            </state>
+            <state name="high">
+                <imagetype name="sixteen">
+                    <area>135,0,30,30</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/icons/ParentalControl/kijkwijzer-16.png</filename>
+                </imagetype>
+            </state>
+            <state name="none"/>
+        </statetype>
+    </group>
+
     <group name="defaultvideodetails">
         <area>0,0,425,390</area>
         <textarea name="title" from="textarea_base">
@@ -3356,7 +3672,7 @@
     <group name="defaultscreenlayoutSettings_1A_animated" from="defaultscreenlayoutSettings_1">
         <animation trigger="AboutToShow">
             <section duration="1000" centre="middle">
-                <position start="-988,0" end="0,0" easingcurve="InOutBack" reversible="false" />
+                <position start="-814,0" end="0,0" easingcurve="InOutBack" reversible="false" />
             </section>
         </animation>
     </group>
@@ -3364,12 +3680,12 @@
     <group name="defaultscreenlayoutSettings_1B_animated" from="defaultscreenlayoutSettings_1">
         <animation trigger="AboutToShow">
             <section duration="1000" centre="middle">
-                <position start="-988,0" end="0,0" easingcurve="InOutBack" reversible="false" />
+                <position start="-814,0" end="0,0" easingcurve="InOutBack" reversible="false" />
             </section>
         </animation>
         <animation trigger="AboutToHide">
             <section duration="2000" centre="middle">
-                <position start="0,0" end="-988,0" easingcurve="InBack" />
+                <position start="0,0" end="-814,0" easingcurve="InBack" />
             </section>
         </animation>
     </group>
@@ -3377,7 +3693,7 @@
     <group name="defaultscreenlayoutSettings_1C_animated" from="defaultscreenlayoutSettings_1">
         <animation trigger="AboutToHide">
             <section duration="2000" centre="middle">
-                <position start="0,0" end="-988,0" easingcurve="InBack" />
+                <position start="0,0" end="-814,0" easingcurve="InBack" />
             </section>
         </animation>
     </group>
@@ -3427,7 +3743,7 @@
         <animation trigger="AboutToShow">
             <section duration="1000" centre="middle">
                 <alpha start="0" end="255" easingcurve="InExpo" />
-                <position start="-988,0" end="0,0" easingcurve="InOutBack" />
+                <position start="-814,0" end="0,0" easingcurve="InOutBack" />
             </section>
         </animation>
     </group>
@@ -3436,13 +3752,13 @@
         <animation trigger="AboutToShow">
             <section duration="1000" centre="middle">
                 <alpha start="0" end="255" easingcurve="InExpo" />
-                <position start="-988,0" end="0,0" easingcurve="InOutBack" />
+                <position start="-814,0" end="0,0" easingcurve="InOutBack" />
             </section>
         </animation>
         <animation trigger="AboutToHide">
             <section duration="2000" centre="middle">
                 <alpha start="255" end="0" easingcurve="OutExpo" />
-                <position start="0,0" end="-988,0" easingcurve="InBack" />
+                <position start="0,0" end="-814,0" easingcurve="InBack" />
             </section>
         </animation>
     </group>
@@ -3451,7 +3767,7 @@
         <animation trigger="AboutToHide">
             <section duration="2000" centre="middle">
                 <alpha start="255" end="0" easingcurve="OutExpo" />
-                <position start="0,0" end="-988,0" easingcurve="InBack" />
+                <position start="0,0" end="-814,0" easingcurve="InBack" />
             </section>
         </animation>
     </group>
@@ -3487,6 +3803,21 @@
 	              <position start="788,0" end="588,0" easingcurve="InBack" />
 	          </section>
 	      </animation>
+    </group>
+
+    <group name="defaultmenu_bgd">      
+       <area>0,0,1280,720</area>
+     
+       <animation trigger="AboutToShow">
+           <section duration="4000" centre="middle">
+               <position start="0,0" end="-378,0" easingcurve="OutQuint" />
+           </section>
+       </animation>
+       <imagetype name="Menu_background_Sub2">
+           <filename>images/shared/HomeBladeLeft.png</filename>
+           <area>-436,0,846,720</area>
+       </imagetype>
+  
     </group>
 
     <group name="defaultpopuplarge">
@@ -3580,62 +3911,6 @@
             <position>0,340</position>
         </imagetype>
     </group>
-
-<!-- ===================================================== -->
-<!-- SCROLLBAR                                             -->
-<!-- ===================================================== -->
-    <shape name="base_button_shape_active">
-        <area>0,0,100%,100%</area>
-        <type>roundbox</type>
-        <fill color="#535353" alpha="120" />
-        <line color="#535353" alpha="100" width="1" />
-        <cornerradius>8</cornerradius>
-    </shape>
-
-    <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
-        <fill color="#ffffff" alpha="200" />
-        <line color="#ffffff" alpha="180" width="1" />
-    </shape>
-    
-    <shape name="base_button_shape_blue" from="base_button_shape_active">
-        <fill color="#105B8F" alpha="200" />
-        <line color="#105B8F" alpha="180" width="1" />
-    </shape>
-    
-    <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
-        <fill color="#1d1d1d" alpha="100" />
-        <line color="#1d1d1d" alpha="80" width="1" />
-    </shape>
-
-    <scrollbar name="base_vertical_scrollbar">
-        <area>0,0,10,640</area>
-        <layout>vertical</layout>
-        <hidedelay>0</hidedelay>
-        <shape name="background" from="base_button_shape_active">
-            <area>0,0,10,640</area>
-            <cornerradius>5</cornerradius> 
-        </shape>
-<!--
-        <shape name="slider" from="base_button_shape_blue">
-            <area>0,0,15,30</area>
-            <cornerradius>5</cornerradius> 
-        </shape>
--->
-       <imagetype name="slider">
-            <area>0,0,42,41</area>
-            <filename>images/shared/progressbar/scrollbarnub-focus.png</filename>
-            <preserveaspect>no</preserveaspect>
-       </imagetype>
-    </scrollbar>
-
-    <!-- Aeon definition of a horizontal scrollbar -->
-    <scrollbar name="base_horizontal_scrollbar" from="base_vertical_scrollbar">
-        <area>15,1050,1890,15</area>
-        <layout>horizontal</layout>
-        <shape name="slider" from="base_button_shape_blue">
-            <area>0,0,30,15</area>
-        </shape>
-    </scrollbar>
 
 <!-- ===================================================== -->
 <!-- WINDOWS & DIALOGS                                     -->
