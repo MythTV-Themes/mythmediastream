@@ -3,123 +3,6 @@
 <mythuitheme>
 
     <!-- ===================================================== -->
-    <!--     MOVIE SELECTION POPUP                             -->
-    <!-- ===================================================== -->
-    <window name="moviesel">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMovieBGD.png</filename>
-        </imagetype>
-        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
-            <position>0,0</position>
-        </group> 
-
-        <group name="movieselgroup" from="defaultscreencontent_1B_animated">
-           <area>0,0,720,988</area>
-	        <!-- ================================================== -->
-	        <!-- Screen description                                 -->
-	        <!-- ================================================== -->
-	        <textarea name="pagetitledesc" from="textarea_base">
-	            <area>250,10,515,65</area>
-	            <font>menu_description</font>
-	            <case>upper</case>
-	            <align>right,bottom</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Choose which movie or tvserie you look for</value>
-	        </textarea>
-	
-	        <textarea name="title" from="textarea_base">
-	            <area>250,75,515,65</area>
-	            <font>menu_active</font>
-	            <case>upper</case>
-	            <align>right,vcenter</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Movie selector</value>
-	        </textarea>
-	
-	        <!-- ================================================== -->
-	        <!-- screen content                                     -->
-	        <!-- ================================================== -->
-	
-	        <buttonlist name="results" from="filelist_base">
-	            <position>250,175</position>
-	        </buttonlist>
-        </group>
-
-    </window>
-
-    <!-- ===================================================== -->
-    <!--     ARTWORK SELECTION POPUP                           -->
-    <!-- ===================================================== -->
-    <window name="artworksel">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMovieBGD.png</filename>
-        </imagetype>
-        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
-            <position>0,0</position>
-        </group> 
-
-        <group name="artworkselgroup" from="defaultscreencontent_1B_animated">
-           <area>0,0,720,988</area>
-	        <!-- ================================================== -->
-	        <!-- Screen description                                 -->
-	        <!-- ================================================== -->
-	        <textarea name="pagetitledesc" from="textarea_base">
-	            <area>250,10,515,65</area>
-	            <font>menu_description</font>
-	            <case>upper</case>
-	            <align>right,bottom</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Choose which artwork you like most</value>
-	        </textarea>
-	
-	        <textarea name="title" from="textarea_base">
-	            <area>250,75,515,65</area>
-	            <font>menu_active</font>
-	            <case>upper</case>
-	            <align>right,vcenter</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Artwork selector</value>
-	        </textarea>
-	
-	        <!-- ================================================== -->
-	        <!-- screen content                                     -->
-	        <!-- ================================================== -->
-	
-	        <buttonlist name="results" from="filelist_big">
-	            <position>250,175</position>
-	            <statetype name="buttonitem">
-	                <state name="active">
-	                    <textarea name="resolution">
-	                        <area>300,50,200,50</area>
-	                        <font>normal</font>
-	                        <alpha>128</alpha>
-	                        <multiline>no</multiline>
-	                        <cutdown>yes</cutdown>
-	                        <align>left,vcenter</align>
-	                        <value>No res specified</value>
-	                    </textarea>
-	                </state>
-	                <state name="selectedactive">
-	                    <textarea name="resolution">
-	                        <area>300,50,200,50</area>
-	                        <font>normal</font>
-	                        <alpha>255</alpha>
-	                        <multiline>no</multiline>
-	                        <cutdown>yes</cutdown>
-	                        <align>left,vcenter</align>
-	                        <value>No res specified</value>
-	                    </textarea>
-	                </state>
-	            </statetype>
-	        </buttonlist>
-        </group>
-    </window>
-
-    <!-- ===================================================== -->
     <!--     VIDEO MANAGER WINDOW                              -->
     <!-- ===================================================== -->
     <window name="manager">
@@ -1400,10 +1283,7 @@
     </window>
 
     <window name="file_associations">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/video-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1505,10 +1385,7 @@
     </window>
 
     <window name="playersettings">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/video-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1632,10 +1509,7 @@
     </window>
 
     <window name="filter">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMovieBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1803,10 +1677,7 @@
      </window>
 
     <window name="metadatasettings">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/video-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 

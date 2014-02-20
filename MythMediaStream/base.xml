@@ -2634,7 +2634,7 @@
                    <filename>images/shared/MenuItemNF.png</filename>
                </imagetype>
                <imagetype name="buttonimage">
-                   <area>0,0,89,50</area>
+                   <area>0,1,85,48</area>
                    <alpha>128</alpha>
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
@@ -2648,7 +2648,7 @@
                    </state>
                    <state name="upfolder" from="folder">
                        <imagetype name="icon">
-                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <filename>images/shared/DefaultFolderUp.png</filename>
                        </imagetype>
                    </state>
                    <state name="executable" from="folder">
@@ -2681,7 +2681,7 @@
                    <filename>images/shared/MenuItemFO.png</filename>
                </imagetype>
                <imagetype name="buttonimage">
-                   <area>0,0,89,50</area>
+                   <area>0,1,85,48</area>
                    <alpha>255</alpha>
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
@@ -2695,7 +2695,7 @@
                    </state>
                    <state name="upfolder" from="folder">
                        <imagetype name="icon">
-                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <filename>images/shared/DefaultFolderUp.png</filename>
                        </imagetype>
                    </state>
                    <state name="executable" from="folder">
@@ -2754,28 +2754,28 @@
 
    <buttonlist name="filelist_big" from="filelist_base">
        <statetype name="buttonitem">
-           <area>0,0,510,100</area>
            <state name="active">
+               <area>0,0,510,100</area>
                <imagetype name="MenuItemNF">
-                   <area>300,50,200,50</area>
+                   <area>0,50,510,50</area>
                    <filename>images/shared/MenuItemNF.png</filename>
                </imagetype>
                <imagetype name="buttonimage">
-                   <area>0,0,267,150</area>
+                   <area>0,2,171,96</area>
                    <alpha>128</alpha>
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
                <statetype name="nodetype">
                    <state name="folder">
                        <imagetype name="icon">
-                           <area>0,0,267,150</area>
+                           <area>0,2,171,96</area>
                            <preserveaspect>true</preserveaspect>
                            <filename>images/shared/DefaultFolder.png</filename>
                        </imagetype>
                    </state>
                    <state name="upfolder" from="folder">
                        <imagetype name="icon">
-                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <filename>images/shared/DefaultFolderUp.png</filename>
                        </imagetype>
                    </state>
                    <state name="executable" from="folder">
@@ -2790,39 +2790,40 @@
                    </state>
                </statetype>
                <textarea name="buttontext">
-                   <area>300,50,200,50</area>
+                   <area>180,0,320,100</area>
                    <font>normal</font>
                    <alpha>128</alpha>
-                   <multiline>no</multiline>
+                   <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>left,vcenter</align>
                </textarea>
            </state>
            <state name="selectedactive">
+               <area>0,0,510,100</area>
                <imagetype name="MenuItemNF">
-                   <area>3000,50,200,50</area>
+                   <area>0,50,510,50</area>
                    <filename>images/shared/MenuItemNF.png</filename>
                </imagetype>
                <imagetype name="MenuItemFO">
-                   <area>300,50,200,50</area>
+                   <area>180,0,240,100</area>
                    <filename>images/shared/MenuItemFO.png</filename>
                </imagetype>
                <imagetype name="buttonimage">
-                   <area>0,0,267,150</area>
+                   <area>0,2,171,96</area>
                    <alpha>255</alpha>
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
                <statetype name="nodetype">
                    <state name="folder">
                        <imagetype name="icon">
-                           <area>0,0,267,150</area>
+                           <area>0,2,171,96</area>
                            <preserveaspect>true</preserveaspect>
                            <filename>images/shared/DefaultFolder.png</filename>
                        </imagetype>
                    </state>
                    <state name="upfolder" from="folder">
                        <imagetype name="icon">
-                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <filename>images/shared/DefaultFolderUp.png</filename>
                        </imagetype>
                    </state>
                    <state name="executable" from="folder">
@@ -2837,11 +2838,10 @@
                    </state>
                </statetype>
                <textarea name="buttontext">
-                   <area>300,50,200,50</area>
+                   <area>180,0,320,100</area>
                    <font>normal</font>
                    <alpha>255</alpha>
-                   <scroll direction="left" />
-                   <multiline>no</multiline>
+                   <multiline>yes</multiline>
                    <cutdown>no</cutdown>
                    <align>left,vcenter</align>
                </textarea>
@@ -4065,11 +4065,7 @@
    </window>
 
    <window name="MythFileBrowser">
- 	 	 <imagetype name="background" from="image_wallpaper_base">
-	         <filename>images/backgrounds/serverroom.jpg</filename>
-	    </imagetype>
-	    <imagetype name="backgroundoverlay" from="background_overlay_base" />
-	     
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -4100,7 +4096,7 @@
 	            <value>File Manager</value>
 	        </textarea>
 	        
-	        <buttonlist name="filelist" from="filelist_base">
+	        <buttonlist name="filelist" from="filelist_big">
 	            <position>250,175</position>
 	        </buttonlist>
 	
@@ -4142,10 +4138,7 @@
    </window>
 
     <window name="MythSearchDialog">
-	 	 <imagetype name="background" from="image_wallpaper_base">
-	         <filename>images/backgrounds/network.jpg</filename>
-	    </imagetype>
-	    <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -4323,55 +4316,122 @@
     </window>
 
     <window name="MythMetadataResults">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMovieBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
-        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
-            <position>0,0</position>
-        </group> 
-
-        <group name="mythmetadataresultsgroup" from="defaultscreencontent_1B_animated">
-           <area>0,0,720,988</area>
-	        <!-- ================================================== -->
-	        <!-- Screen description                                 -->
-	        <!-- ================================================== -->
-	        <textarea name="pagetitledesc" from="textarea_base">
-	            <area>250,10,515,65</area>
-	            <font>menu_description</font>
-	            <case>upper</case>
-	            <align>right,bottom</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Choose which movie or tvserie you look for</value>
-	        </textarea>
-	
-	        <textarea name="title" from="textarea_base">
-	            <area>250,75,515,65</area>
-	            <font>menu_active</font>
-	            <case>upper</case>
-	            <align>right,vcenter</align>
-	            <cutdown>yes</cutdown>
-	            <multiline>yes</multiline>
-	            <value>Movie selector</value>
-	        </textarea>
-	
-	        <!-- ================================================== -->
-	        <!-- screen content                                     -->
-	        <!-- ================================================== -->
-	
-	        <buttonlist name="results" from="filelist_base">
-	            <position>250,175</position>
-	        </buttonlist>
-        </group>
+        <animation trigger="AboutToHide">
+            <section duration="500" centre="middle">
+                <position start="974,0" end="1280,0" easingcurve="InBack" />
+            </section>
+        </animation>
+       <imagetype name="popup_background">
+           <area>974,0,308,720</area>	
+           <filename>images/shared/HomeBladeSubRight.png</filename>
+       </imagetype>
+       <textarea name="label">
+           <area>990,20,290,80</area>
+           <font>title_small</font>
+           <case>upper</case>
+           <multiline>yes</multiline>
+           <align>left,bottom</align>
+           <cutdown>yes</cutdown>
+           <value>Choose which movie or tvserie you look for</value>
+       </textarea>
+       <buttonlist name="results">
+		       <spacing>0</spacing>
+		       <area>980,105,290,612</area>
+		       <searchposition>758,55</searchposition>
+		       <layout>vertical</layout>
+		       <scrollstyle>free</scrollstyle>
+		       <arrange>stack</arrange>
+		       <align>hcenter</align>
+		       <wrapstyle>items</wrapstyle>
+		       <showarrow>no</showarrow>
+		       <buttonarea>0,0,290,612</buttonarea>
+		       <showscrollbar>yes</showscrollbar>
+		       <scrollbar name="scrollbar" from="basescrollbarvert">
+		           <area>10,20,3%,100%-20</area>
+		       </scrollbar>	
+		       <statetype name="buttonitem">
+		           <state name="active">
+	               <area>0,0,175,306</area>
+	               <group name="coverartgroup">
+	                  <area>57,0,175,264</area>
+				         <imagetype name="coverartbgd">
+				             <area>-5,-5,185,268</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/list_movieicon_frame.png</filename>
+				         </imagetype>	
+				         <imagetype name="buttonimage">
+				             <area>0,0,175,264</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/amt-blank-poster.png</filename>
+			                <mask>images/shared/list_movieicon_mask_active.png</mask>
+			                <alpha>192</alpha>
+				         </imagetype>		
+				         <imagetype name="coverartglass">
+				             <area>0,0,175,264</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/list_movieicon_glass.png</filename>
+				         </imagetype>
+			         </group>
+	               <imagetype name="MenuItemNF">
+	                   <area>0,265,300,40</area>
+	                   <filename>images/shared/MenuItemNF.png</filename>
+	               </imagetype>
+	               <textarea name="buttontext" from="textarea_base">
+	                   <area>10,265,270,40</area>
+	                   <alpha>128</alpha>
+	                   <case>upper</case>
+	                   <align>hcenter,vcenter</align>
+	                   <cutdown>yes</cutdown>
+	               </textarea>	              
+	           </state>
+	           <state name="inactive" from ="active"/>
+	           <state name="selectedactive">
+	               <area>0,0,175,306</area>
+	               <group name="coverartgroup">
+	                  <area>57,0,175,264</area>
+				         <imagetype name="coverartbgd">
+				             <area>-5,-5,185,268</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/list_movieicon_frame.png</filename>
+				         </imagetype>	
+				         <imagetype name="buttonimage">
+				             <area>0,0,175,264</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/amt-blank-poster.png</filename>
+			                <mask>images/shared/list_movieicon_mask_active.png</mask>
+			                <alpha>255</alpha>
+				         </imagetype>		
+				         <imagetype name="coverartglass">
+				             <area>0,0,175,263</area>
+				             <preserveaspect>no</preserveaspect>
+			                <filename>images/shared/list_movieicon_glass.png</filename>
+				         </imagetype>
+			         </group>
+	               <imagetype name="MenuItemNF">
+	                   <area>0,265,300,40</area>
+	                   <filename>images/shared/MenuItemNF.png</filename>
+	               </imagetype>
+	               <imagetype name="MenuItemFO">
+	                   <area>0,265,300,40</area>
+	                   <filename>images/shared/MenuItemFO.png</filename>
+	               </imagetype>
+	               <textarea name="buttontext" from="textarea_base">
+	                   <area>10,265,270,40</area>
+	                   <alpha>255</alpha>
+	                   <case>upper</case>
+	                   <align>hcenter,vcenter</align>
+	                   <cutdown>no</cutdown>
+	                   <scroll direction="horizontal"/>
+	               </textarea>	              
+	           </state>
+	           <state name="selectedinactive" from="selectedactive"/>
+	       </statetype>
+        </buttonlist>
     </window>
 
+
     <window name="MythArtworkResults">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMovieBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
