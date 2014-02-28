@@ -1,5 +1,5 @@
 <themeinfo>
-    <name>MythMediaStream</name>
+    <name>MythMediaStream Redux</name>
 
     <aspect>16:9</aspect>
 
@@ -7,6 +7,7 @@
         <name>Ted Verhagen</name>
         <email>ted.verhagen@gmail.com</email>
     </author>
+    
     <types>
         <type>UI</type>
         <type>OSD</type>
@@ -17,7 +18,7 @@
 
     <version>
         <major>27</major>
-        <minor>2</minor>
+        <minor>3</minor>
     </version>
 
     <detail>

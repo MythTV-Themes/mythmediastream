@@ -643,7 +643,9 @@
 
     <window name="editmetadata">
         <area>0,0,988,720</area>
+<!--
         <imagetype name="backgroundoverlay" from="background_overlay_base" />
+-->
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
