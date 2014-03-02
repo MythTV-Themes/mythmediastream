@@ -336,7 +336,8 @@
 					 <fill style="gradient">
 						 <gradient direction="vertical">
 							 <stop position="0" color="#A1A1A1" alpha="225" />
-							 <stop position="60" color="#105B8F" alpha="120" />
+<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
+							 <stop position="60" color="#FFFFFF" alpha="225" />
 						 </gradient>
 					 </fill>
 	         </shape>
@@ -1433,7 +1434,8 @@
 					 <fill style="gradient">
 						 <gradient direction="vertical">
 							 <stop position="0" color="#A1A1A1" alpha="225" />
-							 <stop position="60" color="#105B8F" alpha="120" />
+<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
+							 <stop position="60" color="#FFFFFF" alpha="225" />
 						 </gradient>
 					 </fill>
 	         </shape>

@@ -38,7 +38,8 @@
         <!--     PROGRAM DETAILS                                   -->
         <!-- ===================================================== -->
         <group name="coverartgroup" depends="description">
-           <area>30,175,264,391</area>
+<!--           <area>30,175,264,391</area> -->
+           <area>370,175,264,391</area>
            
 	        <imagetype name="coverartbgd">
 	            <area>0,0,264,391</area>
@@ -95,7 +96,7 @@
            </imagetype>
 	
 	        <textarea name="description" from="textarea_base">
-	            <area>285,105,315,390</area>
+	            <area>10,105,315,390</area>
 	            <font>small</font>
 	            <case>normal</case>
 	            <align>justify</align>
