@@ -5,11 +5,12 @@
     <!-- moving track statetype -->
     <statetype name="basemovingtracksstate">
         <position>0,0</position>
-        <state name="off"></state>
+        <state name="off"/>
         <state name="on">
             <imagetype name="statusimage">
-                <area>0,0,16,32</area>
+                <area>0,0,16,31</area>
                 <filename>images/shared/ArrowUpDownFO.png</filename>
+                <preserveaspect>no</preserveaspect>
             </imagetype>
         </state>
     </statetype>
@@ -151,19 +152,35 @@
 
     <!-- playlist progress bar  -->
     <progressbar name="baseplaylistprogress">
-        <position>0,0</position>
+        <area>0,0,350,10</area>
         <layout>horizontal</layout>
         <style>reveal</style>
-           <imagetype name="background">
-               <area>0,0,350,10</area>
-               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
-           <imagetype name="progressimage">
-               <area>0,0,350,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
+	         <shape name="bar">
+	             <type>background</type>
+	             <area>0,0,100%,100%</area>
+	             <type>roundbox</type>
+		          <line color="#535353" alpha="100" width="1" />
+		          <cornerradius>8</cornerradius>
+					 <fill style="gradient">
+						 <gradient direction="vertical">
+							 <stop position="0" color="#535353" alpha="225" />
+							 <stop position="100" color="#000000" alpha="120" />
+						 </gradient>
+					 </fill>
+	         </shape>
+	         <shape name="progressimage">
+	             <area>0,0,100%,100%</area>
+	             <type>roundbox</type>
+			       <line color="#535353" alpha="100" width="1" />
+	             <cornerradius>8</cornerradius>
+					 <fill style="gradient">
+						 <gradient direction="vertical">
+							 <stop position="0" color="#A1A1A1" alpha="225" />
+	<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
+							 <stop position="60" color="#FFFFFF" alpha="225" />
+						 </gradient>
+					 </fill>
+	         </shape>
     </progressbar>
 
     <!-- track progress bar -->
@@ -522,7 +539,7 @@
     </group>
     
     <group name="basestatusicons">
-        <area>0,0,350,50</area>
+        <area>0,0,150,50</area>
         <statetype name="mutestate" from="basemutestate">
             <position>0,0</position>
         </statetype>
@@ -532,9 +549,6 @@
         <statetype name="shufflestate" from="baseshufflestate">
             <position>100,0</position>
         </statetype>
-        <statetype name="movingtracksstate" from="basemovingtracksstate">
-		      <position>167,9</position>
-		  </statetype>
     </group>
 
     <group name="baseinfopanel">
@@ -616,7 +630,25 @@
 
     </group>
 
-    <group name="baseinfostreampanel">
+    <group name="basetrackinfo">
+        <area>0,0,150,110</area>
+        <textarea name="time" from="textarea_base">
+            <area>0,7,150,25</area>
+            <font>tiny</font>
+            <align>allcenter</align>
+            <template>T: %time%</template>
+        </textarea>
+
+        <progressbar name="progress" from="baseplaylistprogress">
+            <area>0,30,150,10</area>
+        </progressbar>
+
+        <group name="statusicons" from="basestatusicons">
+            <position>0,50</position>
+        </group>
+    </group> 
+
+   <group name="baseinfostreampanel">
         <area>0,0,360,300</area>
 
          <textarea name="infolbl" from="textarea_base" depends="title">
@@ -700,16 +732,18 @@
     </group>
 
     <group name="baseplayliststatusgroup">
-        <area>0,0,360,110</area>
+        <area>0,0,350,110</area>
 
         <textarea name="playlisttime" from="textarea_base">
-            <area>0,0,350,30</area>
-            <font>small</font>
+            <area>0,7,350,25</area>
+            <font>tiny</font>
+            <case>normal</case>
             <align>allcenter</align>
+            <template>Playlist: %playlisttime%</template>
         </textarea>
 
         <progressbar name="playlistprogress" from="baseplaylistprogress">
-            <position>0,30</position>
+            <area>0,30,350,10</area>
         </progressbar>
 
         <group name="musiccontrols" from="basemusiccontrols">
@@ -719,16 +753,18 @@
     </group>
 
     <group name="basestreamliststatusgroup">
-        <area>0,0,360,110</area>
+        <area>0,0,350,110</area>
 
         <textarea name="bufferstatus" from="textarea_base">
-            <area>0,0,350,30</area>
-            <font>small</font>
+            <area>0,7,350,25</area>
+            <font>tiny</font>
+            <case>normal</case>
             <align>allcenter</align>
+            <template>Buffer: %bufferstatus%</template>
         </textarea>
 
         <progressbar name="bufferprogress" from="baseplaylistprogress">
-            <position>0,30</position>
+            <area>0,30,350,10</area>
         </progressbar>
 
         <group name="musiccontrols" from="basemusiccontrols">

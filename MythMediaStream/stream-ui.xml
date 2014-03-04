@@ -4,6 +4,199 @@
 <mythuitheme>
 
     <window name="streamview"  include="music-base.xml">
+        <imagetype name="fanart" from="image_wallpaper_base">
+            <filename>images/backgrounds/radio-stream-bg.jpg</filename>
+        </imagetype>
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
+            <position>0,0</position>        
+        </group>
+        <textarea name="ScreenTitleMusicPlayer" from="screentitle">
+            <value>RADIO STREAM PLAYER</value>
+        </textarea>
+        <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+        <textarea name="ScreenTitleMusicPlayerCurrentView" from="screentitle">
+            <area>410,8,280,45</area>
+            <alpha>255</alpha>
+            <value>Current Streamlist</value>
+        </textarea>
+        <imagetype name="MediaCountBackground" depends="playlistposition">
+            <area>1110,8,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
+        <statetype name="movingtracksstate" from="basemovingtracksstate">
+            <position>1248,11</position>
+        </statetype>
+        <textarea name="playlistposition" from="textarea_base">
+            <area>1112,8,146,40</area>
+            <font>normal</font>
+            <case>lower</case>
+            <align>allcenter</align>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+        </textarea>
+
+        <!-- ===================================================== -->
+        <!--     MUSIC LIST                                        -->
+        <!-- ===================================================== -->
+
+        <buttonlist name="streamlist" from="buttonlist_menu_details">
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
+           <statetype name="buttonitem">
+                <state name="active">
+		              <textarea name="station" from="textarea_base">
+                        <area>10,0,580,40</area>
+                        <alpha>128</alpha>
+                        <font state="error">normal_red</font>
+                        <font state="running">normal_amber</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                        <template>%STATION| - %%CHANNEL%</template>
+                    </textarea>
+		          </state>
+                <state name="selectedactive">
+                    <textarea name="station" from="textarea_base">
+                        <area>10,0,420,40</area>
+                        <scroll direction="left" />
+                        <font state="error">normal_red</font>
+                        <font state="running">normal_amber</font>
+                        <align>left,vcenter</align>
+                        <template>%STATION| - %%CHANNEL%</template>
+                    </textarea>
+                    <textarea name="genre" from="textarea_base">
+                        <area>450,5,150,35</area>
+                        <font>verysmall</font>
+                        <font state="error">verysmall_red</font>
+                        <font state="running">verysmall_amber</font>
+                        <cutdown>yes</cutdown>
+                        <case>Normal</case>
+                        <align>left,vcenter</align>
+                        <template>%genre%</template>
+                    </textarea>
+		          </state>
+		          <state name="inactive" from="active">
+		              <alpha>128</alpha>
+		          </state>
+		          <state name="selectedinactive" from="selectedactive">
+		              <alpha>128</alpha>
+		          </state>
+            </statetype>
+        </buttonlist>
+
+        <group name="preview_details">
+           <area>100,25,490,590</area>
+           		
+	        <imagetype name="coverart">
+	            <area>15,26,460,460</area>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+
+	        <imagetype name="previewframe">
+	            <area>0,0,489,511</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/tvseries_focusframe.png</filename>
+	        </imagetype>
+	        
+        </group>	
+
+        <group name="info_details">
+           <area>30,512,630,110</area>
+	        <group name="streamliststatusgroup" from="basestreamliststatusgroup">
+	            <area>0,0,350,110</area>
+	        </group>
+	        
+	        <video name="visualizer">
+	            <area>365,25,70,70,</area>
+	        </video>	
+	        
+	        <group name="trackstatusgroup" from="basetrackinfo">
+	            <area>447,0,150,110</area>
+	        </group>
+        </group>
+
+        <group name="track_details">
+           <area>30,620,630,85</area>
+
+     		  <textarea name="nowplayinglbl" from="textarea_base">
+	            <area>0,10,110,25</area>
+	            <font>title_verysmall_blue</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <alpha>255</alpha>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <value>Now Playing</value>
+	        </textarea>
+
+
+	        <textarea name="lastlbl" from="nowplayinglbl">
+	            <position>0,37</position>
+	            <value>Last Played</value>
+	        </textarea>
+
+	        <buttonlist name="playedtrackslist">
+			       <area>120,8,500,81</area>
+			       <searchposition>758,55</searchposition>
+			       <align>top,hcenter</align>
+			       <layout>vertical</layout>
+			       <wrapstyle>selection</wrapstyle>
+			       <arrange>stack</arrange>
+			       <showarrow>no</showarrow>
+			       <buttonarea>0,0,500,81</buttonarea>
+			       <statetype name="buttonitem">
+			           <!--ACTIVE-->
+			           <state name="active">
+			               <area>0,0,500,27</area>
+			               <textarea name="title" from="textarea_base">
+			                   <area>0,2,500,25</area>
+			                   <case>normal</case>
+			                   <cutdown>yes</cutdown>
+			                   <alpha>255</alpha>
+			                   <template>%title| - %%artist%</template>
+			               </textarea>
+			           </state>
+			           <state name="selectedactive">
+			               <area>0,0,500,27</area>
+			               <textarea name="title" from="textarea_base">
+			                   <area>0,2,500,25</area>
+			                   <case>normal</case>
+			                   <cutdown>yes</cutdown>
+			                   <alpha>128</alpha>
+			                   <template>%title| - %%artist%</template>
+			               </textarea>
+			           </state>
+			           <state name="inactive" from="active"/>
+			           <state name="selectedinactive" from="active"/>
+			       </statetype>
+			  </buttonlist>
+<!--	
+	        <textarea name="genre" from="title">
+	            <position>120,37</position>
+	            <template>%genre%%, |year% </template>
+	        </textarea>
+	
+	        <textarea name="lastplayed" from="title">
+	            <area>120,64,335,25</area>
+	            <template>%lastplayed% (played: %playcount% times)</template>
+	        </textarea>
+
+	       <statetype name="ratingstate" from="rating_base">
+	            <position>465,58</position>
+	        </statetype>
+-->
+        </group>
+
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
+<!--
          <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/radio-stream-bg.jpg</filename>
         </imagetype>
@@ -21,10 +214,6 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
         </textarea>
-
-        <!-- ===================================================== -->
-        <!--     STREAM LIST                                       -->
-        <!-- ===================================================== -->
 
         <textarea name="nostreams" from="textarea_base">
             <area>345,270,355,60</area>
@@ -55,7 +244,7 @@
        <group name="streamlistvisualizergroup" from="baseplaylistvisualizergroup">
             <position>25,600</position>
        </group>
-
+-->
     </window>
 
     <window name="editstreammetadata">

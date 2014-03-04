@@ -4,10 +4,8 @@
 <mythuitheme>
 
     <window name="albumart_browser">
+        <area>0,0,988,720</area>
 
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
         <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
             <position>0,0</position>        
         </group>
@@ -137,14 +135,28 @@
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleVideoManager" from="screentitle">
-            <value>Playlist View</value>
+        <textarea name="ScreenTitleMusicPlayer" from="screentitle">
+            <value>MUSIC PLAYER</value>
         </textarea>
+        <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+        <textarea name="ScreenTitleMusicPlayerCurrentView" from="screentitle">
+            <area>410,8,280,45</area>
+            <alpha>255</alpha>
+            <value>Current Playlist</value>
+        </textarea>
+        <imagetype name="MediaCountBackground" depends="playlistposition">
+            <area>1110,8,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
+        <statetype name="movingtracksstate" from="basemovingtracksstate">
+            <position>1248,11</position>
+        </statetype>
         <textarea name="playlistposition" from="textarea_base">
-            <area>1112,5,146,40</area>
+            <area>1112,8,146,40</area>
             <font>normal</font>
             <case>lower</case>
             <align>allcenter</align>
@@ -156,35 +168,140 @@
         <!--     MUSIC LIST                                        -->
         <!-- ===================================================== -->
 
-        <buttonlist name="currentplaylist" from="basecurrentplaylist">
-            <position>740,260</position>
+        <buttonlist name="currentplaylist" from="buttonlist_menu_details">
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
+           <statetype name="buttonitem">
+                <state name="active">
+		              <textarea name="title" from="textarea_base">
+                        <area>10,0,580,40</area>
+                        <alpha>128</alpha>
+                        <font state="error">normal_red</font>
+                        <font state="running">normal_amber</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                        <template>%artist| - %%title%</template>
+                    </textarea>
+		          </state>
+                <state name="selectedactive">
+                    <textarea name="title" from="textarea_base">
+                        <area>10,0,420,40</area>
+                        <scroll direction="left" />
+                        <font state="error">normal_red</font>
+                        <font state="running">normal_amber</font>
+                        <align>left,vcenter</align>
+                        <template>%artist| - %%title%</template>
+                    </textarea>
+                    <textarea name="length" from="textarea_base">
+                        <area>450,5,130,35</area>
+                        <font>verysmall</font>
+                        <font state="error">verysmall_red</font>
+                        <font state="running">verysmall_amber</font>
+                        <case>Normal</case>
+                        <align>left,vcenter</align>
+                        <template>%length% minutes</template>
+                    </textarea>
+		          </state>
+		          <state name="inactive" from="active">
+		              <alpha>128</alpha>
+		          </state>
+		          <state name="selectedinactive" from="selectedactive">
+		              <alpha>128</alpha>
+		          </state>
+            </statetype>
         </buttonlist>
 
-        <imagetype name="coverart">
-            <area>25,260,275,275</area>
-            <filename>images/shared/DefaultNetwork.png</filename>
-            <reflection shear="0" scale="65" length="15"/>
-        </imagetype>
-        
-        <textarea name="notracks" from="textarea_base">
-            <area>345,270,355,60</area>
-            <multiline>yes</multiline>
-            <font>small</font>
-            <case>Normal</case>
-            <value>You haven't selected any tracks to play</value>
-        </textarea>
+        <group name="preview_details">
+           <area>100,25,490,590</area>
+           		
+	        <imagetype name="coverart">
+	            <area>15,26,460,460</area>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
 
-        <group name="infopanel" from="baseinfopanel">
-            <position>345,260</position>>
+	        <imagetype name="previewframe">
+	            <area>0,0,489,511</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/tvseries_focusframe.png</filename>
+	        </imagetype>
+	        
+        </group>	
+
+        <group name="info_details">
+           <area>30,512,630,110</area>
+	        <group name="playliststatusgroup" from="baseplayliststatusgroup">
+	            <area>0,0,350,110</area>
+	        </group>
+	        
+	        <video name="visualizer">
+	            <area>365,25,70,70,</area>
+	        </video>	
+	        
+	        <group name="trackstatusgroup" from="basetrackinfo">
+	            <area>447,0,150,110</area>
+	        </group>
         </group>
 
-       <group name="playliststatusgroup" from="baseplayliststatusgroup">
-            <position>345,610</position>
-       </group>
+        <group name="track_details">
+           <area>30,620,630,85</area>
 
-       <group name="streamlistvisualizergroup" from="baseplaylistvisualizergroup">
-            <position>25,600</position>
-       </group>
+     		  <textarea name="nowplayinglbl" from="textarea_base">
+	            <area>0,10,110,25</area>
+	            <font>title_verysmall_blue</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <alpha>255</alpha>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <value>Now Playing</value>
+	        </textarea>
+
+	        <textarea name="genrelbl" from="nowplayinglbl">
+	            <position>0,37</position>
+	            <value>Genre</value>
+	        </textarea>
+
+	        <textarea name="lastlbl" from="nowplayinglbl">
+	            <position>0,64</position>
+	            <value>Last Played</value>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_base">
+	            <area>120,10,500,25</area>
+	            <font>normal</font>
+	            <case>normal</case>
+	            <multiline>no</multiline>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	            <alpha>255</alpha>
+	            <template>%title%% - |artist%% - |album%</template>
+	        </textarea>
+
+	        <textarea name="genre" from="title">
+	            <position>120,37</position>
+	            <template>%genre%%, |year% </template>
+	        </textarea>
+	
+	        <textarea name="lastplayed" from="title">
+	            <area>120,64,335,25</area>
+	            <template>%lastplayed% (played: %playcount% times)</template>
+	        </textarea>
+
+	       <statetype name="ratingstate" from="rating_base">
+	            <position>465,58</position>
+	        </statetype>
+
+        </group>
+
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 
@@ -295,10 +412,7 @@
     </window>
 
     <window name="searchview">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
