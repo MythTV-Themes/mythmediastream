@@ -36,10 +36,6 @@
             <cutdown>no</cutdown>
         </textarea>
 
-        <!-- ===================================================== -->
-        <!--     MUSIC LIST                                        -->
-        <!-- ===================================================== -->
-
         <buttonlist name="streamlist" from="buttonlist_menu_details">
 		     <area>670,60,610,640</area>
 		     <scrollstyle>free</scrollstyle>
@@ -95,11 +91,10 @@
         <group name="preview_details">
            <area>100,25,490,590</area>
            		
-	        <imagetype name="coverart">
+	        <video name="visualizer">
 	            <area>15,26,460,460</area>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
+	        </video>	
+	        
 	        <imagetype name="previewframe">
 	            <area>0,0,489,511</area>
 	            <preserveaspect>no</preserveaspect>
@@ -109,17 +104,13 @@
         </group>	
 
         <group name="info_details">
-           <area>30,512,630,110</area>
+           <area>90,512,630,110</area>
 	        <group name="streamliststatusgroup" from="basestreamliststatusgroup">
 	            <area>0,0,350,110</area>
 	        </group>
 	        
-	        <video name="visualizer">
-	            <area>365,25,70,70,</area>
-	        </video>	
-	        
 	        <group name="trackstatusgroup" from="basetrackinfo">
-	            <area>447,0,150,110</area>
+	            <area>350,0,150,110</area>
 	        </group>
         </group>
 
@@ -178,81 +169,15 @@
 			           <state name="selectedinactive" from="active"/>
 			       </statetype>
 			  </buttonlist>
-<!--	
-	        <textarea name="genre" from="title">
-	            <position>120,37</position>
-	            <template>%genre%%, |year% </template>
-	        </textarea>
-	
-	        <textarea name="lastplayed" from="title">
-	            <area>120,64,335,25</area>
-	            <template>%lastplayed% (played: %playcount% times)</template>
-	        </textarea>
 
-	       <statetype name="ratingstate" from="rating_base">
-	            <position>465,58</position>
-	        </statetype>
--->
         </group>
 
         <group name="menu_bgd" from="defaultmenu_bgd"/>      
-<!--
-         <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/radio-stream-bg.jpg</filename>
-        </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
-            <position>0,0</position>        
-        </group>
-        <textarea name="ScreenTitleVideoManager" from="screentitle">
-            <value>Streamlist View</value>
-        </textarea>
-        <textarea name="playlistposition" from="textarea_base">
-            <area>1112,5,146,40</area>
-            <font>normal</font>
-            <case>lower</case>
-            <align>allcenter</align>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-        </textarea>
 
-        <textarea name="nostreams" from="textarea_base">
-            <area>345,270,355,60</area>
-            <multiline>yes</multiline>
-            <font>small</font>
-            <case>Normal</case>
-            <value>Press MENU to add some radio streams to play.</value>
-        </textarea>
-
-        <buttonlist name="streamlist" from="basecurrentstreamlist">
-            <position>740,260</position>
-        </buttonlist>
-
-        <imagetype name="coverart">
-            <area>25,260,275,275</area>
-            <filename>images/shared/DefaultNetwork.png</filename>
-            <reflection shear="0" scale="65" length="15"/>
-        </imagetype>
-
-        <group name="infostreampanel" from="baseinfostreampanel">
-            <position>345,260</position>>
-        </group>
-
-       <group name="streamliststatusgroup" from="basestreamliststatusgroup">
-            <position>345,610</position>
-       </group>
-
-       <group name="streamlistvisualizergroup" from="baseplaylistvisualizergroup">
-            <position>25,600</position>
-       </group>
--->
     </window>
 
     <window name="editstreammetadata">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -389,11 +314,7 @@
     </window>
 
     <window name="searchstream">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1A_animated">
             <position>0,0</position>
         </group> 
@@ -537,75 +458,6 @@
 	        </buttonlist>
 	 
         </group>
-
-
-        <!-- widgets -->
-<!--
-        <buttonlist name="streamlist" from="basebuttonlist2">
-            <area>30,225,1220,480</area>
-            <spacing>0</spacing>
-            <layout>vertical</layout>
-            <arrange>stack</arrange>
-            <showarrow>no</showarrow>
-            <searchposition>-1,50</searchposition>
-            <buttonarea>0,0,1220,480</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100%,46</area>
-                    <imagetype name="buttonimage">
-                        <area>5,5,36,36</area>
-                        <filename>mm_icecast.png</filename>
-                    </imagetype>
-
-                    <statetype name="selectedstate">
-                        <position>1185,10</position>
-                        <state name="off"></state>
-                        <state name="on">
-                            <imagetype name="statusimage">
-                                <filename>playlist_yes.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <textarea name="station" from="buttontext">
-                        <area>50,0,600,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                        <template>%STATION% - %Channel%</template>
-                    </textarea>
-
-                    <textarea name="genre" from="buttontext">
-                        <area>660,0,550,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonimage">
-                        <area>5,5,36,36</area>
-                        <filename>mm_icecast.png</filename>
-                    </imagetype>
-                    <shape name="selectbar">
-                        <area>0,0,1220,46</area>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="selectbar">
-                        <area>0,0,1220,46</area>
-                    </shape>
-                </state>
-            </statetype>
-
-            <statetype name="upscrollarrow">
-                <position>1160,465</position>
-            </statetype>
-
-            <statetype name="downscrollarrow">
-                <position>1190,465</position>
-            </statetype>
-        </buttonlist>
--->
 
     </window>
 

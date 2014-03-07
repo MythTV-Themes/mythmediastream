@@ -1027,6 +1027,182 @@
         </statetype>
     </button>
 
+<!-- ====================================================== -->
+<!--     STATETYPES                                         -->
+<!-- ====================================================== -->
+    <!-- repeat statetype -->
+    <statetype name="baserepeatstate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDRepeatNF" >
+                <filename>images/shared/OSDRepeatNF.png</filename>
+            </imagetype>
+        </state>
+        <state name="track">
+            <imagetype name="OSDRepeatOneFO" >
+                <filename>images/shared/OSDRepeatOneFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="all">
+            <imagetype name="OSDRepeatAllFO" >
+                <filename>images/shared/OSDRepeatAllFO.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- shuffle statetype -->
+    <statetype name="baseshufflestate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDRandomOffNF" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffNF.png</filename>
+            </imagetype>
+        </state>
+        <state name="random">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="intelligent">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>smart</value>
+            </textarea>
+        </state>
+        <state name="album">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>album</value>
+            </textarea>
+        </state>
+        <state name="artist">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>artist</value>
+            </textarea>
+        </state>
+    </statetype>
+
+    <!-- mute statetype -->
+    <statetype name="basemutestate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDAudioFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDAudioFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="on">
+            <imagetype name="OSDAudioNF" >
+                <position>0,0</position>
+                <filename>images/shared/OSDAudioNF.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- moving track statetype -->
+    <statetype name="basemovingtracksstate">
+        <position>0,0</position>
+        <state name="off"/>
+        <state name="on">
+            <imagetype name="statusimage">
+                <area>0,0,16,31</area>
+                <filename>images/shared/ArrowUpDownFO.png</filename>
+                <preserveaspect>no</preserveaspect>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- star rating statetype -->
+    <statetype name="rating_base">
+        <area>0,0,80,20</area>
+        <showempty>yes</showempty>
+        <state name="0">
+            <imagetype name="0">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating0.png</filename>
+            </imagetype>
+        </state>
+        <state name="1">
+            <imagetype name="1">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="2">
+            <imagetype name="2">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="3">
+            <imagetype name="3">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="4">
+            <imagetype name="4">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="5">
+            <imagetype name="5">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="6">
+            <imagetype name="6">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="7">
+            <imagetype name="7">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="8">
+            <imagetype name="8">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="9">
+            <imagetype name="9">
+                <area>,0,80,20</area>
+                <filename>images/shared/rating/songrating5.png</filename>
+            </imagetype>
+        </state>
+        <state name="10" from="9" />
+    </statetype>
+
 
 <!-- ===================================================== -->
 <!-- SCROLLBAR                                             -->
@@ -1093,6 +1269,72 @@
          </shape>
      </scrollbar>
 
+<!-- ===================================================== -->
+<!-- PROGRESSBAR                                            -->
+<!-- ===================================================== -->
+   <progressbar name="progressbar_base">
+      <area>0,0,350,10</area>
+      <layout>horizontal</layout>
+      <style>reveal</style>
+      <shape name="bar">
+          <type>background</type>
+          <area>0,0,100%,100%</area>
+          <type>box</type>
+          <line color="#535353" alpha="100" width="1" />
+          <cornerradius>8</cornerradius>
+			 <fill style="gradient">
+				 <gradient direction="vertical">
+					 <stop position="0" color="#535353" alpha="225" />
+					 <stop position="100" color="#000000" alpha="120" />
+				 </gradient>
+			 </fill>
+      </shape>
+      <shape name="progressimage">
+          <area>0,0,100%,100%</area>
+          <type>box</type>
+	       <line color="#535353" alpha="100" width="1" />
+          <cornerradius>8</cornerradius>
+			 <fill style="gradient">
+				 <gradient direction="vertical">
+					 <stop position="0" color="#A1A1A1" alpha="225" />
+<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
+					 <stop position="60" color="#FFFFFF" alpha="225" />
+				 </gradient>
+			 </fill>
+      </shape>
+   </progressbar>
+
+   <progressbar name="progressbar_round">
+       <area>0,0,350,10</area>
+       <layout>horizontal</layout>
+       <style>reveal</style>
+	        <shape name="bar">
+	            <type>background</type>
+	            <area>0,0,100%,100%</area>
+	            <type>roundbox</type>
+	            <line color="#535353" alpha="100" width="1" />
+	            <cornerradius>8</cornerradius>
+					<fill style="gradient">
+					 <gradient direction="vertical">
+						 <stop position="0" color="#535353" alpha="225" />
+						 <stop position="100" color="#000000" alpha="120" />
+					 </gradient>
+					</fill>
+	        </shape>
+	        <shape name="progressimage">
+	            <area>0,0,100%,100%</area>
+	            <type>roundbox</type>
+			      <line color="#535353" alpha="100" width="1" />
+	            <cornerradius>8</cornerradius>
+				   <fill style="gradient">
+					 <gradient direction="vertical">
+						 <stop position="0" color="#A1A1A1" alpha="225" />
+	<!--					 <stop position="60" color="#105B8F" alpha="120" /> -->
+						 <stop position="60" color="#FFFFFF" alpha="225" />
+					 </gradient>
+					</fill>
+	        </shape>
+   </progressbar>
 
 <!-- ===================================================== -->
 <!--     BUTTONLIST MENU                                   -->
@@ -1205,16 +1447,15 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_menu">
-       <area>0,0,610,420</area>
+       <area>0,0,610,640</area>
        <searchposition>758,55</searchposition>
        <align>top,hcenter</align>
        <layout>vertical</layout>
        <wrapstyle>selection</wrapstyle>
        <arrange>stack</arrange>
-       <buttonarea>0,0,610,400</buttonarea>
+       <buttonarea>0,0,610,640</buttonarea>
        <showarrow>no</showarrow>
        <statetype name="buttonitem">
-           <!--ACTIVE-->
            <state name="active">
                <imagetype name="MenuItemNF">
                    <area>0,0,610,40</area>
@@ -1225,7 +1466,6 @@
                    <alpha>128</alpha>
                </textarea>
            </state>
-           <!--SELECTED ACTIVE-->
            <state name="selectedactive">
                <imagetype name="MenuItemNF">
                    <area>0,0,610,40</area>
@@ -1241,53 +1481,24 @@
                    <alpha>255</alpha>
                </textarea>
            </state>
-           <!--INACTIVE-->
            <state name="inactive" from="active">
                <alpha>0</alpha>
-               <area>0,0,0,0</area>
            </state>
-           <!--SELECTED INACTIVE-->
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
-               <area>0,0,0,0</area>
            </state>
        </statetype>
-       <!--ARROWS-->
-<!-- 
-       <statetype name="upscrollarrow">
-           <position>10,404</position>	
-           <state type="off">
-               <imagetype name="upoff">
-                   <filename>images/shared/ArrowUpNF.png</filename>
-               </imagetype>
-           </state>
-           <state type="full">
-               <imagetype name="upon">
-                    <filename>images/shared/ArrowUpFO.png</filename>
-               </imagetype>
-           </state>
-       </statetype>
-       <statetype name="downscrollarrow">
-           <position>30,404</position>	
-           <state type="off">
-               <imagetype name="upoff">
-                   <filename>images/shared/ArrowDownNF.png</filename>
-               </imagetype>
-           </state>
-           <state type="full">
-               <imagetype name="upon">
-                   <filename>images/shared/ArrowDownFO.png</filename>
-               </imagetype>
-           </state>
-       </statetype>
--->
    </buttonlist>
 
    <buttonlist name="buttonlist_menu_check" from="buttonlist_menu">
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>-20,0,3%,100%</area>
+       </scrollbar>
        <statetype name="buttonitem">
            <state name="active">
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,580,40</area>
+                   <area>10,0,570,40</area>
                    <alpha>128</alpha>
                </textarea>
                <statetype name="buttoncheck">
@@ -1314,7 +1525,7 @@
            </state>
            <state name="selectedactive">
                <textarea name="buttontext" from="textarea_base">
-                   <area>10,0,580,40</area>
+                   <area>10,0,570,40</area>
                    <scroll direction="left" />
                    <alpha>255</alpha>
                </textarea>
@@ -1362,7 +1573,18 @@
    <buttonlist name="buttonlist_menu_details_permanent" from="buttonlist_menu_details" >
        <statetype name="buttonitem">
            <state name="inactive" from="active">
-               <alpha>255</alpha>
+               <alpha>128</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>128</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_menu_check_permanent" from="buttonlist_menu_check" >
+       <statetype name="buttonitem">
+           <state name="inactive" from="active">
+               <alpha>128</alpha>
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>128</alpha>
@@ -1532,7 +1754,6 @@
           </state>
       </statetype>
    </buttonlist>
-
 
    <buttonlist name="buttonlist_browse">
        <spacing>3</spacing>
@@ -3054,95 +3275,6 @@
     </spinbox>
 
 <!-- ===================================================== -->
-<!-- PROGRESSBAR                                            -->
-<!-- ===================================================== -->
-   <progressbar name="progressbar_base">
-       <area>0,0,700,10</area>
-       <layout>horizontal</layout>
-       <style>reveal</style>
-       <imagetype name="background">
-           <area>0,0,700,10</area>
-           <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-           <preserveaspect>false</preserveaspect>
-       </imagetype>
-       <imagetype name="progressimage">
-           <area>0,0,700,10</area>
-           <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-           <preserveaspect>false</preserveaspect>
-       </imagetype>
-   </progressbar>
-
-
-<!-- ===================================================== -->
-<!-- STAR RATING                                           -->
-<!-- ===================================================== -->
-    <statetype name="rating_base">
-        <area>0,0,80,20</area>
-        <showempty>yes</showempty>
-        <state name="0">
-            <imagetype name="0">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating0.png</filename>
-            </imagetype>
-        </state>
-        <state name="1">
-            <imagetype name="1">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating1.png</filename>
-            </imagetype>
-        </state>
-        <state name="2">
-            <imagetype name="2">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating1.png</filename>
-            </imagetype>
-        </state>
-        <state name="3">
-            <imagetype name="3">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating2.png</filename>
-            </imagetype>
-        </state>
-        <state name="4">
-            <imagetype name="4">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating2.png</filename>
-            </imagetype>
-        </state>
-        <state name="5">
-            <imagetype name="5">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating3.png</filename>
-            </imagetype>
-        </state>
-        <state name="6">
-            <imagetype name="6">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating3.png</filename>
-            </imagetype>
-        </state>
-        <state name="7">
-            <imagetype name="7">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating4.png</filename>
-            </imagetype>
-        </state>
-        <state name="8">
-            <imagetype name="8">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating4.png</filename>
-            </imagetype>
-        </state>
-        <state name="9">
-            <imagetype name="9">
-                <area>,0,80,20</area>
-                <filename>images/shared/rating/songrating5.png</filename>
-            </imagetype>
-        </state>
-        <state name="10" from="9" />
-    </statetype>
-
-<!-- ===================================================== -->
 <!-- GROUPS                                                -->
 <!-- ===================================================== -->
 
@@ -3237,6 +3369,19 @@
             <position>300,0</position>
         </button>
 
+    </group>
+
+    <group name="basestatusicons">
+        <area>0,0,150,50</area>
+        <statetype name="mutestate" from="basemutestate">
+            <position>0,0</position>
+        </statetype>
+        <statetype name="repeatstate" from="baserepeatstate">
+            <position>50,0</position>
+        </statetype>
+        <statetype name="shufflestate" from="baseshufflestate">
+            <position>100,0</position>
+        </statetype>
     </group>
 
     <group name="defaultinfoicons" >
@@ -3469,9 +3614,6 @@
         </statetype>
     </group>
 
-        <!-- ===================================================== -->
-        <!--   Parental ICONS                                          -->
-        <!-- ===================================================== -->
     <group name="parentalcontrolgroup">
         <area>0,0,165,30</area>
         <imagetype name="allbgd">
@@ -3523,6 +3665,66 @@
             </state>
             <state name="none"/>
         </statetype>
+    </group>
+
+    <group name="basetrackinfo">
+        <area>0,0,150,110</area>
+        <textarea name="time" from="textarea_base">
+            <area>0,7,150,25</area>
+            <font>tiny</font>
+            <align>allcenter</align>
+            <value>T: 1%</value>
+        </textarea>
+
+        <progressbar name="progress" from="progressbar_round">
+            <area>10,30,130,10</area>
+        </progressbar>
+
+        <group name="statusicons" from="basestatusicons">
+            <position>0,50</position>
+        </group>
+    </group> 
+
+    <group name="baseplayliststatusgroup">
+        <area>0,0,350,110</area>
+
+        <textarea name="playlisttime" from="textarea_base">
+            <area>0,7,350,25</area>
+            <font>tiny</font>
+            <case>normal</case>
+            <align>allcenter</align>
+            <template>Playlist: %playlisttime%</template>
+        </textarea>
+
+        <progressbar name="playlistprogress" from="progressbar_round">
+            <area>10,30,330,10</area>
+        </progressbar>
+
+        <group name="musiccontrols" from="defaultcontrols">
+            <position>0,50</position>
+        </group>
+
+    </group>
+
+    <group name="basestreamliststatusgroup">
+        <area>0,0,350,110</area>
+
+        <textarea name="bufferstatus" from="textarea_base">
+            <area>0,7,350,25</area>
+            <font>tiny</font>
+            <case>normal</case>
+            <align>allcenter</align>
+            <template>Buffer: %bufferstatus%</template>
+        </textarea>
+
+        <progressbar name="bufferprogress" from="progressbar_round">
+            <area>0,30,350,10</area>
+        </progressbar>
+
+        <group name="musiccontrols" from="defaultcontrols">
+            <position>0,50</position>
+        </group>
+
     </group>
 
     <group name="defaultvideodetails">
@@ -3822,6 +4024,21 @@
   
     </group>
 
+    <group name="defaultmenu_bgd_start">      
+       <area>0,0,1280,720</area>
+     
+       <animation trigger="AboutToShow">
+           <section duration="4000" centre="middle">
+               <position start="-378,0" end="0,0" easingcurve="OutQuint" />
+           </section>
+       </animation>
+       <imagetype name="Menu_background_Sub2">
+           <filename>images/shared/HomeBladeLeft.png</filename>
+           <area>-436,0,846,720</area>
+       </imagetype>
+  
+    </group>
+
     <group name="defaultpopuplarge">
         <area>0,0,1080,611</area>
         <imagetype name="DialogContextTop">
@@ -4053,16 +4270,6 @@
        </textarea>
        <progressbar name="progressbar" from="progressbar_base">
            <area>20,140,480,10</area>
-           <imagetype name="background">
-               <area>0,0,480,10</area>
-               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
-           <imagetype name="progressimage">
-               <area>0,0,480,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
        </progressbar>
    </window>
 

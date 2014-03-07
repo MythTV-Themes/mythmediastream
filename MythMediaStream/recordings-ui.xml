@@ -10,6 +10,7 @@
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamVideoBGD.png</filename>
         </imagetype>
+
         <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
@@ -26,7 +27,7 @@
 		      <statetype name="buttonitem">
 		          <state name="active">
 		              <textarea name="buttontext" from="screentitle">
-		                  <area>0,0,0,0</area>
+		                  <area>0,0,1,1</area>
 		                  <alpha>128</alpha>
 		              </textarea>
 		          </state>
@@ -40,7 +41,7 @@
 		          <state name="selectedinactive" from="selectedactive"/>
 		      </statetype>
 		  </buttonlist>
-		
+
         <imagetype name="MediaCountBackground" depends="rec_count">
             <area>1110,5,160,40</area>
             <filename>images/shared/MediaCountBackgroundLong.png</filename>
@@ -55,13 +56,6 @@
             <cutdown>no</cutdown>
         </textarea>
 
-       <!-- ===================================================== -->
-       <!--     NO RECORDINGS TEXT                                -->
-       <!-- ===================================================== -->
-
-        <!-- ===================================================== -->
-        <!--     RECORDING LIST IN THE GROUP                       -->
-        <!-- ===================================================== -->
         <buttonlist name="recordings" from="buttonlist_menu_details">
 		     <area>670,60,610,640</area>
 		     <scrollstyle>free</scrollstyle>
@@ -162,9 +156,6 @@
             </statetype>
         </buttonlist>
 
-        <!-- ===================================================== -->
-        <!--     RECORDINGS GROUPS                                 -->
-        <!-- ===================================================== -->
         <buttonlist name="groups" from="buttonlist_menu">
 		     <area>670,60,610,600</area>
 		     <scrollstyle>free</scrollstyle>
@@ -178,25 +169,10 @@
 	        </scrollbar>
         </buttonlist>
 
-        <!-- ===================================================== -->
-        <!--     DISK OCCUPATION BAR                               -->
-        <!-- ===================================================== -->
         <group name="usage_details" depends="!preview">
            <area>680,675,610,35</area>
 	        <progressbar name="usedbar" from="progressbar_base">
 	            <area>0,25,580,10</area>
-	            <layout>horizontal</layout>
-	            <style>reveal</style>
-	           <imagetype name="background">
-	               <area>0,0,580,10</area>
-	               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-	               <preserveaspect>false</preserveaspect>
-	           </imagetype>
-	           <imagetype name="progressimage">
-	               <area>0,0,580,10</area>
-	               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-	               <preserveaspect>false</preserveaspect>
-	           </imagetype>
 	        </progressbar>
 	
 	        <textarea name="freereport">
@@ -206,7 +182,7 @@
 	            <align>hcenter,vcenter</align>
 	        </textarea>
         </group>
-        
+     
         <group name="preview_details" depends="preview">
 	           <area>40,55,630,393</area>
 	           
@@ -220,7 +196,7 @@
 		        </textarea>
 		
 		        <imagetype name="preview">
-		            <area>19,37,578,354</area>
+		            <area>18,37,579,356</area>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
 	

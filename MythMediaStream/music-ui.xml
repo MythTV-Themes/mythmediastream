@@ -131,7 +131,7 @@
         </button>
     </window>
 
-    <window name="playlistview" include="music-base.xml">
+    <window name="playlistview">
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
         </imagetype>
@@ -163,10 +163,6 @@
             <multiline>no</multiline>
             <cutdown>no</cutdown>
         </textarea>
-
-        <!-- ===================================================== -->
-        <!--     MUSIC LIST                                        -->
-        <!-- ===================================================== -->
 
         <buttonlist name="currentplaylist" from="buttonlist_menu_details">
 		     <area>670,60,610,640</area>
@@ -219,14 +215,13 @@
             </statetype>
         </buttonlist>
 
-        <group name="preview_details">
+        <group name="preview_image">
            <area>100,25,490,590</area>
-           		
-	        <imagetype name="coverart">
-	            <area>15,26,460,460</area>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
 
+	        <video name="visualizer">
+	            <area>15,26,460,460</area>
+	        </video>	
+	        
 	        <imagetype name="previewframe">
 	            <area>0,0,489,511</area>
 	            <preserveaspect>no</preserveaspect>
@@ -236,17 +231,13 @@
         </group>	
 
         <group name="info_details">
-           <area>30,512,630,110</area>
+           <area>90,512,630,110</area>
 	        <group name="playliststatusgroup" from="baseplayliststatusgroup">
 	            <area>0,0,350,110</area>
 	        </group>
 	        
-	        <video name="visualizer">
-	            <area>365,25,70,70,</area>
-	        </video>	
-	        
 	        <group name="trackstatusgroup" from="basetrackinfo">
-	            <area>447,0,150,110</area>
+	            <area>350,0,150,110</area>
 	        </group>
         </group>
 
@@ -305,18 +296,30 @@
 
     </window>
 
-    <window name="playlisteditorview_tree" include="music-base.xml">
+    <window name="playlisteditorview_tree">
+
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleVideoManager" from="screentitle">
-            <value>Playlist Editor Tree</value>
+        <textarea name="ScreenTitleMusicPlayer" from="screentitle">
+            <value>MUSIC Playlist Editor</value>
         </textarea>
+        <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+        <textarea name="ScreenTitleMusicPlayerCurrentView" from="screentitle">
+            <area>410,8,280,45</area>
+            <alpha>255</alpha>
+            <value>Playlist Tree</value>
+        </textarea>
+        <imagetype name="MediaCountBackground" depends="position">
+            <area>1110,8,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
         <textarea name="position" from="textarea_base">
-            <area>1112,5,146,40</area>
+            <area>1112,8,146,40</area>
             <font>normal</font>
             <case>lower</case>
             <align>allcenter</align>
@@ -324,42 +327,96 @@
             <cutdown>no</cutdown>
         </textarea>
 
+
         <!-- ===================================================== -->
         <!--     MUSIC TREE                                        -->
         <!-- ===================================================== -->
 
-        <!-- optional - shows path to current item -->
-<!--        <textarea name="breadcrumbs" from="textarea_base">
-            <area>450,5,650,45</area>
-            <case>normal</case>
-            <font>verysmall</font>
-            <align>left,vcenter</align>
-        </textarea>-->
-
         <buttontree name="playlist_tree">
-		      <area>740,260,540,440</area>
+		      <area>670,60,610,640</area>
 		      <numlists>1</numlists>
 		      <spacing>0</spacing>
-            <buttonlist name="listtemplate" from="buttonlist_menu_check"/>
+            <buttonlist name="listtemplate" from="buttonlist_menu_check_permanent"/>
         </buttontree>
 
-        <imagetype name="coverart">
-            <area>25,260,275,275</area>
-            <filename>images/shared/DefaultNetwork.png</filename>
-            <reflection shear="0" scale="65" length="15"/>
-        </imagetype>
-        
-        <group name="infopanel" from="baseinfopanel">
-            <position>345,260</position>>
+        <group name="tree_preview_image">
+           <area>100,25,490,590</area>
+
+	        <video name="visualizer">
+	            <area>15,26,460,460</area>
+	        </video>	
+	        
+	        <imagetype name="previewframe">
+	            <area>0,0,489,511</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/tvseries_focusframe.png</filename>
+	        </imagetype>
+	        
+        </group>	
+
+        <group name="info_details">
+           <area>90,512,630,110</area>
+	        <group name="playliststatusgroup" from="baseplayliststatusgroup">
+	            <area>0,0,350,110</area>
+	        </group>
+	        
+	        <group name="trackstatusgroup" from="basetrackinfo">
+	            <area>350,0,150,110</area>
+	        </group>
         </group>
 
-        <group name="playliststatusgroup" from="baseplayliststatusgroup">
-            <position>345,610</position>
+        <group name="tree_track_details">
+           <area>30,620,630,85</area>
+
+     		  <textarea name="nowplayinglbl" from="textarea_base">
+	            <area>0,10,110,25</area>
+	            <font>title_verysmall_blue</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <alpha>255</alpha>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <value>Now Playing</value>
+	        </textarea>
+
+	        <textarea name="genrelbl" from="nowplayinglbl">
+	            <position>0,37</position>
+	            <value>Genre</value>
+	        </textarea>
+
+	        <textarea name="lastlbl" from="nowplayinglbl">
+	            <position>0,64</position>
+	            <value>Last Played</value>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_base">
+	            <area>120,10,500,25</area>
+	            <font>normal</font>
+	            <case>normal</case>
+	            <multiline>no</multiline>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	            <alpha>255</alpha>
+	            <template>%title%% - |artist%% - |album%</template>
+	        </textarea>
+
+	        <textarea name="genre" from="title">
+	            <position>120,37</position>
+	            <template>%genre%%, |year% </template>
+	        </textarea>
+	
+	        <textarea name="lastplayed" from="title">
+	            <area>120,64,335,25</area>
+	            <template>%lastplayed% (played: %playcount% times)</template>
+	        </textarea>
+
+	       <statetype name="ratingstate" from="rating_base">
+	            <position>465,58</position>
+	        </statetype>
+
         </group>
 
-       <group name="playlistvisualizergroup" from="baseplaylistvisualizergroup">
-            <position>25,600</position>
-       </group>
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 
@@ -610,10 +667,7 @@
     
     <!-- This screen allows you to rip tracks from cd's -->
     <window name="cdripper">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -840,10 +894,7 @@
 
     <!-- This screen shows the track ripping status -->
     <window name="ripstatus">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
@@ -922,10 +973,7 @@
     </window>
 
     <window name="import_music">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1157,10 +1205,7 @@
     </window>
 
     <window name="import_coverart">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1354,18 +1399,6 @@
 
         <progressbar name="progress" from="progressbar_base">
             <area>145,125,345,10</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-           <imagetype name="background">
-               <area>0,0,345,10</area>
-               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
-           <imagetype name="progressimage">
-               <area>0,0,345,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
         </progressbar>
     </window>
 
@@ -1397,20 +1430,8 @@
             <position>20,80</position>
         </statetype>
 
-		 <progressbar name="volumeprogress">
-			  <position>80,100</position>
-			  <layout>horizontal</layout>
-			  <style>reveal</style>
-		     <imagetype name="background">
-		         <area>0,0,350,10</area>
-		         <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-		         <preserveaspect>false</preserveaspect>
-		     </imagetype>
-		     <imagetype name="progressimage">
-		         <area>0,0,350,10</area>
-		         <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-		         <preserveaspect>false</preserveaspect>
-		     </imagetype>
+		 <progressbar name="volumeprogress" from="progressbar_base">
+			  <area>80,100,402,10</area>
 		 </progressbar>
 
         <textarea name="volume" from="textarea_base">
@@ -1421,10 +1442,7 @@
     </window>
 
     <window name="editmetadata">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1675,10 +1693,7 @@
     </window>
 
     <window name="editalbumart" include="music-base.xml">
-         <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1783,10 +1798,7 @@
 
    <!-- this is the main smartplaylist editor screen -->
      <window name="smartplaylisteditor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1954,10 +1966,7 @@
 
    <!-- popup to edit a smartplaylist criteria row -->
     <window name="criteriaroweditor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2099,10 +2108,7 @@
 
     <!-- popup to edit the date in a smartplaylist criteria row -->
     <window name="dateeditordialog">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2229,10 +2235,7 @@
 
     <!-- popup to edit the smartplaylist order by clause-->
     <window name="orderbydialog">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2353,10 +2356,7 @@
 
    <!-- shows some information for the currently selected or playing track -->
     <window name="smartplresultviewer">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1A_animated">
             <position>0,0</position>
         </group> 

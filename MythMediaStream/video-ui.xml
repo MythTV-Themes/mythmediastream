@@ -230,7 +230,7 @@
 		        </imagetype>
 		
 		        <imagetype name="fanart" depends="!screenshot">
-		            <area>19,37,578,354</area>
+		            <area>18,37,579,356</area>
 		            <preserveaspect>no</preserveaspect>
                   <filename>images/backgrounds/MGM-Lion.jpg</filename>
 		        </imagetype>
