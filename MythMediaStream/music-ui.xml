@@ -3,133 +3,6 @@
 
 <mythuitheme>
 
-    <window name="albumart_browser">
-        <area>0,0,988,720</area>
-
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
-            <position>0,0</position>        
-        </group>
-        <!-- ================================================== -->
-        <!-- Screen description                                 -->
-        <!-- ================================================== -->
-        <textarea name="pagetitledesc" from="textarea_base">
-            <area>250,10,515,65</area>
-            <font>menu_description</font>
-            <case>upper</case>
-            <align>right,bottom</align>
-            <cutdown>yes</cutdown>
-            <multiline>yes</multiline>
-            <value>Write video to data dvd or file</value>
-        </textarea>
-
-        <textarea name="destination_text" from="textarea_base">
-            <area>250,75,515,65</area>
-            <font>menu_active</font>
-            <case>upper</case>
-            <align>right,vcenter</align>
-            <cutdown>yes</cutdown>
-            <multiline>yes</multiline>
-            <value>Select Destination</value>
-        </textarea>
-
-        <!-- ================================================== -->
-        <!-- screen content                                     -->
-        <!-- ================================================== -->
-
-        <textarea name="heading" from="basetextarea">
-            <area>0,0,800,50</area>
-            <value>Album Art</value>
-            <font>baselarge</font>
-            <align>hcenter</align>
-        </textarea>
-
-        <imagetype name="background">
-            <area>300,55,440,390</area>
-            <filename>mm_trans_background.png</filename>
-        </imagetype>
-
-        <textarea name="imagefilename" from="basetextarea">
-            <area>320,75,400,350</area>
-            <value>No Album Art Found</value>
-            <align>allcenter</align>
-        </textarea>
-
-        <imagetype name="coverart_image">
-            <area>320,75,350,350</area>
-        </imagetype>
-
-        <imagetype name="another_background">
-            <area>300,450,440,70</area>
-            <filename>mm_trans_background.png</filename>
-        </imagetype>
-
-        <textarea name="filenamelabel" from="basetextarea">
-            <area>290,455,170,30</area>
-            <value>Filename:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="typelabel" from="filenamelabel">
-            <position>290,485</position>
-            <value>Type:</value>
-        </textarea>
-
-        <textarea name="imagefilename" from="basetextarea">
-            <area>465,455,190,30</area>
-        </textarea>
-
-        <textarea name="imagetype" from="imagefilename">
-            <position>465,485</position>
-        </textarea>
-
-        <buttonlist name="coverart_grid">
-            <area>70,65,450,450</area>
-            <layout>grid</layout>
-            <buttonarea>0,0,450,450</buttonarea>
-            <spacing>10</spacing>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100,100</area>
-                    <imagetype name="buttonbackground">
-                        <filename>mm_browser_back_reg.png</filename>
-                    </imagetype>
-                    <imagetype name="buttonimage">
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>mm_browser_back_sel.png</filename>
-                    </imagetype>
-                </state>
-                <state name="selectedinactive" from="selectedactive" />
-            </statetype>
-        </buttonlist>
-
-        <!-- Push buttons -->
-
-        <button name="metadata" from="basebutton">
-            <position>20,540</position>
-            <value>Metadata</value>
-        </button>
-
-        <button name="done" from="basebutton">
-            <position>630,540</position>
-            <value>Done</value>
-        </button>
-    </window>
-
-    <window name="imagefinder">
-        <webbrowser name="webbrowser">
-            <area>20,20,1240,600</area>
-            <zoom>1.0</zoom>
-            <background color="#000000" alpha="1" />
-        </webbrowser>
-        <button name="done" from="basebutton">
-            <position>630,540</position>
-            <value>Done</value>
-        </button>
-    </window>
 
     <window name="playlistview">
         <imagetype name="fanart" from="image_wallpaper_base">
@@ -424,14 +297,25 @@
         <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleVideoManager" from="screentitle">
-            <value>Playlist Editor Gallery</value>
+        <textarea name="ScreenTitleMusicPlayer" from="screentitle">
+            <value>MUSIC Playlist Editor</value>
         </textarea>
+        <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+        <textarea name="ScreenTitleMusicPlayerCurrentView" from="screentitle">
+            <area>410,8,280,45</area>
+            <alpha>255</alpha>
+            <value>Playlist Gallery</value>
+        </textarea>
+        <imagetype name="MediaCountBackground" depends="position">
+            <area>1110,8,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
         <textarea name="position" from="textarea_base">
-            <area>1112,5,146,40</area>
+            <area>1112,8,146,40</area>
             <font>normal</font>
             <case>lower</case>
             <align>allcenter</align>
@@ -439,32 +323,93 @@
             <cutdown>no</cutdown>
         </textarea>
 
+
         <!-- ===================================================== -->
         <!--     MUSIC GALLERY                                     -->
         <!-- ===================================================== -->
 
-        <!-- optional - shows path to current item -->
-<!--        <textarea name="breadcrumbs" from="textarea_base">
-            <area>450,5,650,45</area>
-            <case>normal</case>
-            <font>verysmall</font>
-            <align>left,vcenter</align>
-        </textarea>-->
-
         <buttontree name="playlist_tree">
-            <area>25,260,950,450</area>
+		      <area>45,60,800,650</area>
             <numlists>1</numlists>
             <spacing>0</spacing>
-            <buttonlist name="listtemplate" from="basegallerybuttonlist" />
+            <buttonlist name="listtemplate" from="buttonlist_gallery_music" />
         </buttontree>
 
-        <group name="infopanel" from="baseinfopanel">
-            <position>910,260</position>>
+        <group name="gallery_preview_image">
+           <area>810,35,490,590</area>
+
+	        <video name="visualizer">
+	            <area>14,25,442,442</area>
+	        </video>	
+	        
+	        <imagetype name="previewframe">
+	            <area>0,0,470,491</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/tvseries_focusframe.png</filename>
+	        </imagetype>
+	        
+        </group>	
+
+        <group name="gallery_info_details">
+           <area>870,512,350,110</area>
+	        <group name="playliststatusgroup" from="baseplayliststatusgroup">
+	            <area>0,0,350,110</area>
+	        </group>
+	        
         </group>
 
-        <group name="playliststatusgroup" from="baseplayliststatusgroup">
-            <position>910,600</position>
+        <group name="gallery_track_details">
+           <area>810,620,460,85</area>
+
+     		  <textarea name="nowplayinglbl" from="textarea_base">
+	            <area>5,10,110,25</area>
+	            <font>title_verysmall_blue</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <alpha>255</alpha>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <value>Now Playing</value>
+	        </textarea>
+
+	        <textarea name="genrelbl" from="nowplayinglbl">
+	            <position>5,37</position>
+	            <value>Genre</value>
+	        </textarea>
+
+	        <textarea name="lastlbl" from="nowplayinglbl">
+	            <position>5,64</position>
+	            <value>Next Playing</value>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_base">
+	            <area>120,10,340,25</area>
+	            <font>normal</font>
+	            <case>normal</case>
+	            <multiline>no</multiline>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	            <alpha>255</alpha>
+	            <template>%title%% - |artist%% - |album%</template>
+	        </textarea>
+
+	        <textarea name="genre" from="title">
+	            <position>120,37</position>
+	            <template>%genre%%, |year% </template>
+	        </textarea>
+	
+	        <textarea name="lastplayed" from="title">
+	            <area>120,64,335,25</area>
+	            <template>%lastplayed% (played: %playcount% times)</template>
+	        </textarea>
+<!--
+	       <statetype name="ratingstate" from="rating_base">
+	            <position>465,58</position>
+	        </statetype>
+-->
         </group>
+
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 
@@ -610,9 +555,19 @@
 	            <position>250,610</position>
 	        </group>
 	
+	        <imagetype name="coverartbgd">
+	            <area>642,607,105,105</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_musicicon_frame.png</filename>
+	        </imagetype>	
 	        <video name="visualizer">
 	            <area>645,610,100,100,</area>
 	        </video>
+		     <imagetype name="coverartglass">
+	            <area>0,0,100,100</area>
+	            <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_musicicon_glass.png</filename>
+	        </imagetype>
 
         </group>
 
@@ -939,18 +894,6 @@
 	
 	        <progressbar name="overall_progress" from="progressbar_base">
 	            <area>260,230,490,10</area>
-	            <layout>horizontal</layout>
-	            <style>slide</style>
-	           <imagetype name="background">
-	               <area>0,0,490,10</area>
-	               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-	               <preserveaspect>false</preserveaspect>
-	           </imagetype>
-	           <imagetype name="progressimage">
-	               <area>0,0,490,10</area>
-	               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-	               <preserveaspect>false</preserveaspect>
-	           </imagetype>
 	        </progressbar>
 	
 	        <textarea name="track_label" from="overall">

@@ -2188,6 +2188,396 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_gallery_video">
+       <spacing>0</spacing>
+       <area>0,0,800,650</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left,top</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,800,650</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>750,0,3%,100%-20</area>
+       </scrollbar>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,100,150</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-3,-3,106,156</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_frame.png</filename>
+			         </imagetype>	
+			         <imagetype name="coverart">
+			             <area>0,0,100,150</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster.png</filename>
+		                <mask>images/shared/list_movieicon_mask_wall_active.png</mask>
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,100,150</area> 
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,100,150</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask_active.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,100,150</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-20,-30,100,150</area>  
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-4,-4,148,218</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_frame.png</filename>
+			         </imagetype>		
+			         <imagetype name="coverart">
+			             <area>0,0,140,210</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster.png</filename>
+		                <mask>images/shared/list_movieicon_mask_wall_selected.png</mask>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,140,210</area>
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,140,210</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,140,210</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_glass.png</filename>
+			         </imagetype>
+                  <group name="watchstategroup">
+                    <area>108,20,32,39</area>
+				        <imagetype name="OverlayWUBG">
+				            <position>0,0</position>
+				            <filename>images/shared/OverlayWUBG.png</filename>
+				        </imagetype>				
+				        <statetype name="watchedstate">
+				            <state name="yes">
+				                <imagetype name="yes">
+				                    <position>6,4</position>
+				                    <filename>images/shared/OverlayWatched.png</filename>
+				                </imagetype>
+				            </state>
+				            <state name="no">
+				                <imagetype name="no">
+				                    <position>6,4</position>
+				                    <filename>images/shared/OverlayUnwatched.png</filename>
+				                </imagetype>
+				            </state>
+				        </statetype>
+                  </group>
+               </group>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_gallery_music">
+       <spacing>0</spacing>
+       <area>0,0,800,650</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left,top</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,800,650</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>750,0,3%,100%-20</area>
+       </scrollbar>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,100,100</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-3,-3,105,105</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>	
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster_music.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <imagetype name="buttontextbgd" depends="!nodetype">
+	                   <area>-1,-1,102,22</area>
+	                   <filename>images/shared/DialogContextTop.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+	               <textarea name="buttontext" from="textarea_base" depends="!nodetype">
+	                   <area>5,2,90,20</area>
+	                   <alpha>220</alpha>
+	                   <case>normal</case>
+	                   <cutdown>yes</cutdown>
+	                   <align>hcenter,vcenter</align>
+	                   <font state="default">tiny</font>
+	                   <font state="error">tiny_red</font>
+	                   <font state="running">tiny_amber</font>
+	                </textarea>	              
+                  <statetype name="nodetype">
+	                    <state name="default" />
+	                    <state name="alltracks">
+	                        <imagetype name="alltracks">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Alltracks.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="genres">
+	                        <imagetype name="genres">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Genres.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="albums">
+	                        <imagetype name="albums">
+	                            <area>0,0,100,100</area>
+	                             <filename>images/music/Albums.png</filename>
+          		                 <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                       </imagetype>
+	                    </state>
+	                    <state name="artists">
+	                        <imagetype name="artists">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Artists.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="compartists">
+	                        <imagetype name="compartists">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Compartists.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="ratings">
+	                        <imagetype name="ratings">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Ratings.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="years">
+	                        <imagetype name="years">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Years.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="directory">
+	                        <imagetype name="years">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/shared/defaultHardDiskBig.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="compilations">
+	                        <imagetype name="compilations">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Compilations.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="playlists">
+	                        <imagetype name="playlists">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Playlists.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="smartplaylists">
+	                        <imagetype name="smartplaylists">
+	                            <area>0,0,100,100</area>
+	                            <filename>images/music/Smartplaylists.png</filename>
+          		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                        </imagetype>
+	                    </state>
+	               </statetype>
+	               <statetype name="buttoncheck">
+	                   <position>78,-3</position>
+	                   <showempty>yes</showempty>
+	                   <state type="full">
+	                       <imagetype name="marked">
+	                           <filename>images/shared/LEDOn.png</filename>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+				      <imagetype name="coverartglass">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-20,-20,100,100</area>  
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-4,-4,147,147</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>		
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster_music.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+			         </imagetype>		
+	               <imagetype name="buttontextbgd" depends="!nodetype">
+	                   <area>-1,-1,142,22</area>
+	                   <filename>images/shared/DialogContextTop.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+	               <textarea name="buttontext" from="textarea_base" depends="!nodetype">
+	                   <area>5,2,130,20</area>
+	                   <alpha>255</alpha>
+	                   <case>normal</case>
+	                   <scroll direction="left"/>
+	                   <align>hcenter,vcenter</align>
+	                   <font state="default">tiny</font>
+	                   <font state="error">tiny_red</font>
+	                   <font state="running">tiny_amber</font>
+	                </textarea>	              
+                  <statetype name="nodetype">
+	                    <state name="default" />
+	                    <state name="alltracks">
+	                        <imagetype name="alltracks">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Alltracks.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="genres">
+	                        <imagetype name="genres">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Genres.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="albums">
+	                        <imagetype name="albums">
+	                            <area>0,0,140,140</area>
+	                             <filename>images/music/Albums.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                       </imagetype>
+	                    </state>
+	                    <state name="artists">
+	                        <imagetype name="artists">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Artists.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="compartists">
+	                        <imagetype name="compartists">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Compartists.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="ratings">
+	                        <imagetype name="ratings">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Ratings.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="years">
+	                        <imagetype name="years">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Years.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="directory">
+	                        <imagetype name="years">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/shared/defaultHardDiskBig.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="compilations">
+	                        <imagetype name="compilations">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Compilations.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="playlists">
+	                        <imagetype name="playlists">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Playlists.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	                    <state name="smartplaylists">
+	                        <imagetype name="smartplaylists">
+	                            <area>0,0,140,140</area>
+	                            <filename>images/music/Smartplaylists.png</filename>
+		                         <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                        </imagetype>
+	                    </state>
+	               </statetype>
+	               <statetype name="buttoncheck">
+	                   <position>118,-3</position>
+	                   <showempty>yes</showempty>
+	                   <state type="full">
+	                       <imagetype name="marked">
+	                           <filename>images/shared/LEDOn.png</filename>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+               </group>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+
 <!-- ===================================================== -->
 <!--     BUTTONLIST DIALOG                                 -->
 <!-- ===================================================== -->
