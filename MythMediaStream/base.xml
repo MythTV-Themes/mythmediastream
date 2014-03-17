@@ -2444,7 +2444,7 @@
 		         </group>
            </state>
            <state name="inactive" from ="active">
-               <alpha>0</alpha>
+               <alpha>128</alpha>
            </state>
            <state name="selectedactive">
                <area>-20,-20,100,100</area>  
@@ -2572,7 +2572,7 @@
                </group>
            </state>
            <state name="selectedinactive" from="selectedactive">
-               <alpha>0</alpha>
+               <alpha>128</alpha>
            </state>
        </statetype>
    </buttonlist>

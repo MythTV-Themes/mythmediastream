@@ -589,8 +589,11 @@
         </imagetype>
 
         <imagetype name="coverart">
-            <filename>images/music/digital-music.jpg</filename>
+            <filename>images/shared/amt-blank-poster_music.png</filename>
             <area>20,20,115,115</area>
+        </imagetype>
+	     <imagetype name="coverartglass" from="coverart">
+            <filename>images/shared/list_musicicon_glass.png</filename>
         </imagetype>
 
         <textarea name="title" from="textarea_base">
@@ -1307,8 +1310,11 @@
         </imagetype>
 
         <imagetype name="coverart">
-            <filename>images/music/digital-music.jpg</filename>
+            <filename>images/shared/amt-blank-poster_music.png</filename>
             <area>20,20,115,115</area>
+        </imagetype>
+	     <imagetype name="coverartglass" from="coverart">
+            <filename>images/shared/list_musicicon_glass.png</filename>
         </imagetype>
 
         <textarea name="title" from="textarea_base">
@@ -1596,22 +1602,67 @@
 
         <group name="editmetadata6group" from="defaultscreencontent_1A_animated">
            <area>0,0,720,988</area>
-	        <imagetype name="artisticon">
-	            <area>250,525,150,150</area>
-	            <filename>images/music/MM_Artists.png</filename>
-	        </imagetype>
-	
-	        <imagetype name="albumicon" from="artisticon">
-	            <position>430,525</position>
-	            <filename>images/music/MM_Albums.png</filename>
-	        </imagetype>
-	
-	        <imagetype name="genreicon" from="artisticon">
-	            <position>610,525</position>
-	            <filename>images/music/MM_Genres.png</filename>
-	        </imagetype>
-        </group>
+           <group name="artisticongroup">
+               <area>250,525,150,150</area>
+		         <imagetype name="coverartbgd">
+		             <area>0,0,147,147</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_frame.png</filename>
+		         </imagetype>		
+		         <imagetype name="artisticon">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/music/Artists.png</filename>
+	                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+		         </imagetype>		
+		         <imagetype name="coverartglass">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_glass.png</filename>
+		         </imagetype>
+	        </group>
 
+           <group name="albumicongroup">
+               <area>430,525,150,150</area>
+		         <imagetype name="coverartbgd">
+		             <area>0,0,147,147</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_frame.png</filename>
+		         </imagetype>		
+		         <imagetype name="albumicon">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/music/Albums.png</filename>
+	                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+		         </imagetype>		
+		         <imagetype name="coverartglass">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_glass.png</filename>
+		         </imagetype>
+	        </group>
+
+           <group name="genreicongroup">
+               <area>610,525,150,150</area>
+		         <imagetype name="coverartbgd">
+		             <area>0,0,147,147</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_frame.png</filename>
+		         </imagetype>		
+		         <imagetype name="genreicon">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/music/Genres.png</filename>
+	                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+		         </imagetype>		
+		         <imagetype name="coverartglass">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_glass.png</filename>
+		         </imagetype>
+	        </group>
+        </group>
+        
         <group name="editmetadatabutton6group" from="defaultscreencontent_2A_animated">
            <area>788,0,720,988</area>
 	        <textarea name="navigatelbl" from="textarea_base">
@@ -1635,7 +1686,7 @@
 
     </window>
 
-    <window name="editalbumart" include="music-base.xml">
+    <window name="editalbumart">
         <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
@@ -1696,9 +1747,10 @@
 	            <position>420,210</position>
 	        </textarea>
 	
-	        <buttonlist name="coverartlist" from="basegallerybuttonlist">
-	            <area>280,250,510,450</area>
-	            <buttonarea>0,0,510,450</buttonarea>
+	        <buttonlist name="coverartlist" from="buttonlist_gallery_music">
+	            <area>300,270,510,420</area>
+ 		         <showscrollbar>yes</showscrollbar>
+	            <buttonarea>0,0,510,420</buttonarea>
 	        </buttonlist>
 	
 	        <!-- Push buttons -->
@@ -1714,11 +1766,26 @@
 	            <value>Selected</value>
 	        </textarea>
 	
-	        <imagetype name="coverartimage">
-	            <area>22,340,150,150</area>
-	            <reflection shear="0" scale="65" length="15"/>
-	        </imagetype>
-	
+           <group name="coverartimagegroup">
+               <area>22,340,150,150</area>
+		         <imagetype name="coverartbgd">
+		             <area>0,0,147,147</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_frame.png</filename>
+		         </imagetype>		
+		         <imagetype name="coverartimage">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/music/Artists.png</filename>
+	                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+		         </imagetype>		
+		         <imagetype name="coverartglass">
+		             <area>4,4,140,140</area>
+		             <preserveaspect>no</preserveaspect>
+	                <filename>images/shared/list_musicicon_glass.png</filename>
+		         </imagetype>
+	        </group>
+
 	        <textarea name="navigatelbl" from="textarea_base">
 	            <area>2,525,180,35</area>
 	            <alpha>128</alpha>
@@ -2380,158 +2447,156 @@
     </window>
 
     <!-- shows some information for the currently selected or playing track -->
+
     <window name="trackdetail_popup">
-        <area>100,55,1080,611</area>
-        <animation trigger="AboutToShow">
-            <section duration="400" centre="middle">
-                <zoom start="10" end="100" easingcurve="OutBack" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="400" centre="middle">
-                <zoom start="100" end="10" easingcurve="InBack" />
-            </section>
-        </animation>
+        <area>0,0,988,720</area>
+        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
+            <position>0,0</position>
+        </group> 
+        <group name="trackdetail_popup1group" from="defaultscreencontent_1B_animated">
+           <area>0,0,720,988</area>
+	        <!-- ================================================== -->
+	        <!-- Screen description                                 -->
+	        <!-- ================================================== -->
+	        <textarea name="pagetitledesc" from="textarea_base">
+	            <area>250,10,515,65</area>
+	            <font>menu_description</font>
+	            <case>upper</case>
+	            <align>right,bottom</align>
+	            <cutdown>yes</cutdown>
+	            <multiline>yes</multiline>
+	            <value>Information about your music Track</value>
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_base">
+	            <area>250,75,515,65</area>
+	            <font>menu_active</font>
+	            <case>upper</case>
+	            <align>right,vcenter</align>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	            <multiline>no</multiline>
+	        </textarea>
+	
+	        <!-- ================================================== -->
+	        <!-- screen content                                     -->
+	        <!-- ================================================== -->
+	
+	       <textarea name="artistlbl" from="textarea_base">
+	            <area>250,175,510,35</area>
+	            <value>Artist:</value>
+	        </textarea>
+	
+	        <textarea name="artist" from="textarea_base">
+	            <area>420,175,300,35</area>
+	            <alpha>128</alpha>
+	            <case>normal</case>
+	        </textarea>
+	
+	        <textarea name="albumlbl" from="artistlbl">
+	            <position>250,210</position>
+	            <value>Album:</value>
+	        </textarea>
+	
+	        <textarea name="album" from="artist">
+	            <position>420,210</position>
+	        </textarea>
+	
+	        <textarea name="genrelbl" from="artistlbl">
+	            <position>250,245</position>
+	            <value>Genre:</value>
+	        </textarea>
+	
+	        <textarea name="genre" from="artist">
+	            <position>420,245</position>
+	        </textarea>
+	
+	        <textarea name="tracknumlbl"  from="artistlbl">
+	            <position>250,280</position>
+	            <value>Track No.:</value>
+	        </textarea>
+	
+	        <textarea name="tracknum" from="artist">
+	            <position>420,280</position>
+	        </textarea>
+	
+	        <textarea name="lenlbl"  from="artistlbl">
+	            <position>250,315</position>
+	            <value>Length:</value>
+	        </textarea>
+	
+	        <textarea name="length" from="artist">
+	            <position>420,315</position>
+	        </textarea>
+	
+	        <textarea name="yearlbl"  from="artistlbl">
+	            <position>250,350</position>
+	            <value>Year:</value>
+	        </textarea>
+	
+	        <textarea name="year" from="artist">
+	            <position>420,350</position>
+	        </textarea>
+	
+	        <textarea name="ratinglbl"  from="artistlbl">
+	            <position>250,385</position>
+	            <value>Rating:</value>
+	        </textarea>
+	
+	        <statetype name="rating_state" from="rating_base">
+	            <position>420,385</position>
+	        </statetype>
+	
+	        <textarea name="generallbl" from="title">
+	            <area>250,420,515,105</area>
+	            <value>File Information</value>
+	        </textarea>
+	
+	        <textarea name="dateaddedlbl"  from="artistlbl">
+	            <position>250,525</position>
+	            <value>Date Added:</value>
+	        </textarea>
+	
+	        <textarea name="dateadded" from="artist">
+	            <position>420,525</position>
+	            <value>Last Value</value>
+	        </textarea>
+	
+	        <textarea name="lastplaylbl"  from="artistlbl">
+	            <position>250,560</position>
+	            <value>Last Played:</value>
+	        </textarea>
+	
+	        <textarea name="lastplayed" from="artist">
+	            <position>420,560</position>
+	            <value></value>
+	        </textarea>
+	
+	        <textarea name="playcountlbl"  from="artistlbl">
+	            <position>250,595</position>
+	            <value>Played:</value>
+	        </textarea>
+	
+	        <textarea name="playcount" from="artist">
+	            <position>420,595</position>
+	            <template>%playcount% times</template>
+	        </textarea>
+	
+	        <textarea name="filenamelbl"  from="artistlbl">
+	            <position>250,630</position>
+	            <value>Filename:</value>
+	        </textarea>
+	
+	        <textarea name="filename" from="artist">
+	            <area>420,630,300,70</area>
+	            <font>small</font>
+	            <align>left,top</align>
+	            <case>normal</case>
+	            <multiline>yes</multiline>
+	        </textarea>
+		
+        </group>
 
-        <group name="popuplarge" from="defaultpopuplarge"/>
-        <!-- ===================================================== -->
-        <!--     PROGRAM DETAILS                                   -->
-        <!-- ===================================================== -->
-
-        <imagetype name="coverart">
-            <area>30,65,330,330</area>
-            <filename>images/music/digital-music.jpg</filename>
-            <preserveaspect>yes</preserveaspect>
-            <reflection shear="0" scale="65" length="10"/>
-        </imagetype>
-
-        <imagetype name="artisticon">
-            <area>30,420,150,150</area>
-            <filename>images/music/MM_Artists.png</filename>
-        </imagetype>
-
-        <imagetype name="genreicon">
-            <area>210,420,150,150</area>
-            <filename>images/music/MM_Genres.png</filename>
-        </imagetype>
-
-        <textarea name="title" from="textarea_base">
-            <area>380,65,670,35</area>
-            <font>title</font>
-        </textarea>
-
-        <textarea name="artistlbl" from="textarea_base">
-            <area>380,105,150,35</area>
-            <value>Artist:</value>
-        </textarea>
-
-        <textarea name="artist" from="textarea_base">
-            <area>540,105,510,35</area>
-            <alpha>128</alpha>
-            <case>normal</case>
-        </textarea>
-
-        <textarea name="albumlbl" from="artistlbl">
-            <position>380,140</position>
-            <value>Album:</value>
-        </textarea>
-
-        <textarea name="album" from="artist">
-            <position>540,140</position>
-        </textarea>
-
-        <textarea name="genrelbl" from="artistlbl">
-            <position>380,175</position>
-            <value>Genre:</value>
-        </textarea>
-
-        <textarea name="genre" from="artist">
-            <position>540,175</position>
-        </textarea>
-
-        <textarea name="tracknumlbl"  from="artistlbl">
-            <position>380,210</position>
-            <value>Track No.:</value>
-        </textarea>
-
-        <textarea name="tracknum" from="artist">
-            <position>540,210</position>
-        </textarea>
-
-        <textarea name="lenlbl"  from="artistlbl">
-            <position>380,245</position>
-            <value>Length:</value>
-        </textarea>
-
-        <textarea name="length" from="artist">
-            <position>540,245</position>
-        </textarea>
-
-        <textarea name="yearlbl"  from="artistlbl">
-            <position>380,280</position>
-            <value>Year:</value>
-        </textarea>
-
-        <textarea name="year" from="artist">
-            <position>540,280</position>
-        </textarea>
-
-        <textarea name="ratinglbl"  from="artistlbl">
-            <position>380,315</position>
-            <value>Rating:</value>
-        </textarea>
-
-        <statetype name="rating_state" from="rating_base">
-            <position>540,315</position>
-        </statetype>
-
-        <textarea name="generallbl" from="title">
-            <position>380,385</position>
-            <value>File Information</value>
-        </textarea>
-
-        <textarea name="dateaddedlbl"  from="artistlbl">
-            <position>380,425</position>
-            <value>Date Added:</value>
-        </textarea>
-
-        <textarea name="dateadded" from="artist">
-            <position>540,425</position>
-            <value>Last Value</value>
-        </textarea>
-
-        <textarea name="lastplaylbl"  from="artistlbl">
-            <position>380,460</position>
-            <value>Last Played:</value>
-        </textarea>
-
-        <textarea name="lastplayed" from="artist">
-            <position>540,460</position>
-            <value></value>
-        </textarea>
-
-        <textarea name="playcountlbl"  from="artistlbl">
-            <position>380,495</position>
-            <value>Played:</value>
-        </textarea>
-
-        <textarea name="playcount" from="artist">
-            <position>540,495</position>
-            <template>%playcount% times</template>
-        </textarea>
-
-        <textarea name="filenamelbl"  from="artistlbl">
-            <position>380,530</position>
-            <value>Filename:</value>
-        </textarea>
-
-        <textarea name="filename" from="artist">
-            <area>540,530,510,70</area>
-            <font>small</font>
-            <align>left,top</align>
-            <case>normal</case>
-            <multiline>yes</multiline>
-        </textarea>
     </window>
 
 </mythuitheme>
