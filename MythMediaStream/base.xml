@@ -476,17 +476,14 @@
        <align>right,vcenter</align>
        <cutdown>yes</cutdown>
        <case>upper</case>
-       <value>Screen Title</value>
    </textarea>
 
    <textarea name="screentitle2" from="screentitle">
        <area>410,8,280,45</area>
-       <value>Screen Title 2</value>
    </textarea>
 
    <textarea name="screentitle3" from="screentitle">
        <area>730,8,220,50</area>
-       <value>Screen Title 3</value>
    </textarea>
 
 <!-- ===================================================== -->

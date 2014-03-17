@@ -72,9 +72,11 @@
 		              <textarea name="titlesubtitle" from="textarea_base">
                         <area>10,0,580,40</area>
                         <alpha>128</alpha>
+                        <font state="error">normal_red</font>
+                        <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
                         <cutdown>yes</cutdown>
-                        <template>%TITLE|  %%00x00| - %%SUBTITLE%</template>
+                        <template>%TITLE%% - |00x00%% - |SUBTITLE%</template>
                     </textarea>
                     <statetype name="jobstate">
                         <area>580,9,22,22</area>
@@ -118,7 +120,7 @@
                         <font state="error">normal_red</font>
                         <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
-                        <template>%TITLE|  %%00x00| - %%SUBTITLE%</template>
+                        <template>%TITLE%% - |00x00%% - |SUBTITLE%</template>
                     </textarea>
                     <textarea name="lenmins" from="textarea_base">
                         <area>475,5,120,35</area>

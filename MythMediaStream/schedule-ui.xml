@@ -344,10 +344,7 @@
     </window>
 
     <window name="manualschedule">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+       <area>0,0,988,720</area>
        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -387,53 +384,53 @@
 	        </textedit>
 	
 	        <textarea name="channellabel" from="titlelabel">
-	            <position>250,240</position>
+	            <position>250,210</position>
 	            <value>Channel:</value>
 	        </textarea>
 	
 	        <buttonlist name="channel" from="selector_base">
-	            <position>420,240</position>
+	            <position>420,210</position>
 	        </buttonlist>
 	
 	        <textarea name="datelabel" from="titlelabel">
-	            <position>250,305</position>
+	            <position>250,245</position>
 	            <value>Start Date:</value>
 	        </textarea>
 	
 	        <buttonlist name="startdate" from="channel">
-	            <position>420,305</position>
+	            <position>420,245</position>
 	        </buttonlist>
 	
 	        <textarea name="timelabel" from="titlelabel">
-	            <position>250,380</position>
+	            <position>250,280</position>
 	            <value>Start Time:</value>
 	        </textarea>
 	
 	        <spinbox name="starthour" from="spinbox_menu">
-	            <position>420,380</position>
+	            <position>420,280</position>
 	        </spinbox>
 	
 	        <textarea name="hourlabel" from="titlelabel">
-	            <position>520,380</position>
+	            <position>520,280</position>
 	            <value>Hour</value>
 	        </textarea>
 	
 	        <spinbox name="startminute" from="spinbox_base">
-	            <position>565,380</position>
+	            <position>565,280</position>
 	        </spinbox>
 	
 	        <textarea name="minutelabel" from="titlelabel">
-	            <position>665,380</position>
+	            <position>665,280</position>
 	            <value>Minutes</value>
 	        </textarea>
 	
 	        <textarea name="durationlabel" from="titlelabel">
-	            <position>250,445</position>
+	            <position>250,315</position>
 	            <value>Duration:</value>
 	        </textarea>
 	
 	        <spinbox name="duration" from="starthour">
-	            <position>420,445</position>
+	            <position>420,315</position>
 	        </spinbox>
         </group>
 
@@ -461,7 +458,7 @@
         <textarea name="ScreenTitleProgramList" from="screentitle">
             <value>upcoming recordings</value>
         </textarea>
-	     <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+	     <imagetype name="TitleBackgroundDateText" from="titlebackground2" depends="status"/>
         <textarea name="status" from="screentitle2">
             <font state="warning">normal_warning</font>
         </textarea>
@@ -651,9 +648,7 @@
 	        </textarea>
 	
 	        <textarea name="norecordings_info" from="description">
-	            <value>You Haven't Scheduled Any Programs To Be Recorded.\n
-	                To schedule a recording, exit this screen and
-	                select 'Program Guide' or 'Program Finder'.</value>
+	            <value>You Haven't Scheduled Any Programs To Be Recorded.\n\nTo schedule a recording, exit this screen and select 'Program Guide' or 'Program Finder'.</value>
 	        </textarea>
         </group>
 
@@ -662,10 +657,7 @@
     </window>
 
     <window name="channelrecpriority">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/podium.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+       <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
@@ -702,11 +694,12 @@
 	                    <imagetype name="icon">
 	                        <area>0,2,36,36</area>
 	                        <preserveaspect>no</preserveaspect>
+	                        <filename>images/icons/notifications/image-missing.png</filename>
 	                    </imagetype>
-	                    <imagetype name="glasoverlay">
+	                    <imagetype name="glasoverlay" depends="icon">
 	                        <area>0,2,36,36</area>
 	                        <preserveaspect>no</preserveaspect>
-	                        <filename>images/shared/ButtonMenuGlass.png</filename>
+	                        <filename>images/shared/list_musicicon_glass.png</filename>
 	                    </imagetype>
 	                    <textarea name="callsign" from="textarea_base">
 	                        <area>40,0,390,40</area>
@@ -725,11 +718,12 @@
 	                    <imagetype name="icon">
 	                        <area>0,2,36,36</area>
 	                        <preserveaspect>no</preserveaspect>
+	                        <filename>images/icons/notifications/image-missing.png</filename>
 	                    </imagetype>
-	                    <imagetype name="glasoverlay">
+	                    <imagetype name="glasoverlay" depends="icon">
 	                        <area>0,2,36,36</area>
 	                        <preserveaspect>no</preserveaspect>
-	                        <filename>images/shared/ButtonMenuGlass.png</filename>
+	                        <filename>images/shared/list_musicicon_glass.png</filename>
 	                    </imagetype>
 	                    <textarea name="channum" from="textarea_base">
 	                        <area>40,0,50,40</area>
@@ -749,13 +743,14 @@
 	        <imagetype name="icon">
 	            <area>250,590,100,100</area>
 	            <preserveaspect>no</preserveaspect>
+	            <filename>images/icons/notifications/image-missing.png</filename>
 	        </imagetype>
 	
-	        <imagetype name="glasoverlay">
-	             <area>250,590,100,100</area>
-	             <preserveaspect>no</preserveaspect>
-	             <filename>images/shared/ButtonMenuGlass.png</filename>
-	        </imagetype>
+           <imagetype name="glasoverlay" depends="icon">
+               <area>250,590,100,100</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/list_musicicon_glass.png</filename>
+           </imagetype>
 	
 	        <textarea name="channamelabel" from="textarea_base">
 	            <area>370,590,100,25</area>
@@ -814,10 +809,7 @@
     </window>
 
     <window name="programrecpriority">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/podium.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
@@ -932,10 +924,7 @@
     </window>
 
     <window name="custompriority">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/podium.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1041,10 +1030,7 @@
     </window>
 
     <window name="phrasepopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1117,10 +1103,7 @@
     </window>
 
     <window name="timepopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1179,10 +1162,7 @@
     </window>
 
     <window name="powersearchpopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1241,10 +1221,7 @@
     </window>
 
     <window name="editpowersearchpopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2">
             <position>0,0</position>
         </group> 
@@ -1357,22 +1334,31 @@
 
         <textarea name="curview" from="screentitle2"/>
 
-        <buttonlist name="proglist" from="buttonlist_wide">
-            <position>620,260</position>
+        <buttonlist name="proglist" from="buttonlist_menu_details">
+		     <area>670,260,610,440</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
+	        <buttonarea>0,0,610,440</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
                     <textarea name="shortstarttimedate" from="textarea_base">
-                        <area>10,0,570,40</area>
+                        <area>10,0,550,40</area>
                         <alpha>255</alpha>
                         <font>normal</font>
                         <alpha>128</alpha>
                         <font state="error">normal_red</font>
                         <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
-                        <template>%shorttimedate% - %title%</template>
+                        <template>%shortstarttimedate% | %titlesubtitle%</template>
                     </textarea>
                     <textarea name="card" from="shortstarttimedate">
-                        <area>600,0,35,40</area>
+                        <area>570,0,35,40</area>
                         <alpha>128</alpha>
                         <font>normal</font>
                         <font state="error">normal_red</font>
@@ -1382,19 +1368,15 @@
                     </textarea>
                 </state>
                 <state name="selectedactive">
-                    <textarea name="title" from="textarea_base">
-                        <area>10,0,270,40</area>
+                    <textarea name="titlesubtitle" from="textarea_base">
+                        <area>10,0,420,40</area>
                         <alpha>255</alpha>
                         <font state="error">normal_red</font>
                         <font state="running">normal_amber</font>
                         <align>left,vcenter</align>
                     </textarea>
-                    <imagetype name="statusimagedefault">
-                        <area>290,9,22,22</area>
-                        <filename>images/tv-recordings/schedule/schedule_mark.png</filename>
-                    </imagetype>
                     <statetype name="status">
-                        <area>290,9,22,22</area>
+                        <area>445,9,22,22</area>
                         <state name="disabled">
                             <imagetype name="statusimage">
                                 <area>0,0,22,22</area>
@@ -1431,30 +1413,110 @@
                                 <filename>images/tv-recordings/schedule/schedule_mark.png</filename>
                             </imagetype>
                         </state>
+                        <state name="default">
+                            <imagetype name="statusimage">
+                                <area>0,0,22,22</area>
+                                <filename>images/tv-recordings/schedule/schedule_disabled.png</filename>
+                            </imagetype>
+                        </state>
                     </statetype>
-                    <textarea name="shortstarttimedate" from="textarea_base">
-                        <area>320,7,320,33</area>
+                    <textarea name="lenmins" from="textarea_base">
+                        <area>475,5,120,35</area>
                         <alpha>255</alpha>
-                        <font>verysmall</font>
                         <case>normal</case>
+                        <font>verysmall</font>
                         <font state="error">verysmall_red</font>
                         <font state="running">verysmall_amber</font>
                         <align>left,vcenter</align>
-                        <template>Input %card%:  %shorttimedate% on %longchannel%</template>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
 
-<!--        <textarea name="keyinstr" from="textarea_base">
-            <area>900,695,370,25</area>
-            <font>verysmall</font>
-            <multiline>no</multiline>
-            <case>normal</case>
-            <align>right,vcenter</align>
-            <value>Press 1 to sort on date, press 2 to sort on time</value>
-        </textarea>-->
+        <group name="programlistdetails">
+           <area>30,260,630,393</area>
+           
+	        <textarea name="title" from="textarea_base">
+	            <area>15,0,600,30</area>
+	            <font>title</font>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	        </textarea>
+	
+	        <textarea name="category" from="textarea_base">
+	            <area>15,30,600,25</area>
+	            <font>title_small</font>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <alpha>192</alpha>
+	        </textarea>
+           
+           <group name="recordinginfo">
+              <area>0,30,630,122</area>
+	           <imagetype name="MenuItemLine1">
+	               <area>0,0,630,40</area>
+	               <filename>images/shared/MenuItemMusicNF.png</filename>
+	           </imagetype>
+	
+		        <textarea name="airedlbl" from="textarea_base">
+		            <area>60,50,100,25</area>
+		            <font>title_verysmall_blue</font>
+		            <align>left,vcenter</align>
+		            <value>Aired</value>
+		        </textarea>
+		
+		        <textarea name="timedate" from="textarea_base">
+		            <area>160,50,455,25</area>
+		            <font>small</font>
+		            <align>left,vcenter</align>
+		        </textarea>
+		
+		        <textarea name="channellbl" from="airedlbl">
+		            <position>60,77</position>
+		            <value>Channel</value>
+		        </textarea>
+		
+		        <textarea name="longchannel" from="timedate">
+		            <position>160,77</position>
+		            <template>%longchannel% on card %card%</template>
+		        </textarea>
+		
+		        <textarea name="rectypestatuslbl" from="airedlbl">
+		            <position>60,104</position>
+		            <value>Status</value>
+		        </textarea>
+		
+		        <textarea name="rectypestatus" from="timedate">
+		            <position>160,104</position>
+		        </textarea>
+	
+	           <imagetype name="MenuItemLine2" from="MenuItemLine1">
+	               <position>0,97</position>
+	           </imagetype>
+           </group>
 
+	        <textarea name="description" from="textarea_base">
+	            <area>15,180,590,290</area>
+	            <font>small</font>
+	            <case>normal</case>
+	            <align>justify</align>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
+	        </textarea>
+	
+	        <textarea name="msg" from="description">
+	            <value>No listings found for this program search.</value>
+	        </textarea>
+        </group>
+
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
+
+<!--
         <textarea name="title" from="textarea_base">
             <area>20,260,560,40</area>
             <font>title</font>
@@ -1529,6 +1591,7 @@
             <value>No listings found for this program search</value>
             <multiline>yes</multiline>
         </textarea>
+-->
     </window>
 
     <window name="progdetails">
@@ -1555,10 +1618,7 @@
     </window>
 
     <window name="searchpopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/network.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -1904,10 +1964,7 @@
     </window>
 
     <window name="customedit">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -2015,10 +2072,7 @@
     </window>
 
     <window name="scheduleeditor">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsScheduleeditor" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2193,10 +2247,7 @@
     </window>
 
     <window name="scheduleoptionseditor">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsScheduleoptionseditor" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2377,10 +2428,7 @@
     </window>
 
     <window name="schedulefiltereditor">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsScheduleoptionseditor" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group>
@@ -2514,10 +2562,7 @@
     </window>
 
     <window name="storageoptionseditor">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsStorageoptionseditor" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2693,10 +2738,7 @@
     </window>
 
     <window name="postproceditor">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsPostproceditor" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -2883,10 +2925,7 @@
     </window>
     
     <window name="metadataoptions">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/remotecontrol.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettingsMetadataoptions" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
