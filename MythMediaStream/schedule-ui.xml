@@ -235,7 +235,7 @@
             <conflictingcolor>#F92626</conflictingcolor>
             <cutdown>yes</cutdown>
             <multiline>no</multiline>
-            <textoffset>5,5</textoffset>
+            <textoffset>5,0</textoffset>
             <recordstatus type="SingleRecord" image="images/tv-recordings/gg-rs-single.png" />
             <recordstatus type="TimeslotRecord" image="images/tv-recordings/gg-rs-timeslot.png" />
             <recordstatus type="ChannelRecord" image="images/tv-recordings/gg-rs-channel.png" />
@@ -271,14 +271,15 @@
         </buttonlist>
 
         <buttonlist name="channellist">
-            <area>670,60,610,600</area>
+            <area>670,60,610,615</area>
             <layout>vertical</layout>
-            <spacing>4</spacing>
-            <buttonarea>0,0,610,600</buttonarea>
+            <spacing>0</spacing>
+            <align>center</align>
+            <buttonarea>0,0,610,615</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
 		               <imagetype name="MenuItemNF">
-		                   <area>0,0,610,40</area>
+		                   <area>0,0,610,43</area>
 		                   <filename>images/shared/MenuItemNF.png</filename>
 		               </imagetype>
                     <imagetype name="channelicon">
@@ -293,7 +294,7 @@
                         <filename>images/shared/list_musicicon_glass.png</filename>
                     </imagetype>
                     <textarea name="buttontext" from="textarea_base">
-                         <area>40,0,150,40</area>
+                         <area>40,0,150,43</area>
                          <font>smaller</font>
                     </textarea>
                 </state>
