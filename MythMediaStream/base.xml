@@ -4260,6 +4260,84 @@
         </textarea>
     </group>
 
+     <group name="baseprogramdetails">
+        <area>0,0,630,393</area>
+        
+        <textarea name="title" from="textarea_base">
+            <area>15,0,600,30</area>
+            <font>title</font>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <case>upper</case>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <textarea name="category" from="textarea_base">
+            <area>15,30,600,25</area>
+            <font>title_small</font>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+            <case>upper</case>
+            <align>left,vcenter</align>
+            <alpha>192</alpha>
+        </textarea>
+        
+        <group name="recordinginfo" depends="timedate">
+           <area>0,30,630,122</area>
+           <imagetype name="MenuItemLine1">
+               <area>0,0,630,40</area>
+               <filename>images/shared/MenuItemMusicNF.png</filename>
+           </imagetype>
+
+	        <textarea name="airedlbl" from="textarea_base">
+	            <area>60,50,100,25</area>
+	            <font>title_verysmall_blue</font>
+	            <align>left,vcenter</align>
+	            <value>Aired</value>
+	        </textarea>
+	
+	        <textarea name="timedate" from="textarea_base">
+	            <area>160,50,455,25</area>
+	            <font>small</font>
+	            <align>left,vcenter</align>
+	        </textarea>
+	
+	        <textarea name="channellbl" from="airedlbl">
+	            <position>60,77</position>
+	            <value>Channel</value>
+	        </textarea>
+	
+	        <textarea name="longchannel" from="timedate">
+	            <position>160,77</position>
+	            <template>%LONGCHANNEL| %%on card: |CARD%</template>
+	        </textarea>
+	
+	        <textarea name="rectypestatuslbl" from="airedlbl">
+	            <position>60,104</position>
+	            <value>Status</value>
+	        </textarea>
+	
+	        <textarea name="rectypestatus" from="timedate">
+	            <position>160,104</position>
+	        </textarea>
+
+           <imagetype name="MenuItemLine2" from="MenuItemLine1">
+               <position>0,97</position>
+           </imagetype>
+        </group>
+
+        <textarea name="description" from="textarea_base">
+            <area>15,180,590,290</area>
+            <font>small</font>
+            <case>normal</case>
+            <align>justify</align>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <template>%"|SUBTITLE|"\n%%YEARSTARS| %%DESCRIPTION%</template>
+        </textarea>
+     </group>
+
+
     <group name="defaultscreenlayoutSettings_1A_animated" from="defaultscreenlayoutSettings_1">
         <animation trigger="AboutToShow">
             <section duration="1000" centre="middle">
