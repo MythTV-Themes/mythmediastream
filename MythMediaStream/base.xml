@@ -4327,7 +4327,7 @@
         </group>
 
         <textarea name="description" from="textarea_base">
-            <area>15,180,590,290</area>
+            <area>15,180,590,260</area>
             <font>small</font>
             <case>normal</case>
             <align>justify</align>
