@@ -555,6 +555,30 @@
            </textarea>
         </textedit>
 
+        <textedit name="textedit_top">
+           <area>0,0,240,45</area>           
+           <statetype name="background">
+                <state name="active"/>
+                <state name="selected">
+                    <imagetype name="backgroundselected">
+                        <area>0,0,245,35</area>
+                        <alpha>192</alpha>
+                        <filename>images/shared/MenuItemFO.png</filename>
+                        <preserveaspect>no</preserveaspect>
+                    </imagetype>
+                </state>
+                <state name="inactive" from="active"/>
+           </statetype>
+           <imagetype name="cursor">
+               <filename>images/shared/cursor.png</filename>
+               <alpha>192</alpha>
+           </imagetype>
+           <textarea name="text" from="screentitle">
+                <area>0,0,240,35</area>
+                <align>right,vcenter</align>
+           </textarea>
+        </textedit>
+
         <textedit name="textedit_menu_wide">
            <area>0,0,510,35</area>
            <statetype name="background">

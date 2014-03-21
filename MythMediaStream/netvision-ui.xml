@@ -2,16 +2,47 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-  <window name="netsearch">
-        <imagetype name="netsearchbgd" from="image_wallpaper_base">
+    <window name="netsearch">
+        <imagetype name="fanartfallback" from="image_wallpaper_base">
             <filename>images/backgrounds/app-store.jpg</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleRecordings" from="screentitle">
-            <value>SEARCH INTERNET VIDEO</value>
+        <textarea name="ScreenTitleVideoList" from="screentitle">
+            <value>SEARCH INTERNET VIDEOS</value>
         </textarea>
+        <imagetype name="TitleBackgroundDateText" from="titlebackground2"/>
+
+        <textedit name="search">
+           <area>445,10,240,45</area>           
+           <statetype name="background">
+                <state name="active"/>
+                <state name="selected">
+                    <imagetype name="backgroundselected">
+                        <area>0,0,245,35</area>
+                        <alpha>192</alpha>
+                        <filename>images/shared/MenuItemFO.png</filename>
+                        <preserveaspect>no</preserveaspect>
+                    </imagetype>
+                </state>
+                <state name="inactive" from="active"/>
+           </statetype>
+           <imagetype name="cursor">
+               <filename>images/shared/cursor.png</filename>
+               <alpha>192</alpha>
+           </imagetype>
+           <textarea name="text" from="screentitle">
+                <area>0,0,240,35</area>
+                <align>right,vcenter</align>
+           </textarea>
+        </textedit>
+
+        <imagetype name="MediaCountBackground" depends="page">
+            <area>1110,5,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
         <textarea name="page" from="textarea_base">
             <area>1112,8,146,40</area>
             <font>normal</font>
@@ -21,33 +52,37 @@
             <cutdown>no</cutdown>
         </textarea>
 
-        <textarea name="searchlbl" from="textarea_base">
-            <area>750,260,510,35</area>
-            <value>Search for:</value>
-        </textarea>
-
-        <textedit name="search" from="textedit_menu">
-            <position>910,260</position>
-        </textedit>
-
+        <!-- ===================================================== -->
+        <!--     VIDEO LIST                                        -->
+        <!-- ===================================================== -->
         <buttonlist name="sites" from="buttonlist_menu">
-            <area>740,295,540,420</area>
-            <buttonarea>0,0,540,400</buttonarea>
-            <statetype name="upscrollarrow">
-                <position>10,404</position>	
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>30,404</position>	
-            </statetype>
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
         </buttonlist>
 
         <buttonlist name="results" from="buttonlist_menu_details">
-            <area>740,295,540,420</area>
-            <buttonarea>0,0,540,400</buttonarea>
-            <statetype name="buttonitem">
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
+           <statetype name="buttonitem">
                 <state name="selectedactive">
                     <textarea name="length" from="textarea_base">
-                        <area>405,5,120,35</area>
+                        <area>475,5,120,35</area>
                         <font>verysmall</font>
                         <font state="error">verysmall_red</font>
                         <font state="running">verysmall_amber</font>
@@ -57,156 +92,125 @@
                     <statetype name="downloadable">
                         <state name="yes">
                             <imagetype name="yes">
-                                <area>375,9,22,22</area>
-                                <filename>images/shared/OverlayUnwatched.png</filename>
+                                <area>445,9,22,22</area>
+                                <filename>images/icons/go-down.png</filename>
                             </imagetype>
                         </state>
                         <state name="no">
                             <imagetype name="no">
-                                <area>375,9,22,22</area>
-                                <filename>images/shared/OverlayWatched.png</filename>
+                                <area>445,9,22,22</area>
+                                <filename>images/icons/applications-internet.png</filename>
                             </imagetype>
                         </state>
                         <state name="default">
                             <imagetype name="defaultimage">
-                                <area>375,9,22,22</area>
-                                <filename>images/shared/OverlayUnwatched.png</filename>
+                                <area>445,9,22,22</area>
+                                <filename>images/icons/applications-internet.png</filename>
                             </imagetype>
                         </state>
                     </statetype>
 		          </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>10,404</position>	
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>30,404</position>	
-            </statetype>
+           </statetype>
         </buttonlist>
 
-        <imagetype name="preview">
-            <area>25,260,350,197</area>
-            <preserveaspect>no</preserveaspect>
-<!--            <filename>images/shared/defaultNetworkBigWide.png</filename>-->
-            <reflection shear="0" scale="65" length="18"/>
-        </imagetype>
+        <!-- ===================================================== -->
+        <!--     PROGRAM DETAILS                                   -->
+        <!-- ===================================================== -->
 
-        <textarea name="title" from="textarea_base">
-            <area>400,260,325,85</area>
-            <font>title</font>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <case>upper</case>
-            <align>left,bottom</align>
-        </textarea>
+        <group name="preview_details" depends="author">
+	           <area>40,55,630,393</area>
+	           
+		        <statetype name="userratingstate" from="rating_base">
+		            <area>20,10,80,20</area>
+		        </statetype>
 
-        <textarea name="author" from="textarea_base">
-            <area>400,350,325,25</area>
-            <font>title_small</font>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <alpha>128</alpha>
-            <case>upper</case>
-            <align>left,top</align>
-        </textarea>
+			     <group name="parentalcontrol" from="parentalcontrolgroup">
+			         <area>430,10,165,30</area>
+			     </group>
 
-        <textarea name="datelbl" from="textarea_base" depends="date">
-            <area>400,400,100,25</area>
-            <font>title_verysmall_blue</font>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <alpha>255</alpha>
-            <case>upper</case>
-            <align>left,vcenter</align>
-            <value>Date</value>
-        </textarea>
-        
-        <textarea name="resolutionlbl" from="datelbl" depends="resolution">
-            <position>400,430</position>
-            <value>File</value>
-        </textarea>
+     	        <imagetype name="preview">
+		            <area>19,50,578,354</area>
+		            <preserveaspect>no</preserveaspect>
+		        </imagetype>
+		
+		        <imagetype name="previewframe">
+		            <area>0,31,614,392</area>
+		            <preserveaspect>no</preserveaspect>
+		            <filename>images/shared/tvseries_focusframe.png</filename>
+		        </imagetype>
+	
+		        <textarea name="title" from="textarea_base">
+		            <area>15,420,600,30</area>
+		            <font>title</font>
+		            <multiline>no</multiline>
+		            <cutdown>yes</cutdown>
+		            <case>upper</case>
+		            <align>left,vcenter</align>
+		        </textarea>
+		
+              <imagetype name="MenuItemLine1">
+                  <area>0,418,630,40</area>
+                  <filename>images/shared/MenuItemMusicNF.png</filename>
+              </imagetype>
 
-        <textarea name="date" from="textarea_base">
-            <area>470,400,275,25</area>
-            <font>normal</font>
-            <case>normal</case>
-            <multiline>no</multiline>
-            <alpha>255</alpha>
-        </textarea>
-        
-        <textarea name="resolution" from="date">
-            <position>470,430</position>
-            <template>%RESOLUTION|, %%filesize_str| %%(|length|)%</template>
-        </textarea>	
+		        <textarea name="directorlabel" from="textarea_base">
+		            <area>60,473,100,25</area>
+		            <font>title_verysmall_blue</font>
+		            <multiline>no</multiline>
+		            <cutdown>yes</cutdown>
+		            <alpha>255</alpha>
+		            <case>upper</case>
+		            <align>left,vcenter</align>
+		            <value>Author</value>
+		        </textarea>
+	
+		        <textarea name="ratinglabel" from="directorlabel">
+		            <position>60,500</position>
+		            <value>Resolution</value>
+		        </textarea>
 
-        <textarea name="description" from="textarea_base">
-            <area>25,490,700,170</area>
-            <font>small</font>
-            <case>normal</case>
-            <align>left,top</align>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <template>%00x00| - %%"|SUBTITLE|"\n%%|RATING| - %%DESCRIPTION%</template>
-        </textarea>
+		        <textarea name="author" from="textarea_base">
+		            <area>160,473,455,25</area>
+		            <font>normal</font>
+		            <case>normal</case>
+		            <multiline>no</multiline>
+		            <alpha>255</alpha>
+		            <template>%author%%, |date%</template>
+		        </textarea>
+	
+		        <textarea name="resolution" from="textarea_base">
+		            <area>160,500,455,25</area>
+		            <align>left,vcenter</align>
+		            <case>upper</case>
+		            <template>%resolution|, %%filesize_str| %</template>
+		        </textarea>
+		
+              <imagetype name="MenuItemLine2" from="MenuItemLine1">
+                  <position>0,493</position>
+              </imagetype>
 
-        <textarea name="urllbl" from="textarea_base" depends="mediaurl">
-            <area>25,677,100,25</area>
-            <font>title_verysmall_blue</font>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <alpha>255</alpha>
-            <case>upper</case>
-            <align>left,vcenter</align>
-            <value>URL</value>
-        </textarea>
-
-        <textarea name="mediaurl" from="textarea_base">
-            <area>95,677,630,25</area>
-            <font>normal</font>
-            <case>normal</case>
-            <align>left,vcenter</align>
-            <scroll direction="left" />
-            <alpha>255</alpha>
-        </textarea>
+		        <textarea name="description" from="textarea_base">
+		            <area>10,540,590,125</area>
+		            <font>small</font>
+		            <case>normal</case>
+		            <align>justify</align>
+		            <multiline>yes</multiline>
+		            <template>%00x00| - %%"|SUBTITLE|"\n%%|RATING| - %%DESCRIPTION%</template>
+		            <cutdown>yes</cutdown>
+		        </textarea>
+		        
+	     </group>
 
         <textarea name="nosites" from="description">
             <value>Can't find any search scripts! This usually indicates missing search script prerequisites. Try running a script from the command line.</value>
         </textarea>
 
-        <!-- ===================================================== -->
-        <!--   INFO ICONS                                          -->
-        <!-- ===================================================== -->
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
-<!-- now just for decoration, hopefully we will get here real status information-->
-<!-- 
-       <group name="defaultinfoicons" depends="preview"> 
-	       <imagetype name="defaultsub">
-	           <area>25,670,74,50</area>
-	           <alpha>64</alpha>
-	           <preserveaspect>no</preserveaspect>
-	           <filename>images/flags/onscreensub.png</filename>
-	       </imagetype>
-	       <imagetype name="defaultvideo">
-	           <area>95,670,74,50</area>
-	           <preserveaspect>no</preserveaspect>
-	           <alpha>64</alpha>
-	           <filename>images/flags/576i.png</filename>
-	       </imagetype>
-	       <imagetype name="defaultaudio">
-	           <area>170,670,74,50</area>
-	           <preserveaspect>no</preserveaspect>
-	           <alpha>64</alpha>
-	           <filename>images/flags/dd20.png</filename>
-	       </imagetype>
-       </group>
--->
-  </window>
+    </window>
 
   <window name="treeeditor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/app-store.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
@@ -243,10 +247,7 @@
   </window>
 
   <window name="rsseditor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/app-store.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -315,10 +316,7 @@
   </window>
 
   <window name="rsseditpopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/app-store.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
