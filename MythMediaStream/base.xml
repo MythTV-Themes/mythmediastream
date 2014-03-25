@@ -2598,6 +2598,265 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_tree_netvision" from="buttonlist_menu_details">
+     <area>670,60,610,640</area>
+     <scrollstyle>free</scrollstyle>
+     <wrapstyle>items</wrapstyle>
+     <arrange>fixed</arrange>
+     <buttonarea>0,0,610,640</buttonarea>
+     <showarrow>no</showarrow>
+     <showscrollbar>yes</showscrollbar>
+     <scrollbar name="scrollbar" from="basescrollbarvert">
+         <area>-20,0,3%,100%</area>
+     </scrollbar>
+     <statetype name="buttonitem">
+          <state name="selectedactive">
+              <textarea name="length" from="textarea_base">
+                  <area>475,5,120,35</area>
+                  <font>verysmall</font>
+                  <font state="error">verysmall_red</font>
+                  <font state="running">verysmall_amber</font>
+                  <case>Normal</case>
+                  <align>left,vcenter</align>
+              </textarea>
+              <statetype name="downloadable">
+                  <state name="yes">
+                      <imagetype name="yes">
+                          <area>445,9,22,22</area>
+                          <filename>images/icons/go-down.png</filename>
+                      </imagetype>
+                  </state>
+                  <state name="no">
+                      <imagetype name="no">
+                          <area>445,9,22,22</area>
+                          <filename>images/icons/applications-internet.png</filename>
+                      </imagetype>
+                  </state>
+                  <state name="default">
+                      <imagetype name="defaultimage">
+                          <area>445,9,22,22</area>
+                          <filename>images/icons/applications-internet.png</filename>
+                      </imagetype>
+                  </state>
+              </statetype>
+          </state>
+     </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_browse_netvision">
+       <spacing>0</spacing>
+       <area>0,140,1280,391</area>
+       <searchposition>758,55</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1280,391</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+
+       <scrollbar name="scrollbar" from="basescrollbarhorz">
+           <area>40,340,100%-40,8%</area>
+       </scrollbar>
+
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>-3,-3,175,264</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-5,-5,268,268</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>	
+			         <imagetype name="buttonimage">
+			             <area>0,0,264,264</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster_music.png</filename>
+		                <mask>images/shared/list_movieicon_mask_active.png</mask>
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,264,264</area> 
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,175,264</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask_active.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,263,263</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+
+<!--
+               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
+                   <area>5,137,100,20</area>
+                   <alpha>128</alpha>
+                   <case>normal</case>
+                   <align>hcenter,vcenter</align>
+                   <font state="default">tiny</font>
+                   <font state="error">tiny_red</font>
+                   <font state="running">tiny_amber</font>
+               </textarea>	              
+-->
+           </state>
+           <state name="inactive" from ="active"/>
+           <state name="selectedactive">
+	            <area>-39,-58,175,264</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-45,-6,391,391</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_frame.png</filename>
+			         </imagetype>		
+			         <imagetype name="buttonimage">
+			             <area>-39,0,380,380</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster.png</filename>
+		                <mask>images/shared/list_movieicon_mask.png</mask>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>-39,0,380,380</area>
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,380,380</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>-39,0,380,380</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_movieicon_glass.png</filename>
+			         </imagetype>
+               </group>
+           </state>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_gallery_netvision">
+       <spacing>0</spacing>
+       <area>0,0,800,650</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left,top</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,800,650</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>750,0,3%,100%-20</area>
+       </scrollbar>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,100,100</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-3,-3,105,105</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>	
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster_music.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,100,100</area> 
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,100,100</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+				      <imagetype name="coverartglass">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-20,-20,100,100</area>  
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-4,-4,147,147</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>		
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/amt-blank-poster_music.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,140,140</area>
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,140,140</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+	               <statetype name="downloadable">
+	                   <state name="yes">
+	                       <imagetype name="yes">
+	                           <area>118,2,20,20</area>
+	                           <filename>images/icons/go-down.png</filename>
+	                       </imagetype>
+	                   </state>
+	                   <state name="no">
+	                       <imagetype name="no">
+	                           <area>118,2,20,20</area>
+	                           <filename>images/icons/applications-internet.png</filename>
+	                       </imagetype>
+	                   </state>
+	                   <state name="default">
+	                       <imagetype name="defaultimage">
+	                           <area>118,2,20,2</area>
+	                           <filename>images/icons/applications-internet.png</filename>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+               </group>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>128</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
 
 <!-- ===================================================== -->
 <!--     BUTTONLIST DIALOG                                 -->
