@@ -598,7 +598,7 @@
 
        <statetype name="buttonitem">
            <state name="active">
-               <area>-4,0,264,264</area>
+               <area>-5,0,264,264</area>
                <group name="coverartgroup">
 			         <imagetype name="coverartbgd">
 			             <area>-7,-7,278,278</area>
@@ -617,7 +617,7 @@
 	                       <imagetype name="icon">
 	                           <area>0,0,264,264</area>
 	                           <alpha>255</alpha>
-	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
 	                           <mask>images/shared/list_musicicon_mask_netvision_active.png</mask>
 	                           <preserveaspect>no</preserveaspect>
 	                       </imagetype>
@@ -651,7 +651,7 @@
 	                       <imagetype name="icon">
 	                           <area>0,0,380,380</area>
 	                           <alpha>255</alpha>
-	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
 	                           <mask>images/shared/list_musicicon_mask_netvision_selected.png</mask>
 	                           <preserveaspect>no</preserveaspect>
 	                       </imagetype>

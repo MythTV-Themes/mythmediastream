@@ -2782,7 +2782,7 @@
 	                       <imagetype name="icon">
 	                           <area>0,0,100,100</area>
 	                           <alpha>255</alpha>
-	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
 	                           <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
 	                           <preserveaspect>no</preserveaspect>
 	                       </imagetype>
@@ -2818,7 +2818,7 @@
 	                       <imagetype name="icon">
 	                           <area>0,0,140,140</area>
 	                           <alpha>255</alpha>
-	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
 	                           <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
 	                           <preserveaspect>no</preserveaspect>
 	                       </imagetype>
