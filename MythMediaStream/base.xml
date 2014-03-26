@@ -2857,6 +2857,118 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_gallery_gallery">
+       <spacing>0</spacing>
+       <area>0,0,800,650</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left,top</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,800,650</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>750,0,3%,100%-20</area>
+       </scrollbar>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,100,100</area>
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-3,-3,105,105</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>	
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/DefaultFolder.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,100,100</area> 
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,100,100</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
+	                           <mask>images/shared/list_musicicon_mask_wall_active.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+				      <imagetype name="coverartglass">
+			             <area>0,0,100,100</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+		         </group>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-20,-20,100,100</area>  
+               <group name="coverartgroup">
+			         <imagetype name="coverartbgd">
+			             <area>-4,-4,147,147</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_frame.png</filename>
+			         </imagetype>		
+			         <imagetype name="buttonimage" depends="!nodetype">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/DefaultFolder.png</filename>
+		                <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>0,0,140,140</area>
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,140,140</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderUp.png</filename>
+	                           <mask>images/shared/list_musicicon_mask_wall_selected.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+	               <statetype name="downloadable">
+	                   <state name="yes">
+	                       <imagetype name="yes">
+	                           <area>118,2,20,20</area>
+	                           <filename>images/icons/go-down.png</filename>
+	                       </imagetype>
+	                   </state>
+	                   <state name="no">
+	                       <imagetype name="no">
+	                           <area>118,2,20,20</area>
+	                           <filename>images/icons/applications-internet.png</filename>
+	                       </imagetype>
+	                   </state>
+	                   <state name="default">
+	                       <imagetype name="defaultimage">
+	                           <area>118,2,20,2</area>
+	                           <filename>images/icons/applications-internet.png</filename>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
+			         <imagetype name="coverartglass">
+			             <area>0,0,140,140</area>
+			             <preserveaspect>no</preserveaspect>
+		                <filename>images/shared/list_musicicon_glass.png</filename>
+			         </imagetype>
+               </group>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>128</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
 
 <!-- ===================================================== -->
 <!--     BUTTONLIST DIALOG                                 -->

@@ -3,17 +3,22 @@
 <mythuitheme>
 
     <window name="gallery">
-        <imagetype name="picturesbgd" from="image_wallpaper_base">
+        <imagetype name="fanart" from="image_wallpaper_base">
             <filename>images/backgrounds/MediaStreamPicturesBGD.png</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleVideoGallery" from="screentitle">
+        <textarea name="ScreenTitleVideoManager" from="screentitle">
             <value>PICTURE GALLERY</value>
         </textarea>
+        <imagetype name="MediaCountBackground" depends="position">
+            <area>1110,5,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
+
         <textarea name="position" from="textarea_base">
-            <area>1112,5,146,40</area>
+            <area>1112,8,146,40</area>
             <font>normal</font>
             <case>lower</case>
             <align>allcenter</align>
@@ -21,16 +26,66 @@
             <cutdown>no</cutdown>
         </textarea>
 
-        <!-- ===================================================== -->
-        <!--     IMAGE GALLERY                                     -->
-        <!-- ===================================================== -->
+		  <buttonlist name="images" from="buttonlist_gallery_gallery">
+		      <area>45,60,400,650</area>
+		      <buttonarea>0,0,400,650</buttonarea>
+		      <scrollbar name="scrollbar" from="basescrollbarvert">
+		          <area>330,0,3%,100%-20</area>
+		      </scrollbar>
+		  </buttonlist>
+	
+        <group name="picturedetails">
+	        <area>420,60,820,660</area>
+           <textarea name="title" from="textarea_base">
+	            <area>0,0,820,35</area>
+	            <font>title</font>
+	            <scroll direction="left" />
+	            <multiline>no</multiline>
+	            <cutdown>no</cutdown>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	        </textarea>
+	
+	        <imagetype name="selectedimage">
+	            <area>0,50,800,450</area>
+	            <alpha>255</alpha>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/backgrounds/images.jpg</filename>
+	        </imagetype>
+
+	        <imagetype name="previewframe">
+	            <area>-25,24,850,500</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/tvseries_focusframe.png</filename>
+	        </imagetype>
+	        
+	        <textarea name="breadcrumbslbl" from="textarea_base" depends="breadcrumbs">
+	            <area>0,620,80,25</area>
+	            <font>title_verysmall_blue</font>
+	            <case>upper</case>
+	            <align>left,vcenter</align>
+	            <value>Path</value>
+	        </textarea>
+	
+	        <textarea name="breadcrumbs" from="textarea_base">
+	            <area>50,620,770,25</area>
+	            <font>normal</font>
+	            <case>normal</case>
+	            <align>left,bottom</align>
+	            <multiline>no</multiline>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+        </group>
+
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
+
+
+<!--
         <buttonlist name="images" from="buttonlist_menu">
             <position>740,260</position>
         </buttonlist>
 
-        <!-- ===================================================== -->
-        <!--     IMAGE DETAILS                                     -->
-        <!-- ===================================================== -->
         <imagetype name="selectedimagebgd">
             <area>37,257,666,377</area>
             <alpha>255</alpha>
@@ -67,15 +122,11 @@
         <textarea name="noimages" from="breadcrumbs">
             <align>right,vcenter</align>
         </textarea>
-
+-->
     </window>
 
     <window name="filter">
-
-         <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamPicturesBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
