@@ -796,14 +796,14 @@
 	            <font>title_verysmall_blue</font>
 	            <case>upper</case>
 	            <align>left,vcenter</align>
-	            <value>ratings</value>
+	            <value>rating</value>
 	        </textarea>
 	
 	        <textarea name="rating" from="textarea_base">
-	            <area>50,620,30,25</area>
+	            <area>60,620,380,25</area>
 	            <font>normal</font>
 	            <case>normal</case>
-	            <align>right,bottom</align>
+	            <align>left,bottom</align>
 	            <template>%|(RATING)%</template>
 	        </textarea>
 

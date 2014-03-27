@@ -3,15 +3,19 @@
 <mythuitheme>
 
     <window name="news">
-        <imagetype name="bgd" from="image_wallpaper_base">
+        <imagetype name="fanartfallback" from="image_wallpaper_base">
             <filename>images/backgrounds/news.jpg</filename>
         </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
+        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_2">
             <position>0,0</position>        
         </group>
-        <textarea name="ScreenTitleRecordings" from="screentitle">
+        <textarea name="ScreenTitleVideoList" from="screentitle">
             <value>NEWS</value>
         </textarea>
+        <imagetype name="MediaCountBackground" depends="page">
+            <area>1110,5,160,40</area>
+            <filename>images/shared/MediaCountBackgroundLong.png</filename>
+        </imagetype>    
         <textarea name="page" from="textarea_base">
             <area>1112,8,146,40</area>
             <font>normal</font>
@@ -25,71 +29,154 @@
         <!--     NEWS CATEGORIES & ITEMS                           -->
         <!-- ===================================================== -->
         <buttonlist name="siteslist" from="buttonlist_menu">
-            <position>740,260</position>
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
         </buttonlist>
 
         <buttonlist name="articleslist" from="buttonlist_menu">
-            <position>740,260</position>
+		     <area>670,60,610,640</area>
+		     <scrollstyle>free</scrollstyle>
+	        <wrapstyle>items</wrapstyle>
+	        <arrange>fixed</arrange>
+	        <buttonarea>0,0,610,640</buttonarea>
+           <showarrow>no</showarrow>
+           <showscrollbar>yes</showscrollbar>
+	        <scrollbar name="scrollbar" from="basescrollbarvert">
+	            <area>-20,0,3%,100%</area>
+	        </scrollbar>
         </buttonlist>
 
         <!-- ===================================================== -->
         <!--     NEWS DETAILS                                      -->
         <!-- ===================================================== -->
-        <imagetype name="thumbnail">
-            <area>25,260,400,225</area>
-            <preserveaspect>no</preserveaspect>
-            <filename>images/shared/defaultNetworkBigWide.png</filename>
-            <reflection shear="0" scale="65" length="15"/>
-        </imagetype>
 
-        <textarea name="updated" from="textarea_base">
-            <area>450,260,275,25</area>
-            <font>title_small</font>
-            <multiline>no</multiline>
-            <cutdown>yes</cutdown>
-            <alpha>128</alpha>
-            <case>upper</case>
-            <align>left,top</align>
-        </textarea>
+        <group name="news_details" depends="description">
+	           <area>40,55,630,393</area>
+	           <group name="newsstatusgroup"> 
+	              <area>20,10,120,30</area>  
+			        <imagetype name="download">
+			            <filename>images/icons/go-down.png</filename>
+			            <area>0,0,30,30</area>
+			            <preserveaspect>no</preserveaspect>
+			        </imagetype>
+			        <imagetype name="nodownload" from="download" depends="!download">
+			            <alpha>128</alpha>
+			        </imagetype>
+			        			
+			        <imagetype name="ispodcast">
+			            <filename>images/icons/library-podcast.png</filename>
+			            <area>45,0,30,30</area>
+			            <preserveaspect>no</preserveaspect>
+			        </imagetype>
+			        <imagetype name="noispodcast" from="ispodcast" depends="!ispodcast">
+			            <alpha>128</alpha>
+			        </imagetype>
+			        	
+			        <imagetype name="enclosures">
+			            <filename>images/icons/mail-attachment.png</filename>
+			            <area>90,0,30,30</area>
+			            <preserveaspect>no</preserveaspect>
+			        </imagetype>
+			        <imagetype name="noenclosures" from="enclosures" depends="!enclosures">
+			            <alpha>128</alpha>
+			        </imagetype>
+              </group>
+              
+			     <group name="parentalcontrol" from="parentalcontrolgroup">
+			         <area>430,10,165,30</area>
+			     </group>
 
-        <textarea name="title" from="textarea_base">
-            <area>450,285,275,200</area>
-            <font>title</font>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <case>upper</case>
-            <align>left,top</align>
-        </textarea>
+     	        <imagetype name="thumbnail">
+		            <area>19,50,578,354</area>
+		            <preserveaspect>no</preserveaspect>
+		        </imagetype>
+		
+		        <imagetype name="fanart" depends="!thumbnail">
+		            <area>18,50,579,356</area>
+		            <preserveaspect>no</preserveaspect>
+                  <filename>images/backgrounds/news.jpg</filename>
+		        </imagetype>
 
-        <textarea name="description" from="textarea_base">
-            <area>25,540,695,120</area>
-            <font>small</font>
-            <case>normal</case>
-            <align>justify</align>
-            <multiline>yes</multiline>
-        </textarea>
+		        <imagetype name="previewframe">
+		            <area>0,31,614,392</area>
+		            <preserveaspect>no</preserveaspect>
+		            <filename>images/shared/tvseries_focusframe.png</filename>
+		        </imagetype>
+	
+		        <textarea name="title" from="textarea_base">
+		            <area>15,420,600,30</area>
+		            <font>title</font>
+		            <multiline>no</multiline>
+		            <cutdown>yes</cutdown>
+		            <case>upper</case>
+		            <align>left,vcenter</align>
+		        </textarea>
+		
+              <imagetype name="MenuItemLine1">
+                  <area>0,418,630,40</area>
+                  <filename>images/shared/MenuItemMusicNF.png</filename>
+              </imagetype>
+
+		        <textarea name="updatelabel" from="textarea_base">
+		            <area>60,473,100,25</area>
+		            <font>title_verysmall_blue</font>
+		            <multiline>no</multiline>
+		            <cutdown>yes</cutdown>
+		            <alpha>255</alpha>
+		            <case>upper</case>
+		            <align>left,vcenter</align>
+		            <value>Update</value>
+		        </textarea>
+	
+		        <textarea name="ratinglabel" from="updatelabel">
+		            <position>60,500</position>
+		            <value>Rating</value>
+		        </textarea>
+
+		        <textarea name="updated" from="textarea_base">
+		            <area>160,473,455,25</area>
+		            <font>normal</font>
+		            <case>normal</case>
+		            <multiline>no</multiline>
+		            <alpha>255</alpha>
+		        </textarea>
+	
+		        <textarea name="userrating" from="updated">
+		            <area>160,500,455,25</area>
+		            <value>Not Applicable</value>
+		        </textarea>
+		
+              <imagetype name="MenuItemLine2" from="MenuItemLine1">
+                  <position>0,493</position>
+              </imagetype>
+
+		        <textarea name="description" from="textarea_base">
+		            <area>10,540,590,125</area>
+		            <font>small</font>
+		            <case>normal</case>
+		            <align>justify</align>
+		            <multiline>yes</multiline>
+		            <cutdown>yes</cutdown>
+		        </textarea>
+		        
+	     </group>
 
         <textarea name="nosites" from="description"/>
 
-        <imagetype name="download">
-            <filename>need-download.png</filename>
-            <area>25,670,30,30</area>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
-
-        <imagetype name="ispodcast">
-            <filename>podcast.png</filename>
-            <area>70,670,30,30</area>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
+        <group name="menu_bgd" from="defaultmenu_bgd"/>      
 
     </window>
 
     <window name="editor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/news.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -174,11 +261,7 @@
     </window>
 
     <window name="config">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/news.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
             <position>0,0</position>
         </group> 
