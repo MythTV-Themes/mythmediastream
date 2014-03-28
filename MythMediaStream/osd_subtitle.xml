@@ -30,7 +30,7 @@
 	  -->
         <shape name="black_background" from="provider">
           <type>box</type>
-          <fill color="#000000" alpha="255" />
+          <fill color="#000000" alpha="0" />
         </shape>
 
 
@@ -39,6 +39,10 @@
             files like .srt or .txt files.
            -->
         <fontdef name="text" face="Droid Sans" from="provider">
+           <color>#ffffff</color>
+			  <outlinecolor>#000000</outlinecolor>
+			  <outlinesize>3</outlinesize>
+			  <outlinealpha>255</outlinealpha>
         </fontdef>
 
         <shape   name="text" from="black_background">
@@ -59,6 +63,9 @@
             teletext captions.  A monospaced font should be used.
            -->
         <fontdef name="608" face="FreeMono" from="provider">
+			  <outlinecolor>#000000</outlinecolor>
+			  <outlinesize>2</outlinesize>
+			  <outlinealpha>255</outlinealpha>
         </fontdef>
 
         <shape   name="608" from="black_background">

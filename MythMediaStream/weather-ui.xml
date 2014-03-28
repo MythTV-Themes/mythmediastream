@@ -777,10 +777,7 @@
     </window>
 
     <window name="global-setup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -842,10 +839,7 @@
     </window>
 
     <window name="screen-setup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -927,10 +921,7 @@
     </window>
 
     <window name="source-setup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -1011,10 +1002,7 @@
     </window>
 
     <window name="setup-location">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 

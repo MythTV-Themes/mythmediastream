@@ -27,16 +27,6 @@
 
         <progressbar name="progressbar" from="progressbar_base">
             <area>950,30,320,10</area>
-            <imagetype name="background">
-                <area>0,0,320,10</area>
-                <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-                <preserveaspect>false</preserveaspect>
-            </imagetype>
-            <imagetype name="progressimage">
-                <area>0,0,320,10</area>
-                <filename>images/shared/progressbar/progressbar_large_fill_grey.png</filename>
-                <preserveaspect>false</preserveaspect>
-            </imagetype>
         </progressbar>
 
         <webbrowser name="webbrowser">
@@ -47,66 +37,80 @@
     </window>
 
     <window name="bookmarkmanager">
-        <imagetype name="browserbgd" from="image_wallpaper_base">
-            <filename>images/backgrounds/web.jpg</filename>
-        </imagetype>
-        <group name="screenlayoutTVlist" from="defaultscreenlayoutTVlist_1">
-            <position>0,0</position>        
-        </group>
-        <textarea name="ScreenTitleRecordings" from="screentitle">
-            <value>BOOKMARK MANAGER</value>
-        </textarea>
+        <area>0,0,988,720</area>
+        <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_1B_animated">
+            <position>0,0</position>
+        </group> 
+        <group name="bookmarkmanager1group" from="defaultscreencontent_1B_animated">
+           <area>0,0,720,988</area>
+	        <!-- ================================================== -->
+	        <!-- content of the window                              -->
+	        <!-- ================================================== -->
+	        <textarea name="pagetitledesc" from="textarea_base">
+	            <area>250,10,515,65</area>
+	            <font>menu_description</font>
+	            <case>upper</case>
+	            <align>right,bottom</align>
+	            <cutdown>yes</cutdown>
+	            <multiline>yes</multiline>
+	            <value>Choose a bookmark to open in your browser</value> 
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_base">
+	            <area>250,75,515,65</area>
+	            <font>menu_active</font>
+	            <case>upper</case>
+	            <align>right,vcenter</align>
+	            <cutdown>yes</cutdown>
+	            <multiline>yes</multiline>
+	            <value>Select bookmark</value>
+	        </textarea>
+	
+	
+	        <buttonlist name="grouplist" from="buttonlist_dialog_wide">
+	            <position>250,175</position>
+	        </buttonlist>
 
-        <buttonlist name="grouplist" from="buttonlist_menu">
-            <position>740,260</position>
-        </buttonlist>
+	        <buttonlist name="bookmarklist" from="buttonlist_dialog_wide_details">
+	            <position>250,175</position>
+	            <statetype name="buttonitem">
+	                <state name="active">
+	                    <textarea name="name" from="textarea_base">
+	                        <area>10,0,350,40</area>
+	                    </textarea>
+	                </state>
+	                <state name="selectedactive">
+	                    <textarea name="name" from="textarea_base">
+	                        <area>10,0,320,40</area>
+	                    </textarea>
+	                    <textarea name="url" from="textarea_base">
+	                        <area>375,7,155,33</area>
+	                        <font>verysmall</font>
+	                        <case>normal</case>
+                           <cutdown>no</cutdown>
+                           <scroll direction="left"/>
+	                    </textarea>
+	                </state>
+	            </statetype>
+	        </buttonlist>
 
-        <buttonlist name="bookmarklist" from="buttonlist_menu_details">
-            <position>740,260</position>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="name" from="textarea_base">
-                        <area>10,0,350,40</area>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <textarea name="name" from="textarea_base">
-                        <area>10,0,350,40</area>
-                    </textarea>
-                    <textarea name="url" from="textarea_base">
-                        <area>375,7,155,33</area>
-                        <font>verysmall</font>
-                        <case>normal</case>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
+	        <textarea name="infotext" from="textarea_base">
+	            <area>250,560,510,150</area>
+	            <cutdown>yes</cutdown>
+	            <font>smaller</font>
+	            <case>normal</case>
+	            <alpha>128</alpha>
+	            <align>hcenter,bottom</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <imagetype name="NetworkImage">
-            <area>25,260,350,350</area>
-            <filename>images/shared/DefaultNetwork.png</filename>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
-        <textarea name="infotext" from="textarea_base">
-            <area>25,660,720,50</area>
-            <font>small</font>
-            <case>normal</case>
-            <align>left,vcenter</align>
-            <multiline>yes</multiline>
-            <value>Choose a bookmark to show in the web browser</value>
-        </textarea>
-
-        <textarea name="messagetext" from="infotext"/>
+	        <textarea name="messagetext" from="infotext"/>
+	     </group>
 
     </window>
 
     <window name="bookmarkeditor">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/web.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -191,11 +195,7 @@
     </window>
 
     <window name="browserconfig">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/web.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 

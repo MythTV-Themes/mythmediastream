@@ -35,11 +35,7 @@
     </window>
 
     <window name="controls">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/keys.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 

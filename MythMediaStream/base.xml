@@ -3465,6 +3465,26 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_dialog_wide_details" from="buttonlist_dialog_wide">
+       <statetype name="buttonitem">
+           <state name="selectedactive">
+               <imagetype name="MediaItemDetailBG">
+                   <area>340,5,170,30</area>
+                   <filename>images/shared/MediaItemDetailBG.png</filename>
+               </imagetype>
+               <textarea name="buttontext">
+                   <area>10,0,320,40</area>
+                   <font>normal</font>
+                   <alpha>255</alpha>
+                   <scroll direction="left" />
+                   <multiline>no</multiline>
+                   <cutdown>no</cutdown>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_dialog_wide_permanent" from="buttonlist_dialog_wide">
        <statetype name="buttonitem">
            <state name="inactive" from="active">

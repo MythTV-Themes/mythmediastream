@@ -8,10 +8,7 @@ MythArchive GUI theme
 <mythuitheme>
 
     <window name="profilepopup">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -98,16 +95,9 @@ MythArchive GUI theme
         </group>
     </window>
 
-    <!--
-        theme selector
-    -->
-
     <window name="themeselector">
 
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -277,17 +267,8 @@ MythArchive GUI theme
 
     </window>
 
-    <!--
-        ******************************************************************
-        The main mythburn screen
-        *******************************************************************
-    -->
-
     <window name="mythburn">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -506,17 +487,8 @@ MythArchive GUI theme
 
     </window>
 
-  <!--
-      *******************************************************************
-      The editmetadata dialog
-      *******************************************************************
-  -->
-
-  <window name="edit_metadata">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+    <window name="edit_metadata">
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -609,11 +581,8 @@ MythArchive GUI theme
         </group>
     </window>
 
-  <window name="thumbfinder">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+    <window name="thumbfinder">
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 

@@ -121,10 +121,7 @@
   </window>
 
   <window name="edit_metadata">
-
-     <imagetype name="fanart" from="image_wallpaper_base">
-         <filename>images/backgrounds/gameconsole.png</filename>
-     </imagetype>
+     <area>0,0,988,720</area>
      <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
          <position>0,0</position>
      </group> 

@@ -3,10 +3,7 @@
 <mythuitheme>
 
     <window name="iconimport">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2">
             <position>0,0</position>
         </group> 
@@ -111,10 +108,7 @@
     </window>
 
     <window name="channeloverview">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2">
             <position>0,0</position>
         </group> 
@@ -270,10 +264,7 @@
     </window>
 
     <window name="languageselection">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2">
             <position>0,0</position>
         </group> 
@@ -353,12 +344,7 @@
     </window>
 
     <window name="grabbersettings">
-
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/dvd.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -455,12 +441,7 @@
     </window>
 
     <window name="generalwizard">
-
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -536,12 +517,7 @@
     </window>
 
     <window name="audiowizard">
-
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -671,12 +647,7 @@
     </window>
 
     <window name="videowizard">
-
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -757,10 +728,7 @@
 
 <!-- to do -->
     <window name="backendselection">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-        </imagetype>
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2">
             <position>0,0</position>
         </group> 

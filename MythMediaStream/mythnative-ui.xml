@@ -7,15 +7,8 @@ MythTV Archive GUI theme
 -->
 <mythuitheme>
 
-    <!--
-      The export native wizard
-    -->
-
     <window name="exportnative">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -188,15 +181,8 @@ MythTV Archive GUI theme
 
     </window>
 
-    <!--
-      Archive File Selector
-    -->
-
     <window name="archivefile_selector">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -318,16 +304,8 @@ MythTV Archive GUI theme
 
     </window>
 
-  <!--
-      Import Archive
-   -->
-
-  <window name="importnative">
-        <imagetype name="background" from="image_wallpaper_base">
-            <area>0,0,1280,720</area>
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+    <window name="importnative">
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 

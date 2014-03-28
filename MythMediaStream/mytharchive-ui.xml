@@ -8,10 +8,7 @@ Common MythArchive window definitions
 <mythuitheme>
 
     <window name="selectdestination">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -143,14 +140,9 @@ Common MythArchive window definitions
 
     </window>
 
-  <!--
-      Recording Selector
-  -->
-  <window name="recording_selector">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+
+    <window name="recording_selector">
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -276,15 +268,8 @@ Common MythArchive window definitions
 
     </window>
 
-  <!--
-      File Selector
-  -->
-
     <window name="file_selector">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -350,14 +335,8 @@ Common MythArchive window definitions
 
     </window>
 
-  <!--
-      Video Selector
-  -->
-  <window name="video_selector">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+    <window name="video_selector">
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
@@ -474,10 +453,7 @@ Common MythArchive window definitions
     </window>
 
     <window name="logviewer">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/harddisk.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 

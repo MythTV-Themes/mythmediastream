@@ -4,11 +4,7 @@
 <mythuitheme>
 
     <window name="generalsettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -139,11 +135,7 @@
     </window>
 
     <window name="playersettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -235,11 +227,7 @@
     </window>
 
     <window name="ratingsettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -331,11 +319,7 @@
     </window>
 
     <window name="importsettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -459,11 +443,7 @@
     </window>
 
     <window name="visualizationsettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -556,11 +536,7 @@
 
 <!-- Can't find this screen in the menu -->
     <window name="burningsettings">
-
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/music-settings.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 

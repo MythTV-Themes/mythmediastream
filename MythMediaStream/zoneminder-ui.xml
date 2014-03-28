@@ -3,10 +3,7 @@
 <mythuitheme>
 
     <window name="functionpopup">
-        <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/cctv.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -69,10 +66,7 @@
     </window>
 
     <window name="zmconsole">
-        <imagetype name="background" from="image_wallpaper_base">
-            <filename>images/backgrounds/cctv.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2B_animated">
             <position>0,0</position>
         </group> 
@@ -336,11 +330,7 @@
     </window>
 
     <window name="zmevents">
-
-         <imagetype name="fanart" from="image_wallpaper_base">
-            <filename>images/backgrounds/cctv.jpg</filename>
-        </imagetype>
-        <imagetype name="backgroundoverlay" from="background_overlay_base" />
+        <area>0,0,988,720</area>
         <group name="screenlayoutSettings" from="defaultscreenlayoutSettings_2A_animated">
             <position>0,0</position>
         </group> 
