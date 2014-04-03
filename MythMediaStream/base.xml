@@ -81,17 +81,40 @@
        <color>#105B8F</color>
    </fontdef>
 
-   <fontdef name="normal_blue_bold" from="normal_blue">
-<!--       <pixelsize>26</pixelsize>-->
-       <weight>bold</weight>
+   <fontdef name="normal_plainblue" from="normal">
+       <color>#0000FF</color>
    </fontdef>
 
    <fontdef name="normal_red" from="normal">
        <color>#F92626</color>
    </fontdef>
 
+   <fontdef name="normal_plainred" from="normal">
+       <color>#FF0000</color>
+   </fontdef>
+
    <fontdef name="normal_amber" from="normal">
        <color>#E0991A</color>   
+   </fontdef>
+
+   <fontdef name="normal_blue_bold" from="normal_blue">
+       <weight>bold</weight>
+   </fontdef>
+
+   <fontdef name="normal_amber_bold" from="normal_amber">
+       <weight>bold</weight> 
+   </fontdef>
+
+   <fontdef name="normal_red_bold" from="normal_red">
+       <weight>bold</weight> 
+   </fontdef>
+
+   <fontdef name="normal_plainred_bold" from="normal_plainred">
+       <weight>bold</weight> 
+   </fontdef>
+
+   <fontdef name="normal_plainblue_bold" from="normal_plainblue">
+       <weight>bold</weight> 
    </fontdef>
 
    <fontdef name="normal_green" from="normal">
@@ -3392,7 +3415,6 @@
        <buttonarea>0,0,510,360</buttonarea>
        <statetype name="buttonitem">
            <area>0,0,510,40</area>
-           <!--ACTIVE-->
            <state name="active">
                <imagetype name="MenuItemNF">
                    <area>0,0,510,40</area>
@@ -3436,7 +3458,6 @@
                <alpha>0</alpha>
            </state>
        </statetype>
-       <!--ARROWS-->
        <statetype name="upscrollarrow">
            <position>10,364</position>	
            <state type="off">

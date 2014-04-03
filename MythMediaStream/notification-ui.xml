@@ -104,18 +104,6 @@
 
         <progressbar name="progress" from="progressbar_base">
             <area>145,125,345,10</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-           <imagetype name="background">
-               <area>0,0,345,10</area>
-               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
-           <imagetype name="progressimage">
-               <area>0,0,345,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
         </progressbar>
 
     </window>
@@ -171,18 +159,6 @@
 
         <progressbar name="progress" from="progressbar_base">
             <area>20,125,470,10</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-           <imagetype name="background">
-               <area>0,0,470,10</area>
-               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
-           <imagetype name="progressimage">
-               <area>0,0,470,10</area>
-               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
-               <preserveaspect>false</preserveaspect>
-           </imagetype>
         </progressbar>
 
     </window>

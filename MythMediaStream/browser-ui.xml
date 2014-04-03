@@ -21,7 +21,7 @@
 
         <textarea name="status" from="textarea_base">
             <area>950,5,320,25</area>
-            <case>small</case>
+            <case>smaller</case>
             <alpha>128</alpha>
         </textarea>
 
@@ -32,6 +32,13 @@
         <webbrowser name="webbrowser">
             <area>0,49,1280,671</area>
             <zoom>1.4</zoom>
+            <scrollduration>500</scrollduration>
+				<scrollbar name="vertscrollbar" from="basescrollbarvert">
+					<area>100%-15,0,15,100%-15</area>
+				</scrollbar>
+				<scrollbar name="horizscrollbar" from="basescrollbarhorz">
+					<area>0,100%-15,100%-15,15</area>
+				</scrollbar>
         </webbrowser>
 
     </window>
@@ -53,7 +60,7 @@
 	            <align>right,bottom</align>
 	            <cutdown>yes</cutdown>
 	            <multiline>yes</multiline>
-	            <value>Choose a bookmark to open in your browser</value> 
+	            <value>Choose a bookmark to open in the webbrowser</value> 
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_base">
@@ -68,11 +75,25 @@
 	
 	
 	        <buttonlist name="grouplist" from="buttonlist_dialog_wide">
-	            <position>250,175</position>
+	            <area>250,175,510,510</area>
+	            <buttonarea>0,0,510,490</buttonarea>
+			      <statetype name="upscrollarrow">
+			          <position>10,490</position>
+			      </statetype>	
+			      <statetype name="downscrollarrow">
+			          <position>30,490</position>	
+			      </statetype>
 	        </buttonlist>
 
 	        <buttonlist name="bookmarklist" from="buttonlist_dialog_wide_details">
-	            <position>250,175</position>
+	            <area>250,175,510,510</area>
+	            <buttonarea>0,0,510,490</buttonarea>
+			      <statetype name="upscrollarrow">
+			          <position>10,490</position>
+			      </statetype>	
+			      <statetype name="downscrollarrow">
+			          <position>30,490</position>	
+			      </statetype>
 	            <statetype name="buttonitem">
 	                <state name="active">
 	                    <textarea name="name" from="textarea_base">
@@ -84,7 +105,7 @@
 	                        <area>10,0,320,40</area>
 	                    </textarea>
 	                    <textarea name="url" from="textarea_base">
-	                        <area>375,7,155,33</area>
+	                        <area>350,7,155,33</area>
 	                        <font>verysmall</font>
 	                        <case>normal</case>
                            <cutdown>no</cutdown>
@@ -95,13 +116,14 @@
 	        </buttonlist>
 
 	        <textarea name="infotext" from="textarea_base">
-	            <area>250,560,510,150</area>
+	            <area>250,660,510,50</area>
 	            <cutdown>yes</cutdown>
 	            <font>smaller</font>
 	            <case>normal</case>
 	            <alpha>128</alpha>
 	            <align>hcenter,bottom</align>
 	            <multiline>yes</multiline>
+	            <value></value>
 	        </textarea>
 
 	        <textarea name="messagetext" from="infotext"/>
