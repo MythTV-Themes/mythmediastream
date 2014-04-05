@@ -146,6 +146,14 @@
        <pixelsize>25</pixelsize>
    </fontdef>
 
+   <fontdef name="title_smaller" from="title">
+       <pixelsize>20</pixelsize>
+   </fontdef>
+
+   <fontdef name="title_tiny" from="title">
+       <pixelsize>16</pixelsize>
+   </fontdef>
+
    <fontdef name="title_small_blue" from="title">
        <color>#105B8F</color>
   </fontdef>
@@ -1274,9 +1282,12 @@
              <cornerradius>8</cornerradius>
 				 <fill style="gradient">
 					 <gradient direction="horizontal">
+						 <stop position="0" color="#FFFFFF" alpha="225" />
+						 <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
 						 <stop position="0" color="#A1A1A1" alpha="225" />
-<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
 						 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
 					 </gradient>
 				 </fill>
          </shape>
@@ -1305,9 +1316,12 @@
              <cornerradius>8</cornerradius>
 				 <fill style="gradient">
 					 <gradient direction="vertical">
+						 <stop position="0" color="#FFFFFF" alpha="225" />
+						 <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
 						 <stop position="0" color="#A1A1A1" alpha="225" />
-<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
 						 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
 					 </gradient>
 				 </fill>
          </shape>
@@ -1340,9 +1354,12 @@
           <cornerradius>8</cornerradius>
 			 <fill style="gradient">
 				 <gradient direction="vertical">
+					 <stop position="0" color="#FFFFFF" alpha="225" />
+					 <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
 					 <stop position="0" color="#A1A1A1" alpha="225" />
-<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
 					 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
 				 </gradient>
 			 </fill>
       </shape>
@@ -1372,9 +1389,12 @@
 	            <cornerradius>8</cornerradius>
 				   <fill style="gradient">
 					 <gradient direction="vertical">
+						 <stop position="0" color="#FFFFFF" alpha="225" />
+						 <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
 						 <stop position="0" color="#A1A1A1" alpha="225" />
-	<!--					 <stop position="60" color="#105B8F" alpha="120" /> -->
 						 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
 					 </gradient>
 					</fill>
 	        </shape>
@@ -1926,129 +1946,120 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_browse_large">
-       <spacing>0</spacing>
-       <area>0,0,1280,215</area>
-       <searchposition>758,55</searchposition>
-       <layout>horizontal</layout>
-       <scrollstyle>center</scrollstyle>
-       <arrange>stack</arrange>
-       <align>hcenter</align>
-       <wrapstyle>items</wrapstyle>
-       <showarrow>no</showarrow>
-       <buttonarea>0,0,1275,215</buttonarea>
-       <statetype name="buttonitem">
-           <state name="active">
-               <group name="coverartgroup">
-                  <area>0,0,185,269</area>
+	    <spacing>0</spacing>
+	    <area>0,0,1280,391</area>
+	    <searchposition>758,55</searchposition>
+	    <layout>horizontal</layout>
+	    <scrollstyle>center</scrollstyle>
+	    <arrange>stack</arrange>
+	    <align>hcenter</align>
+	    <wrapstyle>items</wrapstyle>
+	    <showarrow>no</showarrow>
+	    <buttonarea>0,0,1280,391</buttonarea>
+	    <showscrollbar>yes</showscrollbar>		
+	    <scrollbar name="scrollbar" from="basescrollbarhorz">
+	        <area>40,340,100%-40,8%</area>
+	    </scrollbar>
+	    <statetype name="buttonitem">
+	        <state name="active">
+	            <area>-3,-3,175,264</area>
+	            <group name="coverartgroup">
 			         <imagetype name="coverartbgd">
-			             <area>0,0,185,269</area>
+			             <area>-5,-5,185,268</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/list_movieicon_frame.png</filename>
-			         </imagetype>
-		
+			         </imagetype>	
 			         <imagetype name="buttonimage">
-			             <area>5,5,175,264</area>
+			             <area>0,0,175,264</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/amt-blank-poster.png</filename>
 		                <mask>images/shared/list_movieicon_mask_active.png</mask>
-			         </imagetype>
-		
+		                <alpha>192</alpha>
+			         </imagetype>		
+	               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
+	                   <area>5,210,165,50</area>
+	                   <alpha>192</alpha>
+	                   <case>normal</case>
+	                   <multiline>yes</multiline>
+	                   <align>hcenter,bottom</align>
+	                   <font state="default">title_small</font>
+	               </textarea>	              
+	               <statetype name="nodetype">
+	                   <area>0,0,175,264</area> 
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,175,264</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask_active.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
 			         <imagetype name="coverartglass">
-			             <area>5,5,175,264</area>
+			             <area>0,0,175,263</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/list_movieicon_glass.png</filename>
 			         </imagetype>
 		         </group>
-               <statetype name="nodetype">
-                   <area>0,0,110,159</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>80,129,25,25</area>
-                           <alpha>128</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,110,159</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
-               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
-                   <area>5,137,100,20</area>
-                   <alpha>128</alpha>
-                   <case>normal</case>
-                   <align>hcenter,vcenter</align>
-                   <font state="default">tiny</font>
-                   <font state="error">tiny_red</font>
-                   <font state="running">tiny_amber</font>
-               </textarea>	              
-           </state>
-           <state name="inactive" from ="active">
-               <alpha>0</alpha>
-           </state>
-           <state name="selectedactive">
-               <group name="coverartgroup">
-	               <area>0,-61,185,269</area>
-<!--	               <area>-40,-61,185,269</area> -->
+	        </state>
+	        <state name="inactive" from ="active"/>
+	        <state name="selectedactive">
+	            <area>-39,-58,175,264</area>
+	            <group name="coverartgroup">
 			         <imagetype name="coverartbgd">
-			             <area>0,0,264,391</area>
+			             <area>-45,-6,264,391</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/list_movieicon_frame.png</filename>
-			         </imagetype>
-		
+			         </imagetype>		
 			         <imagetype name="buttonimage">
-			             <area>7,6,252,380</area>
+			             <area>-39,0,252,380</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/amt-blank-poster.png</filename>
 		                <mask>images/shared/list_movieicon_mask.png</mask>
-			         </imagetype>
-		
+			         </imagetype>		
+	               <statetype name="nodetype">
+	                   <area>-39,0,252,380</area>
+	                   <state name="upfolder">
+	                       <imagetype name="icon">
+	                           <area>0,0,252,380</area>
+	                           <alpha>255</alpha>
+	                           <filename>images/shared/DefaultFolderBack.png</filename>
+	                           <mask>images/shared/list_movieicon_mask.png</mask>
+	                           <preserveaspect>no</preserveaspect>
+	                       </imagetype>
+	                   </state>
+	               </statetype>
 			         <imagetype name="coverartglass">
-			             <area>7,6,252,380</area>
+			             <area>-39,0,252,380</area>
 			             <preserveaspect>no</preserveaspect>
 		                <filename>images/shared/list_movieicon_glass.png</filename>
 			         </imagetype>
-               </group>
-               <statetype name="nodetype">
-                   <area>-8,0,138,199</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>103,164,30,30</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,138,199</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
-               <textarea name="buttontext" from="textarea_base" depends="!buttonimage">
-                   <area>-3,179,128,20</area>
-                   <alpha>255</alpha>
-                   <case>normal</case>
-                   <scroll direction="left" />
-                   <align>hcenter,vcenter</align>
-                   <font state="default">tiny</font>
-                   <font state="error">tiny_red</font>
-                   <font state="running">tiny_amber</font>
-               </textarea>	              
-           </state>
-           <state name="selectedinactive" from="selectedactive">
-               <alpha>0</alpha>
-               <area>0,0,0,0</area>
-           </state>
-       </statetype>
+	               <group name="watchstategroup">
+	                 <area>181,30,32,39</area>
+				        <imagetype name="OverlayWUBG" depends="watchedstate">
+				            <position>0,0</position>
+				            <filename>images/shared/OverlayWUBG.png</filename>
+				        </imagetype>				
+				        <statetype name="watchedstate">
+				            <state name="yes">
+				                <imagetype name="yes">
+				                    <position>6,4</position>
+				                    <filename>images/shared/OverlayWatched.png</filename>
+				                </imagetype>
+				            </state>
+				            <state name="no">
+				                <imagetype name="no">
+				                    <position>6,4</position>
+				                    <filename>images/shared/OverlayUnwatched.png</filename>
+				                </imagetype>
+				            </state>
+				        </statetype>
+	               </group>
+	            </group>
+	        </state>
+	        <state name="selectedinactive" from="selectedactive"/>
+	    </statetype>
    </buttonlist>
 
    <buttonlist name="buttonlist_gallery">
@@ -2263,6 +2274,28 @@
 		                <mask>images/shared/list_movieicon_mask_wall_active.png</mask>
 		                <alpha>192</alpha>
 			         </imagetype>		
+	               <textarea name="buttontext" from="textarea_base" depends="!coverart">
+	                   <area>5,105,90,40</area>
+	                   <alpha>192</alpha>
+	                   <case>normal</case>
+	                   <multiline>yes</multiline>
+	                   <cutdown>no</cutdown>
+	                   <align>hcenter,bottom</align>
+	                   <font state="default">title_smaller</font>
+	               </textarea>	              
+	               <imagetype name="buttontextbgd" depends="##x##">
+	                   <area>-1,-1,102,22</area>
+	                   <filename>images/shared/DialogContextTop.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+	               <textarea name="##x##" from="textarea_base" depends="##x##">
+	                   <area>5,2,90,20</area>
+	                   <alpha>220</alpha>
+	                   <case>normal</case>
+	                   <cutdown>yes</cutdown>
+	                   <align>hcenter,vcenter</align>
+	                   <font state="default">title_tiny</font>
+	                </textarea>	              
 	               <statetype name="nodetype">
 	                   <area>0,0,100,150</area> 
 	                   <state name="upfolder">
@@ -2318,7 +2351,7 @@
 			         </imagetype>
                   <group name="watchstategroup">
                     <area>108,20,32,39</area>
-				        <imagetype name="OverlayWUBG">
+				        <imagetype name="OverlayWUBG" depends="watchedstate">
 				            <position>0,0</position>
 				            <filename>images/shared/OverlayWUBG.png</filename>
 				        </imagetype>				
@@ -2387,9 +2420,7 @@
 	                   <case>normal</case>
 	                   <cutdown>yes</cutdown>
 	                   <align>hcenter,vcenter</align>
-	                   <font state="default">tiny</font>
-	                   <font state="error">tiny_red</font>
-	                   <font state="running">tiny_amber</font>
+	                   <font state="default">title_tiny</font>
 	                </textarea>	              
                   <statetype name="nodetype">
 	                    <state name="default" />

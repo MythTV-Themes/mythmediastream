@@ -312,8 +312,9 @@
             <template>%DESCRIPTION% %VALUE%%UNITS%</template>
         </textarea>
 
-        <progressbar name="position">
+        <progressbar name="position" from="progressbar_round">
             <area>180,80,1080,20</area>
+<!--
             <layout>horizontal</layout>
             <style>reveal</style>
 	         <shape name="background">
@@ -335,12 +336,12 @@
 	             <cornerradius>12</cornerradius>
 					 <fill style="gradient">
 						 <gradient direction="vertical">
-							 <stop position="0" color="#A1A1A1" alpha="225" />
-<!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
-							 <stop position="60" color="#FFFFFF" alpha="225" />
+							 <stop position="0" color="#FFFFFF" alpha="225" />
+							 <stop position="60" color="#A1A1A1" alpha="225" />
 						 </gradient>
 					 </fill>
 	         </shape>
+-->
         </progressbar>
     </window>
 
@@ -1375,7 +1376,35 @@
             <filename>images/shared/OSDBackground.png</filename>
         </imagetype>
 
-        <imagetype name="popup_info">
+        <imagetype name="coverartbgd" depends="coverart">
+            <area>6,-134,168,244</area>
+            <filename>images/shared/list_movieicon_frame.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart">
+            <area>10,-130,160,240</area>
+            <mask>images/shared/list_movieicon_mask_osd.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="coverartglass" from="coverart" depends="coverart">
+            <filename>images/shared/list_movieicon_glass.png</filename>
+        </imagetype>
+<!--
+        <imagetype name="iconpathbgd" depends="!coverart">
+            <area>5,-55,170,170</area>
+            <filename>images/shared/list_musicicon_frame.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="iconpath" depends="!coverart">
+            <area>10,-50,160,160</area>
+            <mask>images/shared/list_musicicon_mask_osd.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="iconpathglass" from="iconpath" depends="iconpath&amp;!coverart">
+            <filename>images/shared/list_musicicon_glass.png</filename>
+        </imagetype>
+-->	
+        <imagetype name="popup_info" depends="!coverart">
             <area>10,-50,160,160</area>	
             <filename>images/shared/Take2Raspberry.png</filename>
         </imagetype>
@@ -1422,7 +1451,11 @@
 					 <fill style="gradient">
 						 <gradient direction="vertical">
 							 <stop position="0" color="#A1A1A1" alpha="225" />
+							 <stop position="60" color="#FF0000" alpha="225" />
+<!--
+							 <stop position="0" color="#A1A1A1" alpha="225" />
 							 <stop position="60" color="#FF2C2C" alpha="225" />
+-->
 						 </gradient>
 					 </fill>
 	         </shape>
@@ -1433,9 +1466,9 @@
 	             <cornerradius>12</cornerradius>
 					 <fill style="gradient">
 						 <gradient direction="vertical">
-							 <stop position="0" color="#A1A1A1" alpha="225" />
+							 <stop position="0" color="#FFFFFF" alpha="225" />
 <!--						 <stop position="60" color="#105B8F" alpha="120" /> -->
-							 <stop position="60" color="#FFFFFF" alpha="225" />
+							 <stop position="60" color="#A1A1A1" alpha="225" />
 						 </gradient>
 					 </fill>
 	         </shape>

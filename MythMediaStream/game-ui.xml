@@ -25,7 +25,7 @@
         <!-- ===================================================== -->
         <!--     GAMES LIST                                        -->
         <!-- ===================================================== -->
-        <buttontree name="gametreelist" from="buttontree_menu">
+        <buttontree name="gametreelist" from="buttontree_video">
             <position>740,260</position>
         </buttontree>
 
