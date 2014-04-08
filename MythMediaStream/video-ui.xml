@@ -879,7 +879,7 @@
 	            <align>right,bottom</align>
 	            <cutdown>yes</cutdown>
 	            <multiline>yes</multiline>
-	            <value>Detailed information of your video</value>
+	            <value>Detailed information about your video</value>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_base">
