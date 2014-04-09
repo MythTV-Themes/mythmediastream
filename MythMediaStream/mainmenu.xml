@@ -71,7 +71,7 @@
 
     <button>
         <type>SETTINGS_GENERAL</type>
-        <text>Various</text>
+        <text>Extra</text>
         <description>Information and Tools</description>
         <action>MENU mms_settings.xml</action>
     </button>
@@ -86,7 +86,7 @@
 
     <button>
         <type>TV_SCHEDULE_RECORDINGS</type>
-        <text>EPG</text>
+        <text>TV Guide</text>
         <description>Use the</description>
         <action>MENU mms_guide.xml</action>
     </button>

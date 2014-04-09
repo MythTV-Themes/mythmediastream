@@ -7,8 +7,9 @@ cp -a MythMediaStream* ~/.mythtv/themes/
 
 This theme is designed to work with a custom menu called MythMediaStreamMenu. To select this menu, go to the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythMediaStream'.
 
-v027.3
-Redesign of the various windows inspired by MediaStream-redux version
+v028.1
+Redesign of the various windows inspired by MediaStream-redux version of the original skin
+fixed full display notification message
 
 v027.2
 Added screens for notifications.

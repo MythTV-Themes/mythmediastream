@@ -176,10 +176,11 @@
 	        </imagetype>
 	
 	        <textarea name="name" from="textarea_base">
-	            <area>520,450,220,35</area>
+	            <area>520,450,250,35</area>
 	            <multiline>no</multiline>
 	            <font>title</font>
-	            <cutdown>yes</cutdown>
+	            <cutdown>no</cutdown>
+<!--	            <scroll direction="left"/> -->
 	        </textarea>
 	
 	        <textarea name="resolution" from="textarea_base">
