@@ -278,23 +278,24 @@
             <buttonarea>0,0,610,615</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
+                <area>0,0,610,43</area>
 		               <imagetype name="MenuItemNF">
 		                   <area>0,0,610,43</area>
 		                   <filename>images/shared/MenuItemNF.png</filename>
 		               </imagetype>
                     <imagetype name="channelicon">
-                        <area>8,7,26,26</area>
+                        <area>3,3,36,36</area>
                         <preserveaspect>no</preserveaspect>
-                        <mask>images/shared/list_programicon_mask_guide_small.png</mask>
+                        <mask>images/shared/list_programicon_mask_channelpriority.png</mask>
                         <filename>images/icons/notifications/image-missing.png</filename>
                     </imagetype>
                     <imagetype name="glasoverlay" depends="channelicon">
-                        <area>8,7,26,26</area>
+                        <area>3,3,36,36</area>
                         <preserveaspect>no</preserveaspect>
                         <filename>images/shared/list_musicicon_glass.png</filename>
                     </imagetype>
                     <textarea name="buttontext" from="textarea_base">
-                         <area>40,0,150,43</area>
+                         <area>50,0,140,43</area>
                          <font>smaller</font>
                     </textarea>
                 </state>
