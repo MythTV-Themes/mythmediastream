@@ -61,8 +61,8 @@
             <recordstatus type="WeekslotRecord" image="images/tv-recordings/gg-rs-weekslot.png" />
             <recordstatus type="FindOneRecord" image="images/tv-recordings/gg-rs-findone.png" />
             <recordstatus type="OverrideRecord" image="images/tv-recordings/gg-rs-override.png" />
-            <arrow direction="left" image="images/shared/ArrowLeftFO.png" />
-            <arrow direction="right" image="images/shared/ArrowRightFO.png" />
+            <arrow direction="up" image="images/shared/ArrowUpFO.png" />
+            <arrow direction="down" image="images/shared/ArrowDownFO.png" />
             <font>smaller</font>
         </guidegrid>
 
