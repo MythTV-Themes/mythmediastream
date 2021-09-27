@@ -2060,66 +2060,75 @@
 	        </textarea>
 	
 	        <textarea name="prioritylbl" from="textarea_base">
-	            <area>250,175,170,35</area>
+	            <area>250,155,170,35</area>
 	            <value>Priority:</value>
 	        </textarea>
 	
 	        <spinbox name="priority" from="spinbox_menu">
-	            <position>420,175</position>
+	            <position>420,155</position>
 	        </spinbox>
 	
 	        <textarea name="ruleactivelbl" from="prioritylbl">
-	            <position>560,175</position>
+	            <position>560,155</position>
 	            <value>Rule active:</value>
 	        </textarea>
 	
 	        <checkbox name="ruleactive" from="checkbox_base">
-	            <position>735,175</position>
+	            <position>735,155</position>
 	        </checkbox>
 	
 	        <textarea name="inputlbl" from="prioritylbl">
-	            <position>250,210</position>
+	            <position>250,190</position>
 	            <value>Input:</value>
 	        </textarea>
 	
 	        <buttonlist name="input" from="selector_base">
-	            <position>420,210</position>
+	            <position>420,190</position>
 	        </buttonlist>
 	
 	        <textarea name="startoffsetlbl" from="prioritylbl">
-	            <position>250,245</position>
+	            <position>250,225</position>
 	            <value>Start early:</value>
 	        </textarea>
 	
 	        <spinbox name="startoffset" from="spinbox_menu">
-	            <position>420,245</position>
+	            <position>420,225</position>
 	        </spinbox>
 	
 	        <textarea name="endoffsetlbl" from="prioritylbl">
-	            <position>560,245</position>
+	            <position>560,225</position>
 	            <value>End late:</value>
 	        </textarea>
 	
 	        <spinbox name="endoffset" from="spinbox_base">
-	            <position>670,245</position>
+	            <position>670,225</position>
 	        </spinbox>
 	
 	        <textarea name="dupmethodlbl" from="prioritylbl">
-	            <area>250,315,510,35</area>
+	            <area>250,275,510,35</area>
 	            <value>Duplication Methode:</value>
 	        </textarea>
 	
 	        <buttonlist name="dupmethod" from="selector_base_wide">
-	            <position>250,350</position>
+	            <position>250,308</position>
 	        </buttonlist>
 	
 	        <textarea name="dupscopelbl" from="prioritylbl">
-	            <area>250,420,510,35</area>
+	            <area>250,360,510,35</area>
 	            <value>Duplication Scope:</value>
 	        </textarea>
 	
 	        <buttonlist name="dupscope" from="selector_base_wide">
-	            <position>250,455</position>
+	            <position>250,393</position>
+	        </buttonlist>
+
+	        <textarea name="autoextendlbl" from="prioritylbl">
+	            <area>250,440,510,35</area>
+	            <value>Automatically Extend:</value>
+	        </textarea>
+
+	        <buttonlist name="autoextend" from="selector_base_wide">
+	            <position>250,475</position>
 	        </buttonlist>
         </group>
 
